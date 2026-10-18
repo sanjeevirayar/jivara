@@ -1,0 +1,1239 @@
+.customer-order-detail {
+  min-height: 700px;
+
+  padding:
+    35px 0 110px;
+
+  background:
+    var(--ivory-light);
+
+  color:
+    var(--charcoal);
+}
+
+
+.customer-order-detail__container {
+  width:
+    min(1350px, 90%);
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.customer-order-detail__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+}
+
+
+.customer-order-detail__back,
+.customer-order-detail__top button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.13em;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.customer-order-detail__intro {
+  margin-top: 55px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+}
+
+
+.customer-order-detail__eyebrow {
+  margin:
+    0 0 8px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.18em;
+}
+
+
+.customer-order-detail__intro h1 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      44px,
+      5vw,
+      68px
+    );
+
+  font-weight: 400;
+}
+
+
+.customer-order-detail__date {
+  margin:
+    7px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+}
+
+
+.customer-order-detail__status {
+  min-width: 220px;
+
+  padding:
+    17px 20px;
+
+  border:
+    1px solid
+    rgba(
+      155,
+      122,
+      66,
+      0.35
+    );
+
+  background:
+    var(--ivory);
+}
+
+
+.customer-order-detail__status span {
+  display: block;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.customer-order-detail__status strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ORDER PROGRESS
+========================================================= */
+
+.customer-order-progress {
+  margin-top: 55px;
+
+  padding: 30px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory);
+}
+
+
+.customer-order-progress__heading p {
+  margin:
+    0 0 4px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.15em;
+}
+
+
+.customer-order-progress__heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+}
+
+
+.customer-order-progress__track {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      6,
+      minmax(0, 1fr)
+    );
+}
+
+
+.customer-order-progress__step {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 11px;
+
+  text-align: center;
+}
+
+
+.customer-order-progress__step::after {
+  content: "";
+
+  position: absolute;
+
+  top: 16px;
+  left: 50%;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    rgba(
+      41,
+      40,
+      36,
+      0.15
+    );
+
+  z-index: 0;
+}
+
+
+.customer-order-progress__step:last-child::after {
+  display: none;
+}
+
+
+.customer-order-progress__marker {
+  width: 33px;
+  height: 33px;
+
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      41,
+      40,
+      36,
+      0.2
+    );
+
+  border-radius: 50%;
+
+  background:
+    var(--ivory);
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+}
+
+
+.customer-order-progress__step.completed
+.customer-order-progress__marker {
+  border-color:
+    var(--antique-gold);
+
+  background:
+    var(--antique-gold);
+
+  color:
+    #ffffff;
+}
+
+
+.customer-order-progress__step.current
+.customer-order-progress__marker {
+  border-color:
+    var(--antique-gold);
+
+  background:
+    var(--charcoal);
+
+  color:
+    #ffffff;
+}
+
+
+.customer-order-progress__step.completed::after {
+  background:
+    var(--antique-gold);
+}
+
+
+.customer-order-progress__step > span {
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.customer-order-progress__step.current > span {
+  color:
+    var(--antique-gold);
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.customer-order-detail__summary-grid {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+.customer-order-summary-card {
+  padding: 28px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory);
+}
+
+
+.customer-order-summary-card__heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  color:
+    var(--antique-gold);
+}
+
+
+.customer-order-summary-card__heading p {
+  margin:
+    0 0 4px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.14em;
+}
+
+
+.customer-order-summary-card__heading h2 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+}
+
+
+.customer-order-summary-card address {
+  margin-top: 24px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-style: normal;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.customer-order-price {
+  margin-top: 22px;
+}
+
+
+.customer-order-price > div {
+  padding:
+    11px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.customer-order-price span {
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+.customer-order-price strong {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.customer-order-price__total {
+  margin-top: 5px;
+
+  border-top:
+    1px solid
+    var(--antique-gold);
+}
+
+
+.customer-order-price__total strong {
+  font-size: 23px;
+}
+
+
+/* =========================================================
+   DESIGNS
+========================================================= */
+
+.customer-order-designs {
+  margin-top: 55px;
+}
+
+
+.customer-order-designs__heading {
+  margin-bottom: 18px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  color:
+    var(--antique-gold);
+}
+
+
+.customer-order-designs__heading p {
+  margin:
+    0 0 4px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.15em;
+}
+
+
+.customer-order-designs__heading h2 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 36px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DESIGN
+========================================================= */
+
+.customer-order-design {
+  margin-bottom: 22px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory);
+}
+
+
+.customer-order-design__product {
+  display: grid;
+
+  grid-template-columns:
+    155px
+    minmax(0, 1fr);
+
+  gap: 27px;
+}
+
+
+.customer-order-design__image {
+  width: 155px;
+
+  aspect-ratio:
+    4 / 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    #eee8dd;
+
+  color:
+    var(--antique-gold);
+}
+
+
+.customer-order-design__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.customer-order-design__info > p {
+  margin:
+    0 0 5px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.customer-order-design__info h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 35px;
+
+  font-weight: 400;
+}
+
+
+.customer-order-design__facts {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+.customer-order-design__facts span,
+.customer-order-date-grid span,
+.customer-order-customisation span,
+.customer-measurement-grid span {
+  display: block;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+.customer-order-design__facts strong,
+.customer-order-date-grid strong,
+.customer-order-customisation strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   DESIGN SECTIONS
+========================================================= */
+
+.customer-order-design__section {
+  margin-top: 28px;
+
+  padding-top: 24px;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.customer-order-design__section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color:
+    var(--antique-gold);
+}
+
+
+.customer-order-design__section-heading > span,
+.customer-order-design__section-heading div > span {
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.14em;
+}
+
+
+.customer-order-design__section-heading p {
+  margin:
+    4px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DATES
+========================================================= */
+
+.customer-order-date-grid {
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CUSTOMISATION
+========================================================= */
+
+.customer-order-customisation {
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.4fr)
+    minmax(0, 1fr);
+
+  gap: 30px;
+}
+
+
+.customer-order-customisation p {
+  margin:
+    6px 0 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MEASUREMENTS
+========================================================= */
+
+.customer-measurement-pieces {
+  margin-top: 20px;
+}
+
+
+.customer-measurement-piece {
+  margin-bottom: 18px;
+
+  padding: 20px;
+
+  background:
+    rgba(
+      155,
+      122,
+      66,
+      0.045
+    );
+}
+
+
+.customer-measurement-piece h4 {
+  margin:
+    0 0 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+.customer-measurement-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+.customer-measurement-grid > div {
+  padding: 13px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory-light);
+}
+
+
+.customer-measurement-grid strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.customer-order-design__empty {
+  margin-top: 18px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CANCELLED
+========================================================= */
+
+.customer-order-cancelled {
+  margin-top: 35px;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      50,
+      40,
+      0.25
+    );
+
+  color:
+    #8d352d;
+}
+
+
+.customer-order-cancelled span {
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+.customer-order-cancelled p {
+  margin:
+    7px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+.customer-order-state {
+  min-height: 620px;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  background:
+    var(--ivory-light);
+
+  color:
+    var(--antique-gold);
+
+  text-align: center;
+}
+
+
+.customer-order-state h1 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 36px;
+
+  font-weight: 400;
+}
+
+
+.customer-order-state p {
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
+
+.customer-order-state a {
+  margin-top: 10px;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+  max-width: 950px
+) {
+
+  .customer-order-progress__track {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+
+    row-gap: 35px;
+  }
+
+
+  .customer-order-progress__step::after {
+    display: none;
+  }
+
+
+  .customer-measurement-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 720px
+) {
+
+  .customer-order-detail__intro {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .customer-order-detail__status {
+    width: 100%;
+  }
+
+
+  .customer-order-detail__summary-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .customer-order-design__product {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .customer-order-design__image {
+    width: 100%;
+
+    max-height:
+      520px;
+  }
+
+
+  .customer-order-design__facts {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .customer-order-customisation {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .customer-measurement-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 500px
+) {
+
+  .customer-order-progress {
+    padding:
+      22px 16px;
+  }
+
+
+  .customer-order-progress__track {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .customer-order-design {
+    padding: 19px;
+  }
+
+
+  .customer-order-design__facts,
+  .customer-order-date-grid,
+  .customer-measurement-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}

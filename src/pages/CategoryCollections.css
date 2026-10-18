@@ -1,0 +1,496 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.category-collections-page {
+  min-height: 700px;
+
+  background:
+    var(--ivory-light);
+
+  color:
+    var(--charcoal);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.category-collections-hero {
+  width:
+    min(900px, 88%);
+
+  margin: auto;
+
+  padding:
+    clamp(70px, 8vw, 120px)
+    0
+    clamp(55px, 7vw, 90px);
+
+  text-align: center;
+}
+
+
+.category-collections-hero__eyebrow {
+  margin:
+    0 0 13px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.2em;
+}
+
+
+.category-collections-hero h1 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      7vw,
+      92px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+
+.category-collections-hero h1 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.category-collections-hero__description {
+  max-width: 620px;
+
+  margin:
+    25px auto 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      16px,
+      1.5vw,
+      19px
+    );
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   HERO ORNAMENT
+========================================================= */
+
+.category-collections-hero__ornament {
+  max-width: 340px;
+
+  margin:
+    32px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color:
+    var(--antique-gold);
+}
+
+
+.category-collections-hero__ornament span {
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    rgba(
+      155,
+      122,
+      66,
+      0.28
+    );
+}
+
+
+.category-collections-hero__ornament b {
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   COLLECTION AREA
+========================================================= */
+
+.category-collections-browser {
+  width:
+    min(
+      1380px,
+      90%
+    );
+
+  margin: auto;
+
+  padding-bottom:
+    110px;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.category-collections-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    clamp(
+      25px,
+      3vw,
+      45px
+    );
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.category-collection-card {
+  min-width: 0;
+
+  display: block;
+
+  color:
+    inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.category-collection-card__image {
+  position: relative;
+
+  aspect-ratio:
+    3 / 4;
+
+  overflow: hidden;
+
+  background:
+    #eee8dd;
+}
+
+
+.category-collection-card__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.55s ease;
+}
+
+
+.category-collection-card:hover
+.category-collection-card__image img {
+  transform:
+    scale(1.025);
+}
+
+
+.category-collection-card__shade {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 65%,
+      rgba(
+        20,
+        19,
+        17,
+        0.11
+      )
+    );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.category-collection-card__content {
+  padding-top:
+    18px;
+}
+
+
+.category-collection-card__eyebrow {
+  margin:
+    0 0 7px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.16em;
+}
+
+
+.category-collection-card__content h2 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      25px,
+      2.2vw,
+      34px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+.category-collection-card__description {
+  margin:
+    12px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   EXPLORE LINK
+========================================================= */
+
+.category-collection-card__link {
+  margin-top:
+    17px;
+
+  padding-bottom:
+    7px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      41,
+      40,
+      36,
+      0.25
+    );
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.category-collection-card__link svg {
+  transition:
+    transform 0.2s ease;
+}
+
+
+.category-collection-card:hover
+.category-collection-card__link svg {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.category-collections-all {
+  margin-top:
+    75px;
+
+  padding-top:
+    30px;
+
+  border-top:
+    1px solid
+    var(--border);
+
+  text-align: center;
+}
+
+
+.category-collections-all a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.13em;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .category-collections-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .category-collections-hero {
+    padding:
+      60px 0
+      50px;
+  }
+
+
+  .category-collections-browser {
+    padding-bottom:
+      75px;
+  }
+
+
+  .category-collections-grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      48px;
+  }
+
+
+  .category-collection-card__image {
+    aspect-ratio:
+      4 / 5;
+  }
+
+
+  .category-collections-all {
+    margin-top:
+      55px;
+  }
+
+}

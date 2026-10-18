@@ -1,0 +1,815 @@
+.customer-auth {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(430px, 0.72fr);
+
+  background:
+    var(--ivory-light);
+}
+
+
+/* =========================================================
+   BRAND SIDE
+========================================================= */
+
+.customer-auth__brand {
+  min-width: 0;
+
+  min-height: 100vh;
+
+  padding:
+    clamp(
+      35px,
+      5vw,
+      75px
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  position: relative;
+
+  background:
+    var(--charcoal);
+
+  color:
+    var(--ivory);
+}
+
+
+/* =========================================================
+   BACK
+========================================================= */
+
+.customer-auth__back {
+  align-self:
+    flex-start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    rgba(
+      248,
+      245,
+      237,
+      0.72
+    );
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.14em;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.customer-auth__logo {
+  width:
+    clamp(
+      270px,
+      29vw,
+      470px
+    );
+
+  margin-top:
+    clamp(
+      70px,
+      10vh,
+      120px
+    );
+}
+
+
+.customer-auth__logo img {
+  width: 110%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   BRAND COPY
+========================================================= */
+
+.customer-auth__brand-copy {
+  width:
+    min(
+      600px,
+      82%
+    );
+
+  margin-top: auto;
+
+  margin-left: auto;
+
+  text-align: right;
+}
+
+
+.customer-auth__brand-copy > p {
+  margin:
+    0 0 15px;
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.2em;
+}
+
+
+.customer-auth__brand-copy h1 {
+  margin: 0;
+
+  color:
+    var(--ivory);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      44px,
+      5vw,
+      74px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.92;
+}
+
+
+.customer-auth__brand-copy h1 span {
+  display: block;
+
+  color:
+    var(--gold-light);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+========================================================= */
+
+.customer-auth__panel {
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    60px 0;
+}
+
+
+.customer-auth__content {
+  width:
+    min(
+      470px,
+      82%
+    );
+}
+
+
+.customer-auth__icon {
+  color:
+    var(--antique-gold);
+}
+
+
+.customer-auth__eyebrow {
+  margin:
+    17px
+    0
+    8px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.19em;
+}
+
+
+.customer-auth__content h2 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      50px,
+      5vw,
+      64px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+
+.customer-auth__content h2 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.customer-auth__intro {
+  max-width:
+    390px;
+
+  margin:
+    21px
+    0
+    30px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    17px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.customer-auth__tabs {
+  margin-bottom: 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.customer-auth__tabs button {
+  min-height:
+    43px;
+
+  padding:
+    0 10px;
+
+  border: 0;
+
+  border-bottom:
+    1px solid
+    transparent;
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.14em;
+
+  cursor: pointer;
+}
+
+
+.customer-auth__tabs button.active {
+  border-bottom-color:
+    var(--antique-gold);
+
+  color:
+    var(--antique-gold);
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.customer-auth__form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+}
+
+
+.customer-auth__name-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 15px;
+}
+
+
+.customer-auth__form label > span {
+  display: block;
+
+  margin-bottom:
+    8px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+.customer-auth__form input {
+  width: 100%;
+
+  height: 51px;
+
+  padding:
+    0
+    14px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(
+      41,
+      40,
+      36,
+      0.18
+    );
+
+  outline: none;
+
+  background:
+    transparent;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    14px;
+}
+
+
+.customer-auth__form input:focus {
+  border-color:
+    var(--antique-gold);
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.customer-auth__password {
+  position: relative;
+}
+
+
+.customer-auth__password input {
+  padding-right:
+    48px;
+}
+
+
+.customer-auth__password button {
+  position: absolute;
+
+  top: 50%;
+
+  right: 14px;
+
+  transform:
+    translateY(-50%);
+
+  padding: 0;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.customer-auth__error {
+  padding:
+    13px;
+
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  gap: 9px;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      50,
+      40,
+      0.25
+    );
+
+  color:
+    #8d352d;
+}
+
+
+.customer-auth__error p {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.4;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.customer-auth__submit {
+  width: 100%;
+
+  min-height:
+    58px;
+
+  padding:
+    0
+    20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  border:
+    1px solid
+    var(--charcoal);
+
+  background:
+    var(--charcoal);
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    9px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.15em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.customer-auth__submit:hover:not(:disabled) {
+  background:
+    var(--antique-gold);
+
+  border-color:
+    var(--antique-gold);
+}
+
+
+.customer-auth__submit:disabled {
+  opacity: 0.6;
+
+  cursor: wait;
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.customer-auth__switch {
+  margin:
+    22px
+    0
+    0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    15px;
+
+  text-align: center;
+}
+
+
+.customer-auth__switch button {
+  margin-left:
+    5px;
+
+  padding:
+    0 0 2px;
+
+  border: 0;
+
+  border-bottom:
+    1px solid
+    var(--antique-gold);
+
+  background:
+    transparent;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    inherit;
+
+  font-size:
+    inherit;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+  max-width: 950px
+) {
+
+  .customer-auth {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(390px, 1fr);
+  }
+
+
+  .customer-auth__brand {
+    padding:
+      40px;
+  }
+
+
+  .customer-auth__logo {
+    width:
+      min(
+        360px,
+        90%
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 780px
+) {
+
+  .customer-auth {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .customer-auth__brand {
+    min-height:
+      600px;
+
+    padding:
+      35px 28px;
+  }
+
+
+  .customer-auth__logo {
+    width:
+      min(
+        350px,
+        85%
+      );
+
+    margin-top:
+      70px;
+  }
+
+
+  .customer-auth__brand-copy {
+    width: 100%;
+  }
+
+
+  .customer-auth__brand-copy h1 {
+    font-size:
+      clamp(
+        44px,
+        12vw,
+        65px
+      );
+  }
+
+
+  .customer-auth__panel {
+    padding:
+      70px 0;
+  }
+
+
+  .customer-auth__content {
+    width:
+      min(
+        470px,
+        calc(
+          100% - 40px
+        )
+      );
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 500px
+) {
+
+  .customer-auth__brand {
+    min-height:
+      520px;
+
+    padding:
+      30px
+      22px;
+  }
+
+
+  .customer-auth__logo {
+    width:
+      min(
+        290px,
+        88%
+      );
+
+    margin-top:
+      55px;
+  }
+
+
+  .customer-auth__brand-copy > p {
+    font-size:
+      7px;
+
+    line-height:
+      1.5;
+  }
+
+
+  .customer-auth__name-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .customer-auth__content h2 {
+    font-size:
+      50px;
+  }
+
+}

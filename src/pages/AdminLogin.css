@@ -1,0 +1,687 @@
+.admin-login {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(420px, 0.65fr);
+
+  background:
+    var(--ivory-light);
+}
+
+
+/* =========================================================
+   BRAND SIDE
+========================================================= */
+
+.admin-login__brand {
+  min-width: 0;
+  min-height: 100vh;
+
+  padding:
+    clamp(40px, 5vw, 80px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background:
+    var(--charcoal);
+
+  color:
+    var(--ivory);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.admin-login__brand-logo {
+  width:
+    clamp(
+      300px,
+      30vw,
+      500px
+    );
+
+  max-width: 70%;
+
+  flex-shrink: 0;
+}
+
+
+.admin-login__brand-logo img {
+  width: 120%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   BRAND COPY
+========================================================= */
+
+.admin-login__brand-copy {
+  width:
+    min(
+      580px,
+      78%
+    );
+
+  margin-top: 50px;
+
+  align-self: flex-end;
+
+  text-align: right;
+}
+
+
+.admin-login__brand-copy h1 {
+  margin: 0;
+margin-top: -100px;
+  color:
+    var(--ivory);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      28px,
+      3vw,
+      46px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+
+.admin-login__brand-copy span {
+  display: block;
+
+  margin-top: 24px;
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    20px;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   LOGIN PANEL
+========================================================= */
+
+.admin-login__panel {
+  width:
+    min(
+      460px,
+      82%
+    );
+
+  margin: auto;
+}
+
+
+.admin-login__icon {
+  color:
+    var(--antique-gold);
+}
+
+
+.admin-login__eyebrow {
+  margin:
+    18px
+    0
+    8px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.2em;
+}
+
+
+.admin-login__panel h2 {
+  margin: 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    58px;
+
+  font-weight:
+    400;
+
+  line-height:
+    0.9;
+}
+
+
+.admin-login__panel h2 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style:
+    italic;
+}
+
+
+.admin-login__intro {
+  max-width:
+    370px;
+
+  margin:
+    22px
+    0
+    35px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    17px;
+
+  line-height:
+    1.45;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.admin-login__form {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    24px;
+}
+
+
+.admin-login__form label > span {
+  display:
+    block;
+
+  margin-bottom:
+    9px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.14em;
+}
+
+
+.admin-login__form input {
+  width: 100%;
+
+  height: 51px;
+
+  padding:
+    0
+    14px;
+
+  border:
+    1px solid
+    rgba(
+      41,
+      40,
+      36,
+      0.18
+    );
+
+  outline: none;
+
+  background:
+    transparent;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    14px;
+
+  box-sizing:
+    border-box;
+}
+
+
+.admin-login__form input:focus {
+  border-color:
+    var(--antique-gold);
+}
+
+
+/* =========================================================
+   PASSWORD FIELD
+========================================================= */
+
+.admin-login__password {
+  position: relative;
+}
+
+
+.admin-login__password input {
+  padding-right:
+    48px;
+}
+
+
+.admin-login__password button {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  transform:
+    translateY(-50%);
+
+  padding: 0;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-login__error {
+  padding:
+    13px;
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  gap:
+    9px;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      50,
+      40,
+      0.25
+    );
+
+  color:
+    #8d352d;
+}
+
+
+.admin-login__error p {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    15px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.admin-login__submit {
+  width: 100%;
+
+  min-height:
+    56px;
+
+  padding:
+    0
+    20px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  border:
+    1px solid
+    var(--charcoal);
+
+  background:
+    var(--charcoal);
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    9px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.15em;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.admin-login__submit:hover:not(:disabled) {
+  background:
+    var(--antique-gold);
+
+  border-color:
+    var(--antique-gold);
+}
+
+
+.admin-login__submit:disabled {
+  opacity:
+    0.6;
+
+  cursor:
+    wait;
+}
+
+
+/* =========================================================
+   SECURE MESSAGE
+========================================================= */
+
+.admin-login__secure {
+  margin-top:
+    18px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    0.13em;
+
+  text-align:
+    center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+  max-width: 1000px
+) {
+
+  .admin-login {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(380px, 0.8fr);
+  }
+
+
+  .admin-login__brand {
+    padding:
+      45px;
+  }
+
+
+  .admin-login__brand-logo {
+    width:
+      clamp(
+        250px,
+        33vw,
+        390px
+      );
+
+    max-width: 82%;
+  }
+
+
+  .admin-login__brand-copy {
+    width: 90%;
+  }
+
+
+  .admin-login__brand-copy h1 {
+    font-size:
+      clamp(
+        27px,
+        3.5vw,
+        39px
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 800px
+) {
+
+  .admin-login {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .admin-login__brand {
+    min-height:
+      620px;
+
+    padding:
+      40px
+      30px;
+
+    justify-content:
+      space-between;
+  }
+
+
+  .admin-login__brand-logo {
+    width:
+      min(
+        360px,
+        85%
+      );
+
+    max-width: none;
+  }
+
+
+  .admin-login__brand-copy {
+    width: 100%;
+
+    margin-top:
+      60px;
+
+    align-self:
+      stretch;
+
+    text-align:
+      right;
+  }
+
+
+  .admin-login__brand-copy h1 {
+    font-size:
+      clamp(
+        27px,
+        7vw,
+        39px
+      );
+
+    line-height:
+      1.05;
+  }
+
+
+  .admin-login__brand-copy span {
+    margin-top:
+      18px;
+
+    font-size:
+      18px;
+  }
+
+
+  .admin-login__panel {
+    width:
+      min(
+        460px,
+        calc(
+          100% - 40px
+        )
+      );
+
+    padding:
+      65px
+      0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 500px
+) {
+
+  .admin-login__brand {
+    min-height:
+      540px;
+
+    padding:
+      32px
+      22px;
+  }
+
+
+  .admin-login__brand-logo {
+    width:
+      min(
+        300px,
+        88%
+      );
+  }
+
+
+  .admin-login__brand-copy h1 {
+    font-size:
+      28px;
+  }
+
+
+  .admin-login__brand-copy span {
+    font-size:
+      17px;
+  }
+
+
+  .admin-login__panel h2 {
+    font-size:
+      50px;
+  }
+
+
+  .admin-login__intro {
+    font-size:
+      16px;
+  }
+
+}

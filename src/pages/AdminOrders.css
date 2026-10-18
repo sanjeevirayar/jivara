@@ -1,0 +1,792 @@
+.admin-orders {
+  min-height: 100vh;
+
+  padding-bottom: 100px;
+
+  background:
+    var(--ivory-light);
+
+  color:
+    var(--charcoal);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-orders__header {
+  min-height: 78px;
+
+  padding:
+    0
+    clamp(25px, 5vw, 75px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory);
+}
+
+
+.admin-orders__header p {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 27px;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.admin-orders__header span {
+  display: block;
+
+  margin-top: 2px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.admin-orders__header button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.15em;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.admin-orders__intro {
+  width:
+    min(1400px, 90%);
+
+  margin:
+    70px auto 40px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+}
+
+
+.admin-orders__eyebrow {
+  margin:
+    0 0 10px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.19em;
+}
+
+
+.admin-orders__intro h1 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      54px,
+      6vw,
+      82px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+
+.admin-orders__intro h1 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.admin-orders__description {
+  max-width: 470px;
+
+  margin:
+    21px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.45;
+}
+
+
+.admin-orders__count {
+  min-width: 180px;
+
+  padding:
+    20px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border:
+    1px solid
+    rgba(
+      155,
+      122,
+      66,
+      0.25
+    );
+
+  color:
+    var(--antique-gold);
+}
+
+
+.admin-orders__count strong {
+  display: block;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 500;
+}
+
+
+.admin-orders__count span {
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.admin-orders__controls {
+  width:
+    min(1400px, 90%);
+
+  margin:
+    0 auto 28px;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+}
+
+
+.admin-orders__search {
+  width:
+    min(560px, 100%);
+
+  height: 52px;
+
+  padding:
+    0 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory);
+}
+
+
+.admin-orders__search svg {
+  color:
+    var(--antique-gold);
+}
+
+
+.admin-orders__search input {
+  width: 100%;
+
+  border: 0;
+
+  outline: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 12px;
+}
+
+
+.admin-orders__refresh {
+  min-height: 52px;
+
+  padding:
+    0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.14em;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ORDER LIST
+========================================================= */
+
+.admin-orders__list {
+  width:
+    min(1400px, 90%);
+
+  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+.admin-order-card {
+  min-height: 175px;
+
+  padding: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    110px
+    minmax(0, 1fr)
+    auto;
+
+  gap: 24px;
+
+  align-items: center;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    var(--ivory);
+}
+
+
+.admin-order-card__image {
+  width: 110px;
+
+  height: 138px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    #eee9dd;
+
+  color:
+    var(--antique-gold);
+}
+
+
+.admin-order-card__image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.admin-order-card__top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+}
+
+
+.admin-order-card__number {
+  margin:
+    0 0 5px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+.admin-order-card__top h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 29px;
+
+  font-weight: 400;
+}
+
+
+.admin-order-card__status {
+  padding:
+    7px 10px;
+
+  border:
+    1px solid
+    rgba(
+      155,
+      122,
+      66,
+      0.25
+    );
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.11em;
+
+  text-transform: uppercase;
+}
+
+
+.admin-order-card__product {
+  margin-top: 12px;
+}
+
+
+.admin-order-card__product strong {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.admin-order-card__product span {
+  margin-left: 8px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 14px;
+}
+
+
+.admin-order-card__meta {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+.admin-order-card__meta span {
+  display: block;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.admin-order-card__meta p {
+  margin:
+    6px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+}
+
+
+.admin-order-card__open {
+  min-width: 140px;
+
+  min-height: 48px;
+
+  padding:
+    0 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 14px;
+
+  border:
+    1px solid
+    var(--charcoal);
+
+  background:
+    var(--charcoal);
+
+  color: white;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing:
+    0.12em;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   STATES
+========================================================= */
+
+.admin-orders__loading,
+.admin-orders__empty {
+  width:
+    min(1400px, 90%);
+
+  min-height: 250px;
+
+  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    var(--border);
+
+  color:
+    var(--antique-gold);
+
+  text-align: center;
+}
+
+
+.admin-orders__loading p,
+.admin-orders__empty p {
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
+
+.admin-orders__empty h2 {
+  margin:
+    13px 0 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+}
+
+
+.admin-orders__error {
+  width:
+    min(1400px, 90%);
+
+  margin:
+    0 auto 20px;
+
+  padding: 14px;
+
+  display: flex;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      50,
+      40,
+      0.25
+    );
+
+  color:
+    #8d352d;
+}
+
+
+.admin-orders__error p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 850px
+) {
+
+  .admin-orders__intro {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .admin-orders__controls {
+    flex-direction:
+      column;
+  }
+
+
+  .admin-orders__search {
+    width: 100%;
+  }
+
+
+  .admin-order-card {
+    grid-template-columns:
+      90px
+      minmax(0, 1fr);
+  }
+
+
+  .admin-order-card__image {
+    width: 90px;
+
+    height: 120px;
+  }
+
+
+  .admin-order-card__open {
+    grid-column:
+      1 / -1;
+
+    width: 100%;
+  }
+
+
+  .admin-order-card__meta {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+@media (
+  max-width: 540px
+) {
+
+  .admin-order-card {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .admin-order-card__image {
+    width: 100%;
+
+    height: 260px;
+  }
+
+
+  .admin-order-card__top {
+    flex-direction:
+      column;
+  }
+
+}

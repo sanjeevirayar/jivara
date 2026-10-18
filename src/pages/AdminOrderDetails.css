@@ -1,0 +1,1031 @@
+.admin-order-detail {
+  min-height: 100vh;
+  padding-bottom: 100px;
+
+  background: var(--ivory-light);
+  color: var(--charcoal);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-order-detail__header {
+  min-height: 78px;
+
+  padding:
+    0
+    clamp(25px, 5vw, 75px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  background: var(--ivory);
+}
+
+
+.admin-order-detail__header p {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 27px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.admin-order-detail__header span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+.admin-order-detail__header button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.admin-order-detail__container {
+  width:
+    min(1400px, 90%);
+
+  margin: auto;
+}
+
+
+.admin-order-detail__back {
+  margin-top: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.admin-order-detail__intro {
+  margin:
+    60px 0 45px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+}
+
+
+.admin-order-detail__eyebrow {
+  margin:
+    0 0 9px;
+
+  color: var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+}
+
+
+.admin-order-detail__intro h1 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      42px,
+      5vw,
+      70px
+    );
+
+  font-weight: 400;
+}
+
+
+.admin-order-detail__intro > div > p:last-child {
+  margin:
+    9px 0 0;
+
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.admin-order-detail__status {
+  min-width: 260px;
+}
+
+
+.admin-order-detail__status label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.14em;
+}
+
+
+.admin-order-detail__status select {
+  width: 100%;
+
+  height: 50px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid
+    var(--antique-gold);
+
+  background: var(--ivory);
+
+  color: var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  outline: none;
+}
+
+
+.admin-order-detail__status > span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.admin-order-detail__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+.admin-detail-card,
+.admin-payment-card {
+  padding: 30px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background: var(--ivory);
+}
+
+
+.admin-detail-card--full {
+  margin-top: 20px;
+}
+
+
+.admin-detail-card__heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  color: var(--antique-gold);
+}
+
+
+.admin-detail-card__heading p {
+  margin:
+    0 0 4px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.admin-detail-card__heading h2 {
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+}
+
+
+.admin-detail-card__rows {
+  margin-top: 25px;
+}
+
+
+.admin-detail-card__rows > div {
+  padding:
+    12px 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.admin-detail-card__rows span,
+.admin-detail-card__address,
+.admin-order-item span,
+.admin-payment-card span {
+  color: var(--soft-charcoal);
+}
+
+
+.admin-detail-card__rows span,
+.admin-order-item__facts span,
+.admin-order-item__custom span,
+.admin-order-item__dates span,
+.admin-payment-card__grid span,
+.admin-payment-card__reference span {
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.admin-detail-card__rows strong {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.admin-detail-card__address {
+  margin-top: 25px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.admin-order-items {
+  margin-top: 45px;
+}
+
+
+.admin-order-items__heading {
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  color: var(--antique-gold);
+}
+
+
+.admin-order-items__heading p {
+  margin:
+    0 0 4px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.admin-order-items__heading h2 {
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+}
+
+
+.admin-order-item {
+  margin-bottom: 22px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background: var(--ivory);
+}
+
+
+.admin-order-item__top {
+  display: grid;
+
+  grid-template-columns:
+    150px
+    minmax(0, 1fr);
+
+  gap: 26px;
+}
+
+
+.admin-order-item__image {
+  width: 150px;
+
+  aspect-ratio: 4 / 5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+
+  color: var(--antique-gold);
+}
+
+
+.admin-order-item__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.admin-order-item__info > p {
+  margin:
+    0 0 5px;
+
+  color: var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.admin-order-item__info h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 35px;
+
+  font-weight: 400;
+}
+
+
+.admin-order-item__facts {
+  margin-top: 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+
+.admin-order-item__facts strong,
+.admin-order-item__dates strong,
+.admin-order-item__custom strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ITEM SECTIONS
+========================================================= */
+
+.admin-order-item__section {
+  margin-top: 28px;
+
+  padding-top: 24px;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.admin-order-item__section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: var(--antique-gold);
+}
+
+
+.admin-order-item__section-heading p {
+  margin: 0;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.admin-order-item__section-heading span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MEASUREMENTS
+========================================================= */
+
+.admin-measurement-pieces {
+  margin-top: 20px;
+}
+
+
+.admin-measurement-piece {
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  background:
+    rgba(
+      155,
+      122,
+      66,
+      0.04
+    );
+}
+
+
+.admin-measurement-piece h4 {
+  margin:
+    0 0 15px;
+
+  color: var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.admin-measurement-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+.admin-measurement-grid > div {
+  padding: 12px;
+
+  border:
+    1px solid
+    var(--border);
+
+  background: var(--ivory-light);
+}
+
+
+.admin-measurement-grid span {
+  display: block;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 0.08em;
+}
+
+
+.admin-measurement-grid strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   CUSTOMISATION + DATES
+========================================================= */
+
+.admin-order-item__custom,
+.admin-order-item__dates {
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+.admin-order-item__custom p {
+  margin:
+    7px 0 0;
+
+  color: var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+.admin-order-item__empty {
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.admin-detail-card__notes {
+  margin:
+    22px 0 0;
+
+  color: var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.admin-payment-card {
+  margin-top: 20px;
+}
+
+
+.admin-payment-card__grid {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+.admin-payment-card__grid strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+
+.admin-payment-card__reference {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.admin-payment-card__reference p {
+  margin:
+    6px 0 0;
+
+  overflow-wrap: anywhere;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-order-detail__error {
+  margin-bottom: 20px;
+
+  padding: 14px;
+
+  display: flex;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    rgba(
+      145,
+      50,
+      40,
+      0.25
+    );
+
+  color: #8d352d;
+}
+
+
+.admin-order-detail__error p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   STATES
+========================================================= */
+
+.admin-order-detail--state {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: var(--antique-gold);
+
+  text-align: center;
+}
+
+
+.admin-order-detail--state h1 {
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-weight: 400;
+}
+
+
+.admin-order-detail--state p {
+  color: var(--soft-charcoal);
+}
+
+
+.admin-order-detail--state a {
+  color: var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .admin-order-detail__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-measurement-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .admin-payment-card__grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .admin-payment-card__reference {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (
+  max-width: 700px
+) {
+
+  .admin-order-detail__intro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .admin-order-detail__status {
+    width: 100%;
+  }
+
+
+  .admin-order-item__top {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-order-item__image {
+    width: 100%;
+    max-height: 500px;
+  }
+
+
+  .admin-order-item__facts {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .admin-measurement-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .admin-order-item__custom,
+  .admin-order-item__dates {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (
+  max-width: 480px
+) {
+
+  .admin-order-item {
+    padding: 19px;
+  }
+
+
+  .admin-measurement-grid,
+  .admin-payment-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+}

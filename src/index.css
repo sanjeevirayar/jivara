@@ -1,0 +1,6452 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap");
+
+
+/* =========================================================
+   JIVARA — GLOBAL
+========================================================= */
+
+:root {
+  --ivory: #f8f5ed;
+  --ivory-light: #fcfaf5;
+  --charcoal: #292824;
+  --soft-charcoal: #59564f;
+
+  --antique-gold: #9b7a42;
+  --gold-light: #c8ad77;
+
+  --border: rgba(41, 40, 36, 0.14);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  background: var(--ivory-light);
+
+  color: var(--charcoal);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   SEARCH OVERLAY
+========================================================= */
+
+.header-search {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+}
+
+
+/* =========================================================
+   BACKDROP
+========================================================= */
+
+.header-search__backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  background:
+    rgba(
+      20,
+      19,
+      17,
+      0.52
+    );
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   SEARCH PANEL
+========================================================= */
+
+.header-search__panel {
+  width:
+    min(
+      680px,
+      100%
+    );
+
+  height: 100vh;
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  padding:
+    clamp(
+      30px,
+      3.5vw,
+      50px
+    );
+
+  box-sizing:
+    border-box;
+
+  overflow-y: auto;
+
+  background:
+    var(--ivory-light);
+
+  box-shadow:
+    -20px 0 60px
+    rgba(
+      0,
+      0,
+      0,
+      0.12
+    );
+}
+
+
+/* =========================================================
+   SEARCH TOP
+========================================================= */
+
+.header-search__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+}
+
+
+.header-search__top p {
+  margin: 0;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing:
+    0.2em;
+}
+
+
+.header-search__top button {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border:
+    1px solid
+    var(--border);
+
+  background:
+    transparent;
+
+  color:
+    var(--charcoal);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.header-search__top button:hover {
+  color:
+    var(--antique-gold);
+
+  border-color:
+    rgba(
+      155,
+      122,
+      66,
+      0.45
+    );
+
+  background:
+    rgba(
+      155,
+      122,
+      66,
+      0.04
+    );
+}
+
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+.header-search__form {
+  min-height: 56px;
+
+  margin-top: 34px;
+
+  padding:
+    0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      41,
+      40,
+      36,
+      0.75
+    );
+
+  color:
+    var(--antique-gold);
+}
+
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.header-search__form > svg {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  color:
+    var(--antique-gold);
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.header-search__form input {
+  min-width: 0;
+
+  flex: 1;
+
+  padding:
+    10px 0;
+
+  border: 0;
+
+  outline: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      20px,
+      1.6vw,
+      24px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  -webkit-appearance: none;
+
+  appearance: none;
+}
+
+
+.header-search__form input::placeholder {
+  color:
+    rgba(
+      89,
+      86,
+      79,
+      0.48
+    );
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   REMOVE BROWSER'S NATIVE SEARCH X
+========================================================= */
+
+.header-search__form
+input[type="search"]::-webkit-search-decoration,
+
+.header-search__form
+input[type="search"]::-webkit-search-cancel-button,
+
+.header-search__form
+input[type="search"]::-webkit-search-results-button,
+
+.header-search__form
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+
+  -webkit-appearance: none;
+}
+
+
+/* =========================================================
+   CUSTOM CLEAR BUTTON
+========================================================= */
+
+.header-search__form > button {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    var(--soft-charcoal);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.header-search__form > button:hover {
+  color:
+    var(--antique-gold);
+}
+
+
+/* =========================================================
+   SEARCH INTRO
+========================================================= */
+
+.header-search__empty {
+  padding:
+    30px 0;
+}
+
+
+.header-search__empty p {
+  max-width:
+    390px;
+
+  margin: 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SEARCH RESULTS
+========================================================= */
+
+.header-search__results {
+  margin-top:
+    20px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SEARCH RESULT
+========================================================= */
+
+.header-search__result {
+  padding:
+    14px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    68px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  color:
+    var(--charcoal);
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.2s ease;
+}
+
+
+.header-search__result:hover {
+  opacity: 0.78;
+}
+
+
+/* =========================================================
+   RESULT IMAGE
+========================================================= */
+
+.header-search__result-image {
+  width: 68px;
+  height: 88px;
+
+  overflow: hidden;
+
+  background:
+    #eee8dd;
+}
+
+
+.header-search__result-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   RESULT COPY
+========================================================= */
+
+.header-search__result-copy {
+  min-width: 0;
+}
+
+
+.header-search__result-copy span {
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.header-search__result-copy h3 {
+  margin:
+    5px 0 0;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      17px,
+      1.4vw,
+      20px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+
+.header-search__result-copy p {
+  margin:
+    5px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   RESULT ARROW
+========================================================= */
+
+.header-search__result > svg {
+  flex-shrink: 0;
+
+  color:
+    var(--charcoal);
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.header-search__result:hover > svg {
+  color:
+    var(--antique-gold);
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   VIEW ALL RESULTS
+========================================================= */
+
+.header-search__all {
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-top:
+    22px;
+
+  padding:
+    0 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  border:
+    1px solid
+    var(--charcoal);
+
+  background:
+    var(--charcoal);
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.14em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.header-search__all:hover {
+  background:
+    transparent;
+
+  color:
+    var(--charcoal);
+}
+
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.header-search__no-results {
+  padding:
+    42px 0;
+
+  text-align: center;
+}
+
+
+.header-search__no-results p {
+  margin: 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+}
+
+
+.header-search__no-results strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+.header-search__no-results span {
+  display: block;
+
+  margin-top:
+    10px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SEARCH PANEL SCROLLBAR
+========================================================= */
+
+.header-search__panel {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    rgba(
+      89,
+      86,
+      79,
+      0.4
+    )
+    transparent;
+}
+
+
+.header-search__panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.header-search__panel::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+
+.header-search__panel::-webkit-scrollbar-thumb {
+  background:
+    rgba(
+      89,
+      86,
+      79,
+      0.32
+    );
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .header-search__panel {
+    width:
+      min(
+        620px,
+        100%
+      );
+
+    padding:
+      34px 30px;
+  }
+
+
+  .header-search__form input {
+    font-size:
+      21px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .header-search__panel {
+    width: 100%;
+
+    height: 100vh;
+
+    min-height:
+      100vh;
+
+    padding:
+      26px 20px;
+  }
+
+
+  .header-search__top button {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .header-search__form {
+    min-height: 52px;
+
+    margin-top:
+      26px;
+
+    padding:
+      0 7px;
+  }
+
+
+  .header-search__form input {
+    font-size:
+      19px;
+  }
+
+
+  .header-search__empty {
+    padding:
+      25px 0;
+  }
+
+
+  .header-search__empty p {
+    font-size: 14px;
+  }
+
+
+  .header-search__result {
+    grid-template-columns:
+      60px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 12px;
+
+    padding:
+      12px 0;
+  }
+
+
+  .header-search__result-image {
+    width: 60px;
+    height: 78px;
+  }
+
+
+  .header-search__result-copy h3 {
+    font-size:
+      17px;
+  }
+
+
+  .header-search__result-copy p {
+    font-size:
+      13px;
+  }
+
+
+  .header-search__all {
+    min-height: 46px;
+  }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  width: 100%;
+
+  background: var(--ivory-light);
+
+  border-bottom: 1px solid var(--border);
+
+  position: relative;
+
+  z-index: 100;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement-bar {
+  min-height: 39px;
+
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  background: var(--charcoal);
+
+  color: var(--ivory);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.055em;
+
+  text-align: center;
+}
+
+
+.announcement-divider {
+  color: var(--antique-gold);
+}
+
+
+.announcement-bar a {
+  color: inherit;
+
+  text-decoration: underline;
+
+  text-decoration-color: var(--antique-gold);
+
+  text-underline-offset: 4px;
+
+  transition: color 0.25s ease;
+}
+
+
+.announcement-bar a:hover {
+  color: var(--antique-gold);
+}
+
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.header-main {
+  width: 100%;
+
+  min-height: 108px;
+
+  padding: 14px 4% 9px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   SHIP TO
+========================================================= */
+
+.header-left {
+  display: flex;
+
+  align-items: flex-end;
+
+  height: 100%;
+}
+
+
+.ship-to {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 7px;
+
+  color: var(--soft-charcoal);
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.ship-to:hover {
+  color: var(--antique-gold);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.header-logo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.header-logo img {
+  display: block;
+  width: 150px;
+  max-height: 200px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin-bottom: 10px;
+}
+
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.header-icon {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--charcoal);
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.header-icon:hover {
+  color: var(--antique-gold);
+
+  transform: translateY(-1px);
+}
+
+
+/* BAG COUNT */
+
+.bag-button {
+  position: relative;
+}
+
+
+.bag-count {
+  position: absolute;
+
+  top: -8px;
+  right: -10px;
+
+  min-width: 15px;
+  height: 15px;
+
+  padding: 0 3px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: var(--antique-gold);
+
+  color: #ffffff;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+  min-height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 38px;
+
+  padding: 0 30px;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.main-nav a {
+  position: relative;
+
+  padding: 15px 0 14px;
+
+  color: var(--charcoal);
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 1.45px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.main-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 9px;
+  left: 50%;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--antique-gold);
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.main-nav a:hover {
+  color: var(--antique-gold);
+}
+
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .main-nav {
+    gap: 23px;
+  }
+
+
+  .main-nav a {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .announcement-bar {
+    font-size: 8px;
+
+    letter-spacing: 1.4px;
+
+    gap: 9px;
+  }
+
+
+  .header-main {
+    min-height: 82px;
+
+    padding: 10px 18px;
+
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+
+  .header-logo img {
+    width: 110px;
+
+    max-height: 62px;
+  }
+
+
+  .header-left {
+    display: none;
+  }
+
+
+  .header-actions {
+    grid-column: 3;
+
+    gap: 13px;
+  }
+
+
+  .header-actions .header-icon:nth-child(2),
+  .header-actions .header-icon:nth-child(3) {
+    display: none;
+  }
+
+
+  .main-nav {
+    overflow-x: auto;
+
+    justify-content: flex-start;
+
+    gap: 24px;
+
+    padding: 0 18px;
+
+    scrollbar-width: none;
+  }
+
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .main-nav a {
+    flex-shrink: 0;
+  }
+
+}
+
+/* =========================================================
+   HEADER ICONS
+========================================================= */
+
+.header-icon {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--charcoal);
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.header-icon:hover {
+  color: var(--antique-gold);
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.wishlist-button {
+  position: relative;
+}
+
+
+.wishlist-button svg {
+  transition:
+    fill 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.wishlist-button:hover svg {
+  transform:
+    scale(1.06);
+}
+
+
+.wishlist-count {
+  position: absolute;
+
+  top: -9px;
+  right: -10px;
+
+  min-width: 16px;
+  height: 16px;
+
+  padding:
+    0 4px;
+
+  box-sizing:
+    border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    var(--antique-gold);
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   BAG COUNT
+========================================================= */
+
+.bag-button {
+  position: relative;
+}
+
+
+.bag-count {
+  position: absolute;
+
+  top: -9px;
+  right: -10px;
+
+  min-width: 16px;
+  height: 16px;
+
+  padding:
+    0 4px;
+
+  box-sizing:
+    border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    var(--antique-gold);
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   JIVARA HERO
+========================================================= */
+
+.jv-hero {
+  position: relative;
+
+  width: 100%;
+
+  height: clamp(460px, 55vw, 550px);
+
+  display: grid;
+  grid-template-columns: 52% 48%;
+
+  overflow: hidden;
+
+  background: #f8f5ed;
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.jv-hero__image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eee7dc;
+}
+
+
+/* =========================================================
+   BLURRED BACKGROUND IMAGE
+========================================================= */
+
+.jv-hero__image-bg {
+  position: absolute;
+
+  inset: -25px;
+
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter: blur(24px);
+
+  transform: scale(1.08);
+
+  opacity: 0.42;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+   KEEP FULL PHOTO VISIBLE
+========================================================= */
+
+.jv-hero__image-main {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  filter: none;
+}
+
+
+/* =========================================================
+   IMAGE → CONTENT FADE
+========================================================= */
+
+.jv-hero__image-fade {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(to right,
+      transparent 0%,
+      transparent 74%,
+      rgba(248, 245, 237, 0.25) 88%,
+      #f8f5ed 100%);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.jv-hero__content {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding:
+    clamp(34px, 3.5vw, 52px) clamp(34px, 5vw, 8%);
+
+  background:
+    radial-gradient(circle at 45% 45%,
+      #fffdf8 0%,
+      #f8f5ed 65%,
+      #f1eadf 100%);
+}
+
+
+
+/* =========================================================
+   SUBTLE DOT TEXTURE
+========================================================= */
+
+.jv-hero__content::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle,
+      rgba(155, 122, 66, 0.25) 1px,
+      transparent 1px);
+
+  background-size: 30px 30px;
+
+  opacity: 0.13;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.jv-hero__copy {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 640px;
+}
+
+
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.jv-hero__eyebrow {
+  margin: 0 0 13px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(15px, 1.2vw, 19px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.28em;
+
+  color: #292824;
+}
+
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.jv-hero__title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(46px, 3.4vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.035em;
+
+  color: #9b7a42;
+
+  text-transform: uppercase;
+}
+
+
+.jv-hero__title span {
+  display: block;
+
+  white-space: nowrap;
+}
+
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.jv-hero__divider {
+  width: 82%;
+
+  max-width: 430px;
+
+  margin-top: 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.jv-hero__divider span {
+  height: 1px;
+
+  flex: 1;
+
+  background: rgba(155, 122, 66, 0.42);
+}
+
+
+.jv-hero__divider b {
+  color: #9b7a42;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.jv-hero__description {
+  max-width: 560px;
+
+  margin-top: 21px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(17px, 1.25vw, 20px);
+
+  line-height: 1.45;
+
+  color: #292824;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.jv-hero__button {
+  width: min(320px, 100%);
+
+  min-height: 54px;
+
+  margin-top: 26px;
+
+  padding: 14px 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #292824;
+
+  color: #ffffff;
+
+  border: 1px solid #292824;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.025em;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.jv-hero__button:hover {
+  background: #9b7a42;
+
+  border-color: #9b7a42;
+
+  transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.jv-hero__decor {
+  position: absolute;
+
+  color: rgba(155, 122, 66, 0.07);
+
+  pointer-events: none;
+}
+
+
+.jv-hero__decor--top {
+  top: -60px;
+
+  right: -25px;
+
+  font-size: 170px;
+}
+
+
+.jv-hero__decor--bottom {
+  left: -40px;
+
+  bottom: -85px;
+
+  font-size: 190px;
+}
+
+
+/* =========================================================
+   HERO SLIDE TRANSITIONS
+========================================================= */
+
+.jv-slide-fade {
+  animation: jvImageFade 0.8s ease;
+}
+
+
+.jv-copy-fade {
+  animation: jvCopyFade 0.7s ease;
+}
+
+
+@keyframes jvImageFade {
+
+  from {
+    opacity: 0;
+
+    transform: scale(1.025);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes jvCopyFade {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.jv-hero__dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 26px;
+}
+
+
+.jv-hero__dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(41, 40, 36, 0.28);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    border-radius 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.jv-hero__dot--active {
+  width: 27px;
+
+  border-radius: 20px;
+
+  background: #9b7a42;
+}
+
+/* =========================================================
+   HERO NAVIGATION ARROWS
+========================================================= */
+
+.jv-hero__arrow {
+  position: absolute;
+
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(41, 40, 36, 0.08);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  color: var(--charcoal);
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.jv-hero__arrow:hover {
+  color: var(--antique-gold);
+
+  background: #ffffff;
+
+  transform:
+    translateY(-50%) scale(1.05);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.jv-hero__arrow--left {
+  left: 22px;
+}
+
+
+.jv-hero__arrow--right {
+  right: 22px;
+}
+
+
+/* =========================================================
+   HERO BENEFITS BAR
+========================================================= */
+
+.hero-benefits {
+  width: 100%;
+
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: var(--ivory-light);
+
+  border-top:
+    1px solid rgba(155, 122, 66, 0.12);
+
+  border-bottom:
+    1px solid rgba(41, 40, 36, 0.1);
+}
+
+
+/* =========================================================
+   BENEFITS MOVING TRACK
+========================================================= */
+
+.hero-benefits__track {
+  width: max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  animation:
+    heroBenefitsScroll 32s linear infinite;
+
+  will-change: transform;
+}
+
+
+.hero-benefits:hover .hero-benefits__track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   BENEFIT ITEM
+========================================================= */
+
+.hero-benefits__item {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 30px;
+
+  white-space: nowrap;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.hero-benefits__icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--antique-gold);
+}
+
+
+.hero-benefits__diamond {
+  margin-left: 22px;
+
+  color: var(--antique-gold);
+
+  font-size: 10px;
+}
+
+
+/* LEFT → RIGHT */
+
+@keyframes heroBenefitsScroll {
+
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   EXISTING FIRST BENEFITS BAR
+========================================================= */
+
+.jv-benefits {
+  width: 100%;
+
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #fcfaf5;
+
+  border-top:
+    1px solid rgba(155, 122, 66, 0.12);
+
+  border-bottom:
+    1px solid rgba(41, 40, 36, 0.1);
+}
+
+
+.jv-benefits__track {
+  width: max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  animation:
+    jivaraBenefitScroll 32s linear infinite;
+
+  will-change: transform;
+}
+
+
+.jv-benefits:hover .jv-benefits__track {
+  animation-play-state: paused;
+}
+
+
+.jv-benefits__item {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 30px;
+
+  white-space: nowrap;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  color: #292824;
+}
+
+
+.jv-benefits__icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #9b7a42;
+}
+
+
+.jv-benefits__diamond {
+  margin-left: 22px;
+
+  color: #9b7a42;
+
+  font-size: 10px;
+}
+
+
+@keyframes jivaraBenefitScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP
+========================================================= */
+
+@media (max-width: 1250px) {
+
+  .jv-hero {
+    height: clamp(450px, 42vw, 520px);
+
+    grid-template-columns: 52% 48%;
+  }
+
+
+  .jv-hero__content {
+    padding:
+      32px 6%;
+  }
+
+
+  .jv-hero__title {
+    font-size:
+      clamp(40px, 3.5vw, 56px);
+  }
+
+
+  .jv-hero__eyebrow {
+    font-size: 15px;
+  }
+
+
+  .jv-hero__description {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .jv-hero {
+    height:
+      clamp(420px, 48vw, 490px);
+
+    grid-template-columns:
+      50% 50%;
+  }
+
+
+  .jv-hero__content {
+    padding:
+      30px 5%;
+  }
+
+
+  .jv-hero__eyebrow {
+    font-size: 14px;
+
+    letter-spacing: 0.22em;
+  }
+
+
+  .jv-hero__title {
+    font-size:
+      clamp(38px, 4.5vw, 48px);
+  }
+
+
+  .jv-hero__description {
+    font-size: 16px;
+  }
+
+
+  .jv-hero__button {
+    width:
+      min(250px, 100%);
+
+    font-size: 15px;
+
+    padding:
+      12px 19px;
+  }
+
+
+  .jv-hero__decor--top {
+    font-size: 140px;
+  }
+
+
+  .jv-hero__decor--bottom {
+    font-size: 150px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .jv-hero {
+    height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  /* =======================================================
+     IMAGE
+  ======================================================= */
+
+  .jv-hero__image {
+    width: 100%;
+
+    height:
+      clamp(320px, 78vw, 420px);
+
+    flex-shrink: 0;
+  }
+
+
+  .jv-hero__image-main {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+
+  .jv-hero__image-bg {
+    inset: -20px;
+
+    width:
+      calc(100% + 40px);
+
+    height:
+      calc(100% + 40px);
+  }
+
+
+  .jv-hero__image-fade {
+    background:
+      linear-gradient(to bottom,
+        transparent 65%,
+        rgba(248, 245, 237, 0.35) 86%,
+        #f8f5ed 100%);
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .jv-hero__content {
+    width: 100%;
+
+    min-height: 360px;
+
+    height: auto;
+
+    padding:
+      38px clamp(20px, 6vw, 32px) 46px;
+  }
+
+
+  .jv-hero__copy {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+
+  .jv-hero__eyebrow {
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .jv-hero__title {
+    font-size:
+      clamp(40px, 11vw, 56px);
+
+    line-height: 0.9;
+  }
+
+
+  .jv-hero__title span {
+    white-space: normal;
+  }
+
+
+  .jv-hero__divider {
+    width:
+      min(90%, 390px);
+
+    margin-top: 20px;
+  }
+
+
+  .jv-hero__description {
+    max-width: 500px;
+
+    font-size: 17px;
+  }
+
+
+  .jv-hero__button {
+    width:
+      min(100%, 300px);
+  }
+
+
+  .jv-hero__dots {
+    margin-top: 20px;
+  }
+
+
+  /* =======================================================
+     DECORATION
+  ======================================================= */
+
+  .jv-hero__decor--top {
+    top: -35px;
+
+    right: -20px;
+
+    font-size: 120px;
+  }
+
+
+  .jv-hero__decor--bottom {
+    left: -30px;
+
+    bottom: -60px;
+
+    font-size: 130px;
+  }
+
+
+  /* =======================================================
+     ARROWS
+  ======================================================= */
+
+  .jv-hero__arrow {
+    width: 42px;
+    height: 42px;
+
+    top:
+      clamp(160px, 39vw, 210px);
+  }
+
+
+  .jv-hero__arrow--left {
+    left: 12px;
+  }
+
+
+  .jv-hero__arrow--right {
+    right: 12px;
+  }
+
+
+  /* =======================================================
+     BENEFITS
+  ======================================================= */
+
+  .hero-benefits {
+    height: 54px;
+  }
+
+
+  .hero-benefits__item {
+    padding:
+      0 22px;
+
+    font-size: 15px;
+  }
+
+
+  .hero-benefits__icon svg {
+    width: 21px;
+
+    height: 21px;
+  }
+
+
+  .jv-benefits {
+    height: 54px;
+  }
+
+
+  .jv-benefits__item {
+    padding:
+      0 22px;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .jv-hero__image {
+    height:
+      clamp(290px, 90vw, 380px);
+  }
+
+
+  .jv-hero__content {
+    min-height: 340px;
+
+    padding:
+      34px 18px 42px;
+  }
+
+
+  .jv-hero__eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .jv-hero__title {
+    font-size:
+      clamp(37px, 11.5vw, 50px);
+  }
+
+
+  .jv-hero__description {
+    font-size: 16px;
+  }
+
+
+  .jv-hero__button {
+    width: 100%;
+
+    max-width: none;
+  }
+
+
+  .jv-hero__arrow {
+    width: 38px;
+    height: 38px;
+
+    top:
+      clamp(145px, 45vw, 190px);
+  }
+
+
+  .jv-hero__arrow--left {
+    left: 9px;
+  }
+
+
+  .jv-hero__arrow--right {
+    right: 9px;
+  }
+
+
+  .jv-hero__dot {
+    width: 5px;
+    height: 5px;
+  }
+
+
+  .jv-hero__dot--active {
+    width: 20px;
+  }
+
+
+  .hero-benefits__item {
+    padding:
+      0 18px;
+
+    font-size: 14px;
+  }
+
+}
+
+/* =========================================================
+   COLLECTIONS PREVIEW
+========================================================= */
+
+.collections-preview {
+  width: 100%;
+
+  padding: 90px 5% 100px;
+
+  background: var(--ivory-light);
+}
+
+/* =========================================================
+   HERO BENEFITS BAR
+   MOVES LEFT → RIGHT
+========================================================= */
+
+.hero-benefits {
+  width: 100%;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: var(--ivory-light);
+
+  border-top:
+    1px solid rgba(155, 122, 66, 0.12);
+
+  border-bottom:
+    1px solid rgba(41, 40, 36, 0.10);
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.hero-benefits__track {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  /*
+    IMPORTANT:
+    This animation runs in the opposite direction
+    to the first benefits bar.
+  */
+
+  animation:
+    heroBenefitsScroll 32s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* pause on hover */
+
+.hero-benefits:hover .hero-benefits__track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   EACH BENEFIT
+========================================================= */
+
+.hero-benefits__item {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 30px;
+
+  white-space: nowrap;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.hero-benefits__icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--antique-gold);
+}
+
+
+/* =========================================================
+   SEPARATOR
+========================================================= */
+
+.hero-benefits__diamond {
+  margin-left: 22px;
+
+  color: var(--antique-gold);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   LEFT → RIGHT ANIMATION
+========================================================= */
+
+@keyframes heroBenefitsScroll {
+
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .hero-benefits {
+    height: 54px;
+  }
+
+
+  .hero-benefits__item {
+    padding: 0 22px;
+
+    font-size: 15px;
+  }
+
+
+  .hero-benefits__icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.collections-preview__heading {
+  max-width: 720px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+
+.collections-preview__eyebrow {
+  margin-bottom: 10px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+}
+
+
+.collections-preview__heading h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(42px, 4vw, 64px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--charcoal);
+}
+
+
+.collections-preview__intro {
+  max-width: 580px;
+
+  margin: 18px auto 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  color: var(--soft-charcoal);
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.collections-preview__grid {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   COLLECTION CARD
+========================================================= */
+
+.collection-card {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  background: #eee8dc;
+}
+
+
+.collection-card__image {
+  position: relative;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+}
+
+
+.collection-card__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+
+.collection-card:hover .collection-card__image img {
+  transform: scale(1.035);
+}
+
+
+/* subtle bottom fade */
+
+.collection-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(to top,
+      rgba(25, 23, 20, 0.55) 0%,
+      rgba(25, 23, 20, 0.05) 38%,
+      transparent 60%);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.collection-card__content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 26px 24px;
+
+  color: #ffffff;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+
+.collection-card__arrow {
+  font-size: 23px;
+
+  transform: translateX(0);
+
+  transition: transform 0.3s ease;
+}
+
+
+.collection-card:hover .collection-card__arrow {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.collections-preview__footer {
+  margin-top: 45px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.collections-preview__button {
+  padding: 14px 30px;
+
+  border: 1px solid var(--charcoal);
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.collections-preview__button:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+
+  border-color: var(--charcoal);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .collections-preview {
+    padding: 70px 4% 80px;
+  }
+
+
+  .collections-preview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .collections-preview {
+    padding: 60px 18px 70px;
+  }
+
+
+  .collections-preview__heading {
+    margin-bottom: 35px;
+  }
+
+
+  .collections-preview__heading h2 {
+    font-size: 42px;
+  }
+
+
+  .collections-preview__intro {
+    font-size: 17px;
+  }
+
+
+  .collections-preview__grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .collection-card__image {
+    aspect-ratio: 4 / 4.7;
+  }
+
+
+  .collection-card__content {
+    padding: 22px 20px;
+
+    font-size: 23px;
+  }
+
+}
+
+/* =========================================================
+   MADE FOR TWO
+========================================================= */
+
+.couple-feature {
+  width: 100%;
+
+  padding: 95px 3.5% 105px;
+
+  background: var(--ivory-light);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.couple-feature__heading {
+  width: 100%;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+
+.couple-feature__heading h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 36px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  color: var(--charcoal);
+}
+
+
+.couple-feature__heading p {
+  margin: 15px 0 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  color: var(--charcoal);
+}
+
+
+/* =========================================================
+   TWO LARGE IMAGES
+========================================================= */
+
+.couple-feature__gallery {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.couple-feature__image {
+  position: relative;
+
+  width: 100%;
+
+  height: clamp(500px, 32vw, 620px);
+
+  display: block;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+}
+
+
+/* =========================================================
+   MADE FOR TWO — IMAGE HANDLING
+========================================================= */
+
+.couple-feature__image {
+  position: relative;
+
+  width: 100%;
+  height: clamp(500px, 32vw, 620px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+}
+
+
+/* blurred image fills unused space */
+
+.couple-feature__image-bg {
+  position: absolute;
+
+  inset: -25px;
+
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+
+  object-fit: cover;
+
+  filter: blur(25px);
+
+  transform: scale(1.08);
+
+  opacity: 0.35;
+}
+
+
+/* actual photograph remains fully visible */
+
+.couple-feature__image-main {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+
+.couple-feature__image:hover .couple-feature__image-main {
+  transform: scale(1.012);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.couple-feature__footer {
+  width: 100%;
+
+  margin-top: 48px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.couple-feature__button {
+  width: min(620px, 100%);
+
+  min-height: 54px;
+
+  padding: 0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  border: 1px solid var(--charcoal);
+
+  background: transparent;
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.20em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.couple-feature__button:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .couple-feature {
+    padding:
+      75px 3% 85px;
+  }
+
+
+  .couple-feature__gallery {
+    gap: 18px;
+  }
+
+
+  .couple-feature__image {
+    height: 500px;
+  }
+
+
+  .couple-feature__heading h2 {
+    font-size: 32px;
+  }
+
+
+  .couple-feature__heading p {
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .couple-feature {
+    padding:
+      60px 18px 70px;
+  }
+
+
+  .couple-feature__heading {
+    margin-bottom: 25px;
+  }
+
+
+  .couple-feature__heading h2 {
+    font-size: 29px;
+  }
+
+
+  .couple-feature__heading p {
+    max-width: 330px;
+
+    margin:
+      12px auto 0;
+
+    font-size: 17px;
+  }
+
+
+  .couple-feature__gallery {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  .couple-feature__image {
+    height: 500px;
+  }
+
+
+  .couple-feature__footer {
+    margin-top: 28px;
+  }
+
+
+  .couple-feature__button {
+    width: 100%;
+
+    min-height: 50px;
+  }
+
+}
+
+/* =========================================================
+   CRAFTSMANSHIP FEATURE
+========================================================= */
+
+.craft-feature {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 54% 46%;
+
+  min-height: 610px;
+
+  background: var(--ivory);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.craft-feature__image {
+  position: relative;
+
+  min-height: 610px;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+}
+
+
+.craft-feature__image img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.craft-feature__content {
+  padding: 70px 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.craft-feature__eyebrow {
+  margin: 0 0 12px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+}
+
+
+.craft-feature__content h2 {
+  margin: 0;
+
+  max-width: 560px;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(45px, 4vw, 64px);
+
+  font-weight: 400;
+
+  line-height: 0.96;
+}
+
+
+.craft-feature__content h2 span {
+  display: block;
+
+  color: var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.craft-feature__intro {
+  max-width: 560px;
+
+  margin-top: 22px;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.craft-feature__points {
+  max-width: 590px;
+
+  margin-top: 35px;
+
+  border-top:
+    1px solid rgba(41, 40, 36, 0.12);
+}
+
+
+.craft-feature__point {
+  display: grid;
+
+  grid-template-columns: 42px 1fr;
+
+  gap: 18px;
+
+  padding: 18px 0;
+
+  border-bottom:
+    1px solid rgba(41, 40, 36, 0.12);
+}
+
+
+.craft-feature__point>span {
+  padding-top: 5px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.craft-feature__point h3 {
+  margin: 0 0 3px;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+
+  font-weight: 500;
+}
+
+
+.craft-feature__point p {
+  margin: 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.craft-feature__button {
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding: 13px 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  border: 1px solid var(--charcoal);
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.craft-feature__button:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .craft-feature {
+    grid-template-columns: 50% 50%;
+
+    min-height: 560px;
+  }
+
+
+  .craft-feature__image {
+    min-height: 560px;
+  }
+
+
+  .craft-feature__content {
+    padding: 55px 7%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .craft-feature {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  .craft-feature__image {
+    min-height: 480px;
+  }
+
+
+  .craft-feature__content {
+    padding: 55px 22px 65px;
+  }
+
+
+  .craft-feature__content h2 {
+    font-size: 45px;
+  }
+
+
+  .craft-feature__intro {
+    font-size: 17px;
+  }
+
+
+  .craft-feature__button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+}
+
+/* =========================================================
+   WORN BY JIVARA
+========================================================= */
+
+.worn-jivara {
+  width: 100%;
+
+  padding:
+    clamp(60px, 5vw, 95px) clamp(18px, 3.5vw, 65px) clamp(70px, 5vw, 100px);
+
+  background: var(--ivory-light);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.worn-jivara__heading {
+  max-width: 700px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+
+.worn-jivara__eyebrow {
+  margin: 0 0 10px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+}
+
+
+.worn-jivara__heading h2 {
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(44px, 4vw, 62px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+.worn-jivara__intro {
+  max-width: 540px;
+
+  margin: 15px auto 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   UNIFORM 6 IMAGE GRID
+========================================================= */
+
+.worn-jivara__grid {
+  width: min(1500px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(10px, 1vw, 16px);
+}
+
+/* =========================================================
+   IMAGE BOX
+========================================================= */
+
+.worn-jivara__item {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+}
+
+
+.worn-jivara__item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.4s ease;
+}
+
+.worn-jivara__item:hover img {
+  transform: scale(1.025);
+
+  filter: brightness(0.95);
+}
+
+
+/* =========================================================
+   OPTIONAL SUBTLE OVERLAY
+========================================================= */
+
+.worn-jivara__item::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(to top,
+      rgba(24, 22, 19, 0.08),
+      transparent 35%);
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+
+.worn-jivara__item:hover::after {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.worn-jivara__footer {
+  margin-top: 38px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.worn-jivara__button {
+  width: min(390px, 100%);
+
+  min-height: 48px;
+
+  padding: 0 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  border: 1px solid var(--charcoal);
+
+  background: transparent;
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.worn-jivara__button:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1000px) {
+
+  .worn-jivara__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    max-width: 900px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .worn-jivara__grid {
+    grid-template-columns: 1fr;
+
+    max-width: 480px;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .worn-jivara {
+    padding: 75px 3% 80px;
+  }
+
+
+  .worn-jivara__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+
+  .worn-jivara__item {
+    aspect-ratio: 4 / 5;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .worn-jivara {
+    padding: 60px 18px 70px;
+  }
+
+
+  .worn-jivara__heading {
+    margin-bottom: 30px;
+  }
+
+
+  .worn-jivara__heading h2 {
+    font-size: 44px;
+  }
+
+
+  .worn-jivara__intro {
+    font-size: 17px;
+  }
+
+
+  .worn-jivara__grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .worn-jivara__item {
+    aspect-ratio: 4 / 5;
+  }
+
+
+  .worn-jivara__footer {
+    margin-top: 28px;
+  }
+
+
+  .worn-jivara__button {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   ABOUT JIVARA
+========================================================= */
+
+.about-jivara {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 40% 50%;
+
+  min-height: 760px;
+
+  background: var(--ivory);
+}
+
+
+/* =========================================================
+   ABOUT JIVARA — LEFT VISUAL
+========================================================= */
+
+.about-jivara__visual {
+  position: relative;
+
+  min-height: 760px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eee7dc;
+}
+
+
+/* =========================================================
+   FOUNDER IMAGE
+========================================================= */
+
+.about-jivara__visual img {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 70%;
+  height: 70%;
+
+  transform: translate(-50%, -50%);
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SUBTLE FRAME AROUND IMAGE
+========================================================= */
+
+.about-jivara__visual::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: calc(70% + 28px);
+  height: calc(70% + 28px);
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(155, 122, 66, 0.28);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   VERY SUBTLE DECORATIVE DETAIL
+========================================================= */
+
+.about-jivara__visual::after {
+  content: "◇";
+
+  position: absolute;
+
+  right: 8%;
+  top: 9%;
+
+  color: rgba(155, 122, 66, 0.16);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 32px;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   REMOVE FULL-PANEL DARK OVERLAY
+========================================================= */
+
+.about-jivara__overlay {
+  display: none;
+}
+
+/* =========================================================
+   IMAGE TEXT
+========================================================= */
+
+.about-jivara__visual-copy {
+  position: absolute;
+
+  left: 50%;
+  bottom: 4%;
+
+  width: 70%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  text-align: center;
+
+  color: var(--charcoal);
+}
+
+
+.about-jivara__visual-copy>span {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  color: var(--charcoal);
+}
+
+
+.about-jivara__visual-copy p {
+  margin: 5px 0 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 16px;
+
+  line-height: 1.25;
+
+  font-style: italic;
+
+  color: var(--antique-gold);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-jivara__content {
+  padding: 75px 8%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* small heading */
+
+.about-jivara__eyebrow {
+  margin: 0 0 12px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.23em;
+}
+
+
+/* main title */
+
+.about-jivara__content h2 {
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(48px, 4.3vw, 70px);
+
+  font-weight: 400;
+
+  line-height: 0.94;
+}
+
+
+.about-jivara__content h2 span {
+  display: block;
+
+  color: var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+/* intro */
+
+.about-jivara__lead {
+  max-width: 660px;
+
+  margin: 25px 0 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 19px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.about-jivara__quote {
+  max-width: 620px;
+
+  margin-top: 32px;
+
+  padding: 22px 0 22px 27px;
+
+  display: flex;
+
+  gap: 18px;
+
+  border-left:
+    1px solid var(--antique-gold);
+}
+
+
+.about-jivara__quote>span {
+  color: var(--antique-gold);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 48px;
+
+  line-height: 0.75;
+}
+
+
+.about-jivara__quote p {
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 23px;
+
+  font-style: italic;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.about-jivara__journey {
+  max-width: 680px;
+
+  margin-top: 32px;
+
+  border-top:
+    1px solid rgba(41, 40, 36, 0.12);
+}
+
+
+.about-jivara__chapter {
+  display: grid;
+
+  grid-template-columns: 40px 1fr;
+
+  gap: 18px;
+
+  padding: 20px 0;
+
+  border-bottom:
+    1px solid rgba(41, 40, 36, 0.12);
+}
+
+
+.about-jivara__number {
+  padding-top: 5px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.about-jivara__chapter h3 {
+  margin: 0 0 5px;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+
+.about-jivara__chapter p {
+  margin: 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.about-jivara__closing {
+  max-width: 650px;
+
+  margin-top: 30px;
+}
+
+
+.about-jivara__closing p {
+  margin: 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  line-height: 1.55;
+}
+
+
+.about-jivara__closing strong {
+  display: block;
+
+  margin-top: 20px;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.about-jivara__button {
+  width: fit-content;
+
+  margin-top: 32px;
+
+  padding: 14px 22px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 30px;
+
+  border: 1px solid var(--charcoal);
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.about-jivara__button:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-jivara {
+    grid-template-columns: 43% 57%;
+  }
+
+
+  .about-jivara__content {
+    padding: 65px 7%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .about-jivara {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  .about-jivara__visual {
+    min-height: 540px;
+  }
+
+
+  .about-jivara__visual-copy {
+    left: 24px;
+    bottom: 28px;
+  }
+
+
+  .about-jivara__visual-copy>span {
+    font-size: 38px;
+  }
+
+
+  .about-jivara__content {
+    padding: 60px 22px 70px;
+  }
+
+
+  .about-jivara__content h2 {
+    font-size: 48px;
+  }
+
+
+  .about-jivara__lead {
+    font-size: 17px;
+  }
+
+
+  .about-jivara__quote p {
+    font-size: 20px;
+  }
+
+
+  .about-jivara__button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+}
+
+/* =========================================================
+   ABOUT JIVARA — RESPONSIVE SIZE FIX ONLY
+========================================================= */
+
+
+/* Desktop / large screens */
+
+.about-jivara {
+  min-height: clamp(620px, 55vw, 760px);
+}
+
+
+.about-jivara__visual {
+  min-height: clamp(620px, 55vw, 760px);
+}
+
+
+/* Keep the same 70% image size,
+   but stop it becoming excessively large */
+
+.about-jivara__visual img {
+  width: 70%;
+  height: 70%;
+
+  max-width: 520px;
+  max-height: 540px;
+}
+
+
+/* Keep frame matching the image */
+
+.about-jivara__visual::before {
+  width: min(calc(70% + 28px), 548px);
+  height: min(calc(70% + 28px), 568px);
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP / LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .about-jivara {
+    min-height: clamp(580px, 60vw, 700px);
+  }
+
+
+  .about-jivara__visual {
+    min-height: clamp(580px, 60vw, 700px);
+  }
+
+
+  .about-jivara__visual img {
+    width: 70%;
+    height: 70%;
+
+    max-width: 460px;
+    max-height: 490px;
+  }
+
+
+  .about-jivara__visual::before {
+    width: min(calc(70% + 28px), 488px);
+    height: min(calc(70% + 28px), 518px);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-jivara {
+    min-height: clamp(540px, 68vw, 650px);
+  }
+
+
+  .about-jivara__visual {
+    min-height: clamp(540px, 68vw, 650px);
+  }
+
+
+  .about-jivara__visual img {
+    width: 70%;
+    height: 68%;
+
+    max-width: 400px;
+    max-height: 440px;
+  }
+
+
+  .about-jivara__visual::before {
+    width: min(calc(70% + 28px), 428px);
+    height: min(calc(68% + 28px), 468px);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .about-jivara {
+    min-height: 0;
+  }
+
+
+  .about-jivara__visual {
+    min-height: clamp(480px, 120vw, 540px);
+  }
+
+
+  .about-jivara__visual img {
+    width: 70%;
+    height: 68%;
+
+    max-width: 360px;
+    max-height: 380px;
+  }
+
+
+  .about-jivara__visual::before {
+    width: min(calc(70% + 28px), 388px);
+    height: min(calc(68% + 28px), 408px);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-jivara__visual {
+    min-height: 470px;
+  }
+
+
+  .about-jivara__visual img {
+    width: 72%;
+    height: 66%;
+
+    max-width: 300px;
+    max-height: 330px;
+  }
+
+
+  .about-jivara__visual::before {
+    width: min(calc(72% + 28px), 328px);
+    height: min(calc(66% + 28px), 358px);
+  }
+
+}
+
+/* =========================================================
+   CLOSING CTA
+========================================================= */
+
+.closing-cta {
+  position: relative;
+
+  width: 100%;
+
+  padding: 110px 24px 115px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(circle at center,
+      #fffdf8 0%,
+      var(--ivory) 58%,
+      #efe7da 100%);
+}
+
+
+/* subtle dot texture */
+
+.closing-cta::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.055;
+
+  background-image:
+    radial-gradient(circle,
+      var(--antique-gold) 1px,
+      transparent 1px);
+
+  background-size: 30px 30px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ORNAMENT
+========================================================= */
+
+.closing-cta__ornament {
+  position: relative;
+
+  z-index: 2;
+
+  margin-bottom: 18px;
+
+  color: var(--antique-gold);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.closing-cta__eyebrow {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0 0 15px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.24em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.closing-cta h2 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(52px, 5vw, 78px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.closing-cta h2 span {
+  display: block;
+
+  color: var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.closing-cta__text {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 590px;
+
+  margin: 24px auto 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 19px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.closing-cta__actions {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+}
+
+
+.closing-cta__primary,
+.closing-cta__secondary {
+  min-width: 245px;
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* primary */
+
+.closing-cta__primary {
+  background: var(--charcoal);
+
+  border: 1px solid var(--charcoal);
+
+  color: #ffffff;
+}
+
+
+.closing-cta__primary:hover {
+  background: var(--antique-gold);
+
+  border-color: var(--antique-gold);
+
+  transform: translateY(-2px);
+}
+
+
+/* secondary */
+
+.closing-cta__secondary {
+  background: transparent;
+
+  border: 1px solid var(--charcoal);
+
+  color: var(--charcoal);
+}
+
+
+.closing-cta__secondary:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .closing-cta {
+    padding: 80px 20px 85px;
+  }
+
+
+  .closing-cta h2 {
+    font-size: 50px;
+  }
+
+
+  .closing-cta__text {
+    font-size: 17px;
+  }
+
+
+  .closing-cta__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    max-width: 340px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .closing-cta__primary,
+  .closing-cta__secondary {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+}
+
+/* =========================================================
+   JIVARA FOOTER
+========================================================= */
+
+.site-footer {
+  width: 100%;
+
+  background: #292824;
+
+  color: #f8f5ed;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.site-footer__main {
+  width: 100%;
+
+  padding: 75px 5% 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 1.6fr) repeat(3, minmax(150px, 1fr));
+
+  gap: 65px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.site-footer__brand {
+  max-width: 390px;
+}
+
+
+.site-footer__logo {
+  display: inline-block;
+
+  color: #f8f5ed;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 47px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+}
+
+
+.site-footer__tagline {
+  margin: 15px 0 0;
+
+  color: #c8ad77;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+
+  font-style: italic;
+
+  line-height: 1.25;
+}
+
+
+.site-footer__description {
+  max-width: 340px;
+
+  margin: 21px 0 0;
+
+  color: rgba(248, 245, 237, 0.72);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.site-footer__socials {
+  margin-top: 27px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+
+.site-footer__social-text {
+  position: relative;
+
+  color: rgba(248, 245, 237, 0.72);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 400;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  transition: color 0.25s ease;
+}
+
+
+.site-footer__social-text::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--antique-gold);
+
+  transition: width 0.3s ease;
+}
+
+
+.site-footer__social-text:hover {
+  color: var(--gold-light);
+}
+
+
+.site-footer__social-text:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.site-footer__column h3 {
+  margin: 0 0 22px;
+
+  color: #c8ad77;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.20em;
+
+  text-transform: uppercase;
+}
+
+
+.site-footer__column nav {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+
+.site-footer__column a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  position: relative;
+
+  color: rgba(248, 245, 237, 0.78);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.site-footer__column a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 1px;
+
+  background: #c8ad77;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.site-footer__column a:hover {
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+
+.site-footer__column a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   SIGNATURE DIVIDER
+========================================================= */
+
+.site-footer__signature {
+  width: calc(100% - 10%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.site-footer__signature span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(200, 173, 119, 0.22);
+}
+
+
+.site-footer__signature p {
+  margin: 0;
+
+  flex-shrink: 0;
+
+  color: #c8ad77;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.site-footer__bottom {
+  min-height: 75px;
+
+  padding: 20px 5%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  color: rgba(248, 245, 237, 0.52);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+}
+
+
+.site-footer__bottom p {
+  margin: 0;
+}
+
+
+.site-footer__made {
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .site-footer__main {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px 40px;
+  }
+
+
+  .site-footer__brand {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .site-footer__main {
+    padding: 60px 22px 50px;
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .site-footer__logo {
+    font-size: 42px;
+  }
+
+
+  .site-footer__description {
+    max-width: 100%;
+  }
+
+
+  .site-footer__signature {
+    width: calc(100% - 44px);
+
+    gap: 12px;
+  }
+
+
+  .site-footer__signature p {
+    font-size: 12px;
+  }
+
+
+  .site-footer__bottom {
+    padding: 25px 22px 30px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    line-height: 1.5;
+  }
+
+}
+
+/* =========================================================
+   ETERNAL LOVE MEDIA
+========================================================= */
+
+.eternal-love__visual {
+  position: relative;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.eternal-love__video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 2;
+
+  background: #292824;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FINISHED LEHENGA IMAGE
+========================================================= */
+
+.eternal-love__intro-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #eee7dc;
+
+  z-index: 4;
+
+  opacity: 1;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
+}
+
+
+/* Hide finished design */
+
+.eternal-love__intro-image--hidden {
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.eternal-love__video-label {
+  position: absolute;
+
+  left: 28px;
+  bottom: 25px;
+
+  z-index: 6;
+
+  padding: 9px 13px;
+
+  background: rgba(248, 245, 237, 0.92);
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   ETERNAL LOVE — INTRO IMAGE
+========================================================= */
+
+.eternal-love__visual {
+  position: relative;
+}
+
+
+/* Finished lehenga shown first */
+
+.eternal-love__intro-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 4;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #eee7dc;
+
+  opacity: 1;
+
+  transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
+}
+
+
+/* fade image away */
+
+.eternal-love__intro-image--hidden {
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+}
+
+
+/* video underneath */
+
+.eternal-love__video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 2;
+
+  background: #292824;
+}
+
+
+/* keep label above both */
+
+.eternal-love__video-label {
+  z-index: 5;
+}
+
+/* =========================================================
+   ETERNAL LOVE — SIGNATURE COLLECTION
+========================================================= */
+
+.eternal-love {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 56% 44%;
+
+  min-height: 490px;
+
+  background: var(--ivory);
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.eternal-love__visual {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #ebe4d8;
+}
+
+
+.eternal-love__video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  inset: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* small label */
+
+.eternal-love__video-label {
+  position: absolute;
+
+  left: 28px;
+  bottom: 25px;
+
+  z-index: 3;
+
+  padding: 9px 13px;
+
+  background: rgba(248, 245, 237, 0.92);
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.eternal-love__content {
+  position: relative;
+
+  padding: 65px 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 40% 45%,
+      #fffdf8 0%,
+      var(--ivory) 65%,
+      #eee7dc 100%);
+}
+
+
+/* subtle texture */
+
+.eternal-love__content::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.04;
+
+  background-image:
+    radial-gradient(circle,
+      var(--antique-gold) 1px,
+      transparent 1px);
+
+  background-size: 30px 30px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eternal-love__eyebrow {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0 0 13px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.23em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.eternal-love__content h2 {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 560px;
+
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(45px, 4vw, 65px);
+
+  font-weight: 400;
+
+  line-height: 0.96;
+}
+
+
+.eternal-love__content h2 span {
+  display: block;
+
+  color: var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.eternal-love__divider {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(370px, 85%);
+
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.eternal-love__divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(155, 122, 66, 0.38);
+}
+
+
+.eternal-love__divider b {
+  color: var(--antique-gold);
+
+  font-size: 12px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.eternal-love__description {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 580px;
+
+  margin: 23px 0 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+}
+
+
+.eternal-love__description--secondary {
+  margin-top: 12px;
+
+  color: var(--soft-charcoal);
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.eternal-love__quote {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 520px;
+
+  margin: 23px 0 0;
+
+  padding-left: 18px;
+
+  border-left:
+    1px solid var(--antique-gold);
+
+  color: var(--antique-gold);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.eternal-love__button {
+  position: relative;
+
+  z-index: 2;
+
+  width: fit-content;
+
+  margin-top: 28px;
+
+  padding: 14px 21px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 27px;
+
+  border: 1px solid var(--charcoal);
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.eternal-love__button:hover {
+  background: var(--charcoal);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .eternal-love {
+    grid-template-columns: 52% 48%;
+
+    min-height: 480px;
+  }
+
+
+  .eternal-love__visual {
+    min-height: 480px;
+  }
+
+
+  .eternal-love__content {
+    padding: 50px 7%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .eternal-love {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  .eternal-love__visual {
+    min-height: 430px;
+  }
+
+
+  .eternal-love__content {
+    padding: 52px 22px 60px;
+  }
+
+
+  .eternal-love__content h2 {
+    font-size: 46px;
+  }
+
+
+  .eternal-love__description {
+    font-size: 17px;
+  }
+
+
+  .eternal-love__button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+}
+
+.eternal-love {
+  border-bottom: 1px solid rgba(155, 122, 66, 0.12);
+}
+
+/* =========================================================
+   COLLECTIONS PAGE
+========================================================= */
+
+.collections-page {
+  width: 100%;
+
+  background: var(--ivory-light);
+}
+
+
+/* =========================================================
+   COLLECTIONS PAGE
+========================================================= */
+
+.collections-page {
+  width: 100%;
+
+  background: var(--ivory-light);
+}
+
+
+/* =========================================================
+   COLLECTIONS HERO
+========================================================= */
+
+.collections-hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 400px;
+
+  padding:
+    62px 24px 55px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(circle at center,
+      #fffdf8 0%,
+      var(--ivory) 62%,
+      #efe8dc 100%);
+
+  border-bottom:
+    1px solid rgba(155, 122, 66, 0.14);
+}
+
+
+/* =========================================================
+   HERO BACKGROUND PATTERN
+========================================================= */
+
+.collections-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.065;
+
+  background-image:
+    radial-gradient(circle,
+      var(--antique-gold) 1px,
+      transparent 1px);
+
+  background-size: 32px 32px;
+}
+
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
+.collections-hero::after {
+  content: "✦";
+
+  position: absolute;
+
+  right: clamp(-30px, 1vw, 20px);
+
+  top: clamp(-45px, -2vw, -20px);
+
+  color: rgba(155, 122, 66, 0.06);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(170px, 18vw, 300px);
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.collections-hero__eyebrow {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0 0 12px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.collections-hero h1 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size:
+    clamp(58px, 6vw, 92px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.035em;
+}
+
+
+.collections-hero h1 span {
+  display: block;
+
+  color: var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.collections-hero__description {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin:
+    22px auto 0;
+
+  color: var(--soft-charcoal);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size:
+    clamp(18px, 1.5vw, 21px);
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   HERO ORNAMENT
+========================================================= */
+
+.collections-hero__ornament {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(360px, 75%);
+
+  margin-top: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.collections-hero__ornament span {
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    rgba(155, 122, 66, 0.4);
+}
+
+
+.collections-hero__ornament b {
+  color: var(--antique-gold);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   COLLECTIONS BROWSER
+========================================================= */
+
+.collections-browser {
+  width: 100%;
+
+  padding:
+    42px clamp(20px, 4vw, 65px) clamp(90px, 8vw, 125px);
+
+  background: var(--ivory-light);
+}
+
+
+/* =========================================================
+   COLLECTION GRID
+========================================================= */
+
+.collections-page-grid {
+  width: min(1450px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    clamp(24px, 2.5vw, 36px) clamp(18px, 2vw, 30px);
+}
+
+
+
+/* =========================================================
+   COLLECTION CARD
+========================================================= */
+
+.collections-page-card {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  min-width: 0;
+
+  display: block;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+
+.collections-page-card__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #eee8dd;
+}
+
+
+.collections-page-card__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.45s ease;
+}
+
+
+
+/* =========================================================
+   IMAGE GRADIENT
+========================================================= */
+
+.collections-page-card__shade {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(to top,
+      rgba(18, 17, 15, 0.82) 0%,
+      rgba(18, 17, 15, 0.56) 28%,
+      rgba(18, 17, 15, 0.14) 58%,
+      transparent 78%);
+
+  transition:
+    background 0.4s ease;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.collections-page-card:hover .collections-page-card__image img {
+  transform: scale(1.035);
+
+  filter: brightness(0.92);
+}
+
+
+/* =========================================================
+   CARD CONTENT OVER IMAGE
+========================================================= */
+
+.collections-page-card__content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 4;
+
+  width: 100%;
+
+  padding:
+    28px clamp(20px, 2vw, 30px) 27px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  color: #ffffff;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   CARD EYEBROW
+========================================================= */
+
+.collections-page-card__eyebrow {
+  margin: 0 0 8px;
+
+  color: #d7bd88;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.collections-page-card__title {
+  margin: 0;
+
+  max-width: 90%;
+
+  color: #ffffff;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size:
+    clamp(30px, 2.4vw, 40px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.collections-page-card__description {
+  max-width: 390px;
+
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 16px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   EXPLORE LINK
+========================================================= */
+
+.collections-page-card__link {
+  width: fit-content;
+
+  margin-top: 17px;
+
+  padding-bottom: 5px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  color: #ffffff;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.65);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.15em;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.collections-page-card:hover .collections-page-card__link {
+  gap: 24px;
+
+  color: #d7bd88;
+
+  border-color: #d7bd88;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .collections-page-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+
+  .collections-page-card__content {
+    padding:
+      25px 22px 24px;
+  }
+
+
+  .collections-page-card__title {
+    font-size:
+      clamp(31px, 4vw, 38px);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .collections-page-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .collections-page-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    aspect-ratio: 4 / 5;
+  }
+
+
+  .collections-page-card__content {
+    padding:
+      24px 20px 23px;
+  }
+
+
+  .collections-page-card__title {
+    max-width: 100%;
+
+    font-size:
+      clamp(31px, 9vw, 38px);
+  }
+
+
+  .collections-page-card__description {
+    max-width: 95%;
+
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .collections-page-card__content {
+    padding:
+      21px 18px 20px;
+  }
+
+
+  .collections-page-card__eyebrow {
+    font-size: 7px;
+  }
+
+
+  .collections-page-card__title {
+    font-size: 30px;
+  }
+
+
+  .collections-page-card__description {
+    margin-top: 9px;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+  }
+
+
+  .collections-page-card__link {
+    margin-top: 14px;
+
+    font-size: 7px;
+  }
+
+}
