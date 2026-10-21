@@ -30,12 +30,11 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import {
+  API_URL,
+} from "../config/api.js";
+
 import "./CustomerAccount.css";
-
-
-const API_URL =
-  "http://localhost:5000";
-
 
 /* =====================================================
    HELPERS
