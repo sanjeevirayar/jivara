@@ -22,9 +22,9 @@ import "./Payment.css";
    BACKEND
 ===================================================== */
 
-const API_URL =
-    "http://localhost:5000";
-
+import {
+  API_URL,
+} from "../config/api.js";
 
 /* =====================================================
    PRICE FORMATTER
