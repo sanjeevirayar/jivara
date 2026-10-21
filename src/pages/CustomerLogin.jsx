@@ -1,4 +1,8 @@
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
+
 import {
   Link,
   useNavigate,
@@ -14,11 +18,11 @@ import {
   AlertCircle,
 } from "lucide-react";
 
+import {
+  API_URL,
+} from "../config/api.js";
+
 import "./CustomerLogin.css";
-
-
-const API_URL =
-  "http://localhost:5000";
 
 
 function CustomerLogin() {
@@ -26,6 +30,10 @@ function CustomerLogin() {
   const navigate =
     useNavigate();
 
+
+  /* =====================================================
+     MODE
+  ===================================================== */
 
   const [
     mode,
@@ -129,6 +137,7 @@ function CustomerLogin() {
       setForm(
         (current) => ({
           ...current,
+
           [name]:
             value,
         })
@@ -160,7 +169,7 @@ function CustomerLogin() {
         )
       );
 
-  };
+    };
 
 
   /* =====================================================
@@ -215,7 +224,7 @@ function CustomerLogin() {
         data.customer
       );
 
-  };
+    };
 
 
   /* =====================================================
@@ -304,7 +313,7 @@ function CustomerLogin() {
         data.customer
       );
 
-  };
+    };
 
 
   /* =====================================================
@@ -374,7 +383,9 @@ function CustomerLogin() {
 
 
   return (
+
     <main className="customer-auth">
+
 
       {/* =================================================
           BRAND SIDE
@@ -414,8 +425,10 @@ function CustomerLogin() {
             INSPIRED BY DEVOTION
           </p>
 
+
           <h1>
             Your Jivara,
+
             <span>
               Your Story.
             </span>
@@ -433,6 +446,7 @@ function CustomerLogin() {
       <section className="customer-auth__panel">
 
         <div className="customer-auth__content">
+
 
           <div className="customer-auth__icon">
 
@@ -473,6 +487,7 @@ function CustomerLogin() {
               ? (
                 <>
                   Sign
+
                   <span>
                     In.
                   </span>
@@ -481,6 +496,7 @@ function CustomerLogin() {
               : (
                 <>
                   Create Your
+
                   <span>
                     Account.
                   </span>
@@ -566,6 +582,7 @@ function CustomerLogin() {
                     FIRST NAME
                   </span>
 
+
                   <input
                     type="text"
                     name="firstName"
@@ -587,6 +604,7 @@ function CustomerLogin() {
                   <span>
                     LAST NAME
                   </span>
+
 
                   <input
                     type="text"
@@ -614,6 +632,7 @@ function CustomerLogin() {
                 EMAIL
               </span>
 
+
               <input
                 type="email"
                 name="email"
@@ -639,6 +658,7 @@ function CustomerLogin() {
                   PHONE
                 </span>
 
+
                 <input
                   type="tel"
                   name="phone"
@@ -661,6 +681,7 @@ function CustomerLogin() {
               <span>
                 PASSWORD
               </span>
+
 
               <div className="customer-auth__password">
 
@@ -734,6 +755,7 @@ function CustomerLogin() {
                   CONFIRM PASSWORD
                 </span>
 
+
                 <input
                   type={
                     showPassword
@@ -764,6 +786,7 @@ function CustomerLogin() {
                   size={17}
                   strokeWidth={1.4}
                 />
+
 
                 <p>
                   {error}
@@ -845,6 +868,7 @@ function CustomerLogin() {
       </section>
 
     </main>
+
   );
 
 }
