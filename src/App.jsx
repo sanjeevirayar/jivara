@@ -12,153 +12,234 @@ import Bag from "./pages/Bag";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import Payment from "./pages/Payment";
+
 import AdminLogin from "./pages/AdminLogin";
 import AdminOrders from "./pages/AdminOrders";
 import AdminOrderDetails from "./pages/AdminOrderDetails";
 import AdminDashboard from "./pages/AdminDashboard";
+
 import CustomerLogin from "./pages/CustomerLogin";
 import CustomerAccount from "./pages/CustomerAccount";
 import CustomerOrderDetails from "./pages/CustomerOrderDetails";
+
 import Wishlist from "./pages/Wishlist";
 import SearchResults from "./pages/SearchResults";
 import CategoryCollections from "./pages/CategoryCollections";
 import OurStory from "./pages/OurStory";
 import Contact from "./pages/Contact";
 
+import ScrollToTop from "./components/ScrollToTop";
+
+
 function App() {
+
   return (
-    <Routes>
+    <>
 
-      {/* HOME */}
-      <Route
-        path="/"
-        element={<Home />}
-      />
+      {/* =====================================================
+          GLOBAL SCROLL RESET
+      ===================================================== */}
 
-
-      {/* ALL COLLECTIONS */}
-      <Route
-        path="/collections"
-        element={<Collections />}
-      />
+      <ScrollToTop />
 
 
-      {/* INDIVIDUAL COLLECTION */}
-      <Route
-        path="/collections/:collectionId"
-        element={<CollectionDetails />}
-      />
+      {/* =====================================================
+          ROUTES
+      ===================================================== */}
+
+      <Routes>
 
 
-      {/* INDIVIDUAL DESIGN */}
-      <Route
-        path="/product/:slug"
-        element={<ProductDetails />}
-      />
+        {/* =================================================
+            HOME
+        ================================================= */}
 
-      <Route
-        path="/order/:slug"
-        element={<OrderDesign />}
-      />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-      <Route
-        path="/bag"
-        element={<Bag />}
-      />
 
-      <Route
-        path="/checkout"
-        element={<Checkout />}
-      />
+        {/* =================================================
+            COLLECTIONS
+        ================================================= */}
 
-      <Route
-        path="/order-confirmation"
-        element={<OrderConfirmation />}
-      />
+        <Route
+          path="/collections"
+          element={<Collections />}
+        />
 
-      <Route
-        path="/payment"
-        element={<Payment />}
-      />
-      <Route
-        path="/admin/login"
-        element={<AdminLogin />}
-      />
 
-      <Route
-        path="/admin/orders"
-        element={<AdminOrders />}
-      />
+        <Route
+          path="/collections/:collectionId"
+          element={<CollectionDetails />}
+        />
 
-      <Route
-        path="/admin/orders/:id"
-        element={<AdminOrderDetails />}
-      />
 
-      <Route
-        path="/admin"
-        element={<AdminDashboard />}
-      />
+        {/* =================================================
+            PRODUCT
+        ================================================= */}
 
-      <Route
-        path="/account/login"
-        element={<CustomerLogin />}
-      />
-      <Route
-        path="/account"
-        element={<CustomerAccount />}
-      />
-      <Route
-        path="/account/orders/:id"
-        element={<CustomerOrderDetails />}
-      />
-      <Route
-        path="/wishlist"
-        element={<Wishlist />}
-      />
-      <Route
-        path="/search"
-        element={<SearchResults />}
-      />
-      <Route
-        path="/bridal"
-        element={
-          <CategoryCollections category="bridal" />
-        }
-      />
+        <Route
+          path="/product/:slug"
+          element={<ProductDetails />}
+        />
 
-      <Route
-        path="/women"
-        element={
-          <CategoryCollections category="women" />
-        }
-      />
 
-      <Route
-        path="/men"
-        element={
-          <CategoryCollections category="men" />
-        }
-      />
+        {/* =================================================
+            ORDER FLOW
+        ================================================= */}
 
-      <Route
-        path="/kids"
-        element={
-          <CategoryCollections category="kids" />
-        }
-      />
-      <Route
-        path="/our-story"
-        element={<OurStory />}
-      />
+        <Route
+          path="/order/:slug"
+          element={<OrderDesign />}
+        />
 
-      <Route
-        path="/contact"
-        element={<Contact />}
-      />
 
-    </Routes>
+        <Route
+          path="/bag"
+          element={<Bag />}
+        />
+
+
+        <Route
+          path="/checkout"
+          element={<Checkout />}
+        />
+
+
+        <Route
+          path="/order-confirmation"
+          element={<OrderConfirmation />}
+        />
+
+
+        <Route
+          path="/payment"
+          element={<Payment />}
+        />
+
+
+        {/* =================================================
+            CUSTOMER ACCOUNT
+        ================================================= */}
+
+        <Route
+          path="/account/login"
+          element={<CustomerLogin />}
+        />
+
+
+        <Route
+          path="/account"
+          element={<CustomerAccount />}
+        />
+
+
+        <Route
+          path="/account/orders/:id"
+          element={<CustomerOrderDetails />}
+        />
+
+
+        {/* =================================================
+            WISHLIST
+        ================================================= */}
+
+        <Route
+          path="/wishlist"
+          element={<Wishlist />}
+        />
+
+
+        {/* =================================================
+            SEARCH
+        ================================================= */}
+
+        <Route
+          path="/search"
+          element={<SearchResults />}
+        />
+
+
+        {/* =================================================
+            CATEGORY PAGES
+        ================================================= */}
+
+        <Route
+          path="/bridal"
+          element={
+            <CategoryCollections
+              category="bridal"
+            />
+          }
+        />
+
+
+        <Route
+          path="/women"
+          element={
+            <CategoryCollections
+              category="women"
+            />
+          }
+        />
+
+
+        {/* =================================================
+            OUR STORY
+        ================================================= */}
+
+        <Route
+          path="/our-story"
+          element={<OurStory />}
+        />
+
+
+        {/* =================================================
+            CONTACT
+        ================================================= */}
+
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+
+        {/* =================================================
+            ADMIN
+        ================================================= */}
+
+        <Route
+          path="/admin/login"
+          element={<AdminLogin />}
+        />
+
+
+        <Route
+          path="/admin"
+          element={<AdminDashboard />}
+        />
+
+
+        <Route
+          path="/admin/orders"
+          element={<AdminOrders />}
+        />
+
+
+        <Route
+          path="/admin/orders/:id"
+          element={<AdminOrderDetails />}
+        />
+
+
+      </Routes>
+
+    </>
   );
+
 }
+
 
 export default App;
