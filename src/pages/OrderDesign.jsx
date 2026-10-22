@@ -59,6 +59,32 @@ const measurementFields = {
     { key: "sleeveLength", label: "Sleeve Length" },
     { key: "armhole", label: "Armhole" },
   ],
+
+  gown: [
+  { key: "bust", label: "Bust" },
+  { key: "underBust", label: "Under Bust" },
+  { key: "shoulder", label: "Shoulder" },
+  { key: "waist", label: "Waist" },
+  { key: "hip", label: "Hip" },
+  { key: "armhole", label: "Armhole" },
+  { key: "gownLength", label: "Gown Length" },
+],
+
+menswear: [
+  { key: "chest", label: "Chest" },
+  { key: "shoulder", label: "Shoulder" },
+  { key: "waist", label: "Waist" },
+  { key: "hip", label: "Hip" },
+  { key: "sleeveLength", label: "Sleeve Length" },
+  { key: "upperArm", label: "Upper Arm" },
+  { key: "armhole", label: "Armhole" },
+  { key: "neck", label: "Neck" },
+  { key: "sherwaniLength", label: "Sherwani / Kurta Length" },
+  { key: "trouserWaist", label: "Trouser Waist" },
+  { key: "trouserHip", label: "Trouser Hip" },
+  { key: "trouserLength", label: "Trouser Length" },
+  { key: "inseam", label: "Inseam" },
+],
 };
 
 
