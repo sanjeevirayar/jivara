@@ -3,6 +3,8 @@
 ========================================================= */
 
 .category-collections-page {
+  width: 100%;
+
   min-height: 700px;
 
   background:
@@ -18,23 +20,57 @@
 ========================================================= */
 
 .category-collections-hero {
-  width:
-    min(900px, 88%);
+  width: 100%;
 
-  margin: auto;
+  min-height: 260px;
+
+  box-sizing: border-box;
+
+  margin: 0;
 
   padding:
-    clamp(70px, 8vw, 120px)
-    0
-    clamp(55px, 7vw, 90px);
+    38px
+    24px
+    34px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
 
   text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      #fffdf8 0%,
+      var(--ivory-light) 62%,
+      var(--ivory) 100%
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      41,
+      40,
+      36,
+      0.06
+    );
 }
 
 
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
 .category-collections-hero__eyebrow {
   margin:
-    0 0 13px;
+    0
+    0
+    11px;
 
   color:
     var(--antique-gold);
@@ -48,11 +84,21 @@
   font-weight: 500;
 
   letter-spacing:
-    0.2em;
+    0.24em;
+
+  text-transform:
+    uppercase;
 }
 
 
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
 .category-collections-hero h1 {
+  max-width:
+    1050px;
+
   margin: 0;
 
   color:
@@ -64,32 +110,50 @@
 
   font-size:
     clamp(
-      52px,
-      7vw,
-      92px
+      44px,
+      4.6vw,
+      64px
     );
 
   font-weight: 400;
 
-  line-height: 0.9;
+  line-height: 0.95;
+
+  letter-spacing:
+    -0.02em;
 }
 
 
+/* =========================================================
+   HERO TITLE ACCENT
+========================================================= */
+
 .category-collections-hero h1 span {
-  display: block;
+  display: inline;
+
+  margin-left:
+    8px;
 
   color:
     var(--antique-gold);
 
-  font-style: italic;
+  font-style:
+    italic;
 }
 
 
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
 .category-collections-hero__description {
-  max-width: 620px;
+  max-width:
+    680px;
 
   margin:
-    25px auto 0;
+    17px
+    auto
+    0;
 
   color:
     var(--soft-charcoal);
@@ -101,11 +165,12 @@
   font-size:
     clamp(
       16px,
-      1.5vw,
-      19px
+      1.4vw,
+      18px
     );
 
-  line-height: 1.6;
+  line-height:
+    1.55;
 }
 
 
@@ -114,16 +179,22 @@
 ========================================================= */
 
 .category-collections-hero__ornament {
-  max-width: 340px;
+  width:
+    min(
+      320px,
+      72%
+    );
 
   margin:
-    32px auto 0;
+    22px
+    auto
+    0;
 
   display: flex;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 
   color:
     var(--antique-gold);
@@ -131,24 +202,38 @@
 
 
 .category-collections-hero__ornament span {
-  height: 1px;
+  height:
+    1px;
 
-  flex: 1;
+  flex:
+    1;
 
   background:
     rgba(
       155,
       122,
       66,
-      0.28
+      0.38
     );
 }
 
 
 .category-collections-hero__ornament b {
-  font-size: 13px;
+  color:
+    var(--antique-gold);
 
-  font-weight: 400;
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    12px;
+
+  font-weight:
+    400;
+
+  line-height:
+    1;
 }
 
 
@@ -163,9 +248,13 @@
       90%
     );
 
-  margin: auto;
+  margin:
+    0
+    auto;
 
-  padding-bottom:
+  padding:
+    30px
+    0
     110px;
 }
 
@@ -180,7 +269,10 @@
   grid-template-columns:
     repeat(
       3,
-      minmax(0, 1fr)
+      minmax(
+        0,
+        1fr
+      )
     );
 
   gap:
@@ -204,7 +296,8 @@
   color:
     inherit;
 
-  text-decoration: none;
+  text-decoration:
+    none;
 }
 
 
@@ -213,12 +306,14 @@
 ========================================================= */
 
 .category-collection-card__image {
-  position: relative;
+  position:
+    relative;
 
   aspect-ratio:
     3 / 4;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   background:
     #eee8dd;
@@ -226,15 +321,25 @@
 
 
 .category-collection-card__image img {
-  width: 100%;
-  height: 100%;
+  width:
+    100%;
 
-  display: block;
+  height:
+    100%;
 
-  object-fit: cover;
+  display:
+    block;
+
+  object-fit:
+    cover;
+
+  object-position:
+    center;
 
   transition:
-    transform 0.55s ease;
+    transform
+    0.55s
+    ease;
 }
 
 
@@ -246,9 +351,14 @@
 
 
 .category-collection-card__shade {
-  position: absolute;
+  position:
+    absolute;
 
-  inset: 0;
+  inset:
+    0;
+
+  pointer-events:
+    none;
 
   background:
     linear-gradient(
@@ -276,7 +386,9 @@
 
 .category-collection-card__eyebrow {
   margin:
-    0 0 7px;
+    0
+    0
+    7px;
 
   color:
     var(--antique-gold);
@@ -285,12 +397,17 @@
     "Inter",
     sans-serif;
 
-  font-size: 7px;
+  font-size:
+    7px;
 
-  font-weight: 500;
+  font-weight:
+    500;
 
   letter-spacing:
     0.16em;
+
+  text-transform:
+    uppercase;
 }
 
 
@@ -313,13 +430,16 @@
 
   font-weight: 400;
 
-  line-height: 1;
+  line-height:
+    1;
 }
 
 
 .category-collection-card__description {
   margin:
-    12px 0 0;
+    12px
+    0
+    0;
 
   color:
     var(--soft-charcoal);
@@ -328,9 +448,11 @@
     "Cormorant Garamond",
     serif;
 
-  font-size: 15px;
+  font-size:
+    15px;
 
-  line-height: 1.5;
+  line-height:
+    1.5;
 }
 
 
@@ -339,17 +461,23 @@
 ========================================================= */
 
 .category-collection-card__link {
+  width:
+    fit-content;
+
   margin-top:
     17px;
 
   padding-bottom:
     7px;
 
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 10px;
+  gap:
+    10px;
 
   border-bottom:
     1px solid
@@ -367,18 +495,43 @@
     "Inter",
     sans-serif;
 
-  font-size: 7px;
+  font-size:
+    7px;
 
-  font-weight: 500;
+  font-weight:
+    500;
 
   letter-spacing:
     0.12em;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    color
+    0.2s
+    ease,
+    border-color
+    0.2s
+    ease;
 }
 
 
 .category-collection-card__link svg {
   transition:
-    transform 0.2s ease;
+    transform
+    0.2s
+    ease;
+}
+
+
+.category-collection-card:hover
+.category-collection-card__link {
+  color:
+    var(--antique-gold);
+
+  border-color:
+    var(--antique-gold);
 }
 
 
@@ -404,16 +557,20 @@
     1px solid
     var(--border);
 
-  text-align: center;
+  text-align:
+    center;
 }
 
 
 .category-collections-all a {
-  display: inline-flex;
+  display:
+    inline-flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 10px;
+  gap:
+    10px;
 
   color:
     var(--charcoal);
@@ -422,14 +579,31 @@
     "Inter",
     sans-serif;
 
-  font-size: 8px;
+  font-size:
+    8px;
 
-  font-weight: 500;
+  font-weight:
+    500;
 
   letter-spacing:
     0.13em;
 
-  text-decoration: none;
+  text-decoration:
+    none;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    color
+    0.2s
+    ease;
+}
+
+
+.category-collections-all a:hover {
+  color:
+    var(--antique-gold);
 }
 
 
@@ -441,11 +615,41 @@
   max-width: 900px
 ) {
 
+  .category-collections-hero {
+    min-height:
+      235px;
+
+    padding:
+      34px
+      22px
+      31px;
+  }
+
+
+  .category-collections-hero h1 {
+    font-size:
+      clamp(
+        42px,
+        6.5vw,
+        56px
+      );
+  }
+
+
+  .category-collections-browser {
+    padding-top:
+      28px;
+  }
+
+
   .category-collections-grid {
     grid-template-columns:
       repeat(
         2,
-        minmax(0, 1fr)
+        minmax(
+          0,
+          1fr
+        )
       );
   }
 
@@ -461,14 +665,81 @@
 ) {
 
   .category-collections-hero {
+    min-height:
+      215px;
+
     padding:
-      60px 0
-      50px;
+      30px
+      18px
+      28px;
+  }
+
+
+  .category-collections-hero__eyebrow {
+    margin-bottom:
+      9px;
+
+    font-size:
+      7px;
+  }
+
+
+  .category-collections-hero h1 {
+    max-width:
+      520px;
+
+    font-size:
+      clamp(
+        38px,
+        11vw,
+        48px
+      );
+
+    line-height:
+      0.98;
+  }
+
+
+  .category-collections-hero h1 span {
+    margin-left:
+      5px;
+  }
+
+
+  .category-collections-hero__description {
+    max-width:
+      500px;
+
+    margin-top:
+      13px;
+
+    font-size:
+      15px;
+
+    line-height:
+      1.5;
+  }
+
+
+  .category-collections-hero__ornament {
+    width:
+      min(
+        250px,
+        78%
+      );
+
+    margin-top:
+      18px;
   }
 
 
   .category-collections-browser {
-    padding-bottom:
+    width:
+      92%;
+
+    padding:
+      26px
+      0
       75px;
   }
 
@@ -482,15 +753,89 @@
   }
 
 
+  .category-collection-card {
+    width:
+      100%;
+
+    max-width:
+      520px;
+
+    margin:
+      0
+      auto;
+  }
+
+
   .category-collection-card__image {
     aspect-ratio:
       4 / 5;
   }
 
 
+  .category-collection-card__content h2 {
+    font-size:
+      29px;
+  }
+
+
   .category-collections-all {
     margin-top:
       55px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (
+  max-width: 420px
+) {
+
+  .category-collections-hero {
+    min-height:
+      200px;
+
+    padding:
+      27px
+      16px
+      25px;
+  }
+
+
+  .category-collections-hero h1 {
+    font-size:
+      clamp(
+        36px,
+        10.5vw,
+        44px
+      );
+  }
+
+
+  .category-collections-hero__description {
+    font-size:
+      14px;
+  }
+
+
+  .category-collections-hero__ornament {
+    margin-top:
+      16px;
+  }
+
+
+  .category-collections-browser {
+    padding-top:
+      24px;
+  }
+
+
+  .category-collections-grid {
+    gap:
+      42px;
   }
 
 }

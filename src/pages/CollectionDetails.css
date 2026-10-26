@@ -4,7 +4,6 @@
 
 .collection-details-page {
   width: 100%;
-
   background: var(--ivory-light);
 }
 
@@ -15,87 +14,31 @@
 
 .collection-details-hero {
   width: 100%;
+  min-height: 260px;
+  box-sizing: border-box;
 
-  min-height: clamp(500px, 42vw, 620px);
-
-  display: grid;
-
-  grid-template-columns: 55% 45%;
-
-  overflow: hidden;
-
-  background: var(--ivory);
-}
-
-
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
-.collection-details-hero__image {
-  position: relative;
-
-  width: 100%;
-
-  min-width: 0;
-
-  min-height: inherit;
-
-  overflow: hidden;
-
-  background: #eee7dc;
-}
-
-
-.collection-details-hero__image {
-  position: relative;
+  padding:
+    38px
+    24px
+    34px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   overflow: hidden;
-
-  background: #f5eee3;
-}
-
-
-.collection-details-hero__image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: contain;
-  object-position: center;
-}
-
-.collection-details-hero:hover
-.collection-details-hero__image img {
-  transform: scale(1.015);
-}
-
-
-/* =========================================================
-   IMAGE FADE
-========================================================= */
-
-.collection-details-hero__overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 2;
-
-  pointer-events: none;
+  text-align: center;
 
   background:
-    linear-gradient(
-      to right,
-      transparent 60%,
-      rgba(248, 245, 237, 0.18) 80%,
+    radial-gradient(
+      circle at 50% 42%,
+      #fffdf8 0%,
+      var(--ivory-light) 62%,
       var(--ivory) 100%
     );
+
+  border-bottom:
+    1px solid rgba(41, 40, 36, 0.06);
 }
 
 
@@ -106,109 +49,39 @@
 .collection-details-hero__content {
   position: relative;
 
-  min-width: 0;
+  width: 100%;
+  max-width: 920px;
 
-  padding:
-    clamp(50px, 6vw, 90px)
-    clamp(35px, 6vw, 8%);
+  margin: 0 auto;
+  padding: 0;
 
   display: flex;
-
   flex-direction: column;
-
+  align-items: center;
   justify-content: center;
 
-  overflow: hidden;
+  text-align: center;
 
-  background:
-    radial-gradient(
-      circle at 40% 48%,
-      #fffdf8 0%,
-      var(--ivory) 68%,
-      #efe8dd 100%
-    );
+  background: transparent;
 }
 
-
-/* subtle dots */
-
-.collection-details-hero__content::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  opacity: 0.05;
-
-  pointer-events: none;
-
-  background-image:
-    radial-gradient(
-      circle,
-      var(--antique-gold) 1px,
-      transparent 1px
-    );
-
-  background-size: 30px 30px;
-}
-
-
-/* decorative symbol */
-
-.collection-details-hero__content::after {
-  content: "✦";
-
-  position: absolute;
-
-  right: -25px;
-  top: -40px;
-
-  color: rgba(155, 122, 66, 0.06);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 180px;
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   HERO EYEBROW
-========================================================= */
 
 .collection-details-hero__eyebrow {
-  position: relative;
-
-  z-index: 2;
-
-  margin: 0 0 13px;
+  margin: 0 0 11px;
 
   color: var(--antique-gold);
 
   font-family: "Inter", sans-serif;
-
-  font-size: 9px;
-
+  font-size: 8px;
   font-weight: 500;
 
-  letter-spacing: 0.23em;
-
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
 
-/* =========================================================
-   HERO TITLE
-========================================================= */
-
 .collection-details-hero__content h1 {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 620px;
+  max-width: 840px;
 
   margin: 0;
 
@@ -217,55 +90,37 @@
   font-family: "Cormorant Garamond", serif;
 
   font-size:
-    clamp(48px, 4.6vw, 72px);
+    clamp(44px, 4.6vw, 64px);
 
   font-weight: 400;
 
-  line-height: 0.94;
-
-  letter-spacing: -0.025em;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 
 
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
+.collection-details-hero__description {
+  max-width: 680px;
 
-.collection-details-hero__content
-> p:not(.collection-details-hero__eyebrow) {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 560px;
-
-  margin: 24px 0 0;
+  margin: 17px auto 0;
 
   color: var(--soft-charcoal);
 
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 19px;
+  font-size:
+    clamp(16px, 1.4vw, 18px);
 
   line-height: 1.55;
 }
 
 
-/* =========================================================
-   HERO DIVIDER
-========================================================= */
-
 .collection-details-hero__divider {
-  position: relative;
+  width: min(320px, 72%);
 
-  z-index: 2;
-
-  width: min(360px, 85%);
-
-  margin-top: 30px;
+  margin-top: 22px;
 
   display: flex;
-
   align-items: center;
 
   gap: 12px;
@@ -273,12 +128,11 @@
 
 
 .collection-details-hero__divider span {
+  height: 1px;
   flex: 1;
 
-  height: 1px;
-
   background:
-    rgba(155, 122, 66, 0.4);
+    rgba(155, 122, 66, 0.38);
 }
 
 
@@ -287,89 +141,26 @@
 
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 13px;
-
+  font-size: 12px;
   font-weight: 400;
 }
 
 
 /* =========================================================
-   PRODUCTS SECTION
+   PRODUCTS
 ========================================================= */
 
 .collection-products {
   width: 100%;
 
   padding:
-    clamp(75px, 7vw, 105px)
+    5px
     clamp(20px, 4vw, 65px)
     clamp(90px, 8vw, 125px);
 
   background: var(--ivory-light);
 }
 
-
-/* =========================================================
-   PRODUCTS HEADING
-========================================================= */
-
-.collection-products__heading {
-  max-width: 650px;
-
-  margin:
-    0
-    auto
-    48px;
-
-  text-align: center;
-}
-
-
-.collection-products__heading > p {
-  margin: 0 0 11px;
-
-  color: var(--antique-gold);
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 9px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.22em;
-
-  text-transform: uppercase;
-}
-
-
-.collection-products__heading h2 {
-  margin: 0;
-
-  color: var(--charcoal);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size:
-    clamp(46px, 4.5vw, 66px);
-
-  font-weight: 400;
-
-  line-height: 0.95;
-}
-
-
-.collection-products__heading h2 span {
-  display: block;
-
-  color: var(--antique-gold);
-
-  font-style: italic;
-}
-
-
-/* =========================================================
-   PRODUCT GRID
-========================================================= */
 
 .collection-products__grid {
   width: min(1450px, 100%);
@@ -392,6 +183,8 @@
 ========================================================= */
 
 .jivara-product-card {
+  position: relative;
+
   min-width: 0;
 
   display: block;
@@ -415,18 +208,30 @@
 }
 
 
-.jivara-product-card__image img {
+.jivara-product-card__image-link {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+.jivara-product-card__image img,
+.jivara-product-card__image-link img {
   width: 100%;
   height: 100%;
 
   display: block;
 
   object-fit: cover;
-
   object-position: center;
 
   transition:
-    transform 0.7s ease,
+    transform 0.45s ease,
     filter 0.4s ease;
 }
 
@@ -436,6 +241,70 @@
   transform: scale(1.025);
 
   filter: brightness(0.96);
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.jivara-product-card__wishlist {
+  width: 41px;
+  height: 41px;
+
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(248, 245, 237, 0.65);
+
+  border-radius: 50%;
+
+  background:
+    rgba(248, 245, 237, 0.9);
+
+  color: var(--charcoal);
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.jivara-product-card__wishlist:hover {
+  color: var(--antique-gold);
+
+  background: var(--ivory);
+
+  border-color:
+    rgba(155, 122, 66, 0.4);
+
+  transform: scale(1.06);
+}
+
+
+.jivara-product-card__wishlist--active {
+  color: var(--antique-gold);
+
+  border-color:
+    rgba(155, 122, 66, 0.45);
+
+  background: var(--ivory);
 }
 
 
@@ -465,6 +334,13 @@
 }
 
 
+.jivara-product-card__title {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
 .jivara-product-card__content h3 {
   margin: 0;
 
@@ -480,9 +356,10 @@
 }
 
 
-/* =========================================================
-   PRODUCT LINK
-========================================================= */
+.jivara-product-card__title:hover h3 {
+  color: var(--antique-gold);
+}
+
 
 .jivara-product-card__link {
   width: fit-content;
@@ -510,6 +387,8 @@
 
   letter-spacing: 0.14em;
 
+  text-decoration: none;
+
   transition:
     gap 0.25s ease,
     color 0.25s ease,
@@ -534,14 +413,9 @@
 .collection-products__empty {
   max-width: 580px;
 
-  margin:
-    10px
-    auto
-    0;
+  margin: 10px auto 0;
 
-  padding:
-    48px
-    30px;
+  padding: 48px 30px;
 
   text-align: center;
 
@@ -587,17 +461,6 @@
   letter-spacing: 0.15em;
 
   text-decoration: none;
-
-  transition:
-    color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-
-.collection-products__empty a:hover {
-  color: var(--antique-gold);
-
-  border-color: var(--antique-gold);
 }
 
 
@@ -626,13 +489,13 @@
 .collection-not-found h1 {
   margin: 0;
 
+  color: var(--charcoal);
+
   font-family: "Cormorant Garamond", serif;
 
   font-size: 52px;
 
   font-weight: 400;
-
-  color: var(--charcoal);
 }
 
 
@@ -646,6 +509,8 @@
   font-size: 9px;
 
   letter-spacing: 0.15em;
+
+  text-decoration: none;
 }
 
 
@@ -656,23 +521,23 @@
 @media (max-width: 1000px) {
 
   .collection-details-hero {
-    grid-template-columns:
-      52% 48%;
+    min-height: 215px;
 
-    min-height: 500px;
+    padding:
+      30px
+      20px
+      28px;
   }
 
 
   .collection-details-hero__content {
-    padding:
-      55px
-      7%;
+    max-width: 780px;
   }
 
 
   .collection-details-hero__content h1 {
     font-size:
-      clamp(45px, 5vw, 58px);
+      clamp(42px, 6vw, 58px);
   }
 
 
@@ -691,65 +556,51 @@
 @media (max-width: 700px) {
 
   .collection-details-hero {
-    display: flex;
+    min-height: 205px;
 
-    flex-direction: column;
-
-    min-height: 0;
-  }
-
-
-  .collection-details-hero__image {
-    width: 100%;
-
-    height:
-      clamp(360px, 105vw, 500px);
-
-    min-height: 0;
-  }
-
-
-  .collection-details-hero__overlay {
-    background:
-      linear-gradient(
-        to bottom,
-        transparent 65%,
-        rgba(248, 245, 237, 0.3) 84%,
-        var(--ivory) 100%
-      );
-  }
-
-
-  .collection-details-hero__content {
     padding:
-      48px
+      28px
       20px
-      58px;
+      26px;
+  }
+
+
+  .collection-details-hero__eyebrow {
+    margin-bottom: 9px;
+
+    font-size: 7px;
   }
 
 
   .collection-details-hero__content h1 {
     font-size:
-      clamp(46px, 13vw, 62px);
+      clamp(38px, 11vw, 49px);
+
+    line-height: 0.98;
   }
 
 
-  .collection-details-hero__content
-  > p:not(.collection-details-hero__eyebrow) {
-    font-size: 17px;
+  .collection-details-hero__description {
+    max-width: 520px;
+
+    margin-top: 13px;
+
+    font-size: 15px;
+  }
+
+
+  .collection-details-hero__divider {
+    width: min(250px, 78%);
+
+    margin-top: 18px;
   }
 
 
   .collection-products {
     padding:
-      62px
+      5px
       18px
       80px;
-  }
-
-
-  .collection-products__heading {
-    margin-bottom: 35px;
   }
 
 
@@ -777,52 +628,44 @@
 
 @media (max-width: 480px) {
 
-  .collection-details-hero__image {
-    height:
-      clamp(320px, 115vw, 440px);
-  }
+  .collection-details-hero {
+    min-height: 195px;
 
-
-  .collection-details-hero__content {
     padding:
-      42px
+      25px
       18px
-      50px;
+      23px;
   }
 
 
   .collection-details-hero__content h1 {
     font-size:
-      clamp(42px, 12vw, 54px);
+      clamp(36px, 10.5vw, 44px);
   }
 
 
-  .collection-details-hero__content
-  > p:not(.collection-details-hero__eyebrow) {
-    margin-top: 20px;
+  .collection-details-hero__description {
+    margin-top: 12px;
 
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+
+  .collection-details-hero__divider {
+    margin-top: 16px;
   }
 
 
   .collection-products {
     padding:
-      55px
+      5px
       16px
       70px;
   }
 
 
-  .collection-products__heading h2 {
-    font-size:
-      clamp(42px, 12vw, 52px);
-  }
-
-
   .collection-products__empty {
-    padding:
-      38px
-      15px;
+    padding: 38px 15px;
   }
 
 
@@ -830,216 +673,14 @@
     font-size: 18px;
   }
 
-}
-
-/* =========================================================
-   PRODUCT CARD WISHLIST
-========================================================= */
-
-.jivara-product-card {
-  position: relative;
-}
-
-
-/* =========================================================
-   PRODUCT IMAGE LINK
-========================================================= */
-
-.jivara-product-card__image {
-  position: relative;
-
-  overflow: hidden;
-}
-
-
-.jivara-product-card__image-link {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  color: inherit;
-
-  text-decoration: none;
-}
-
-
-.jivara-product-card__image-link img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.45s ease;
-}
-
-
-.jivara-product-card:hover
-.jivara-product-card__image-link img {
-  transform:
-    scale(1.025);
-}
-
-
-/* =========================================================
-   WISHLIST HEART
-========================================================= */
-
-.jivara-product-card__wishlist {
-  width: 41px;
-  height: 41px;
-
-  position: absolute;
-
-  top: 15px;
-  right: 15px;
-
-  z-index: 3;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border:
-    1px solid
-    rgba(
-      248,
-      245,
-      237,
-      0.65
-    );
-
-  border-radius:
-    50%;
-
-  background:
-    rgba(
-      248,
-      245,
-      237,
-      0.9
-    );
-
-  color:
-    var(--charcoal);
-
-  cursor:
-    pointer;
-
-  backdrop-filter:
-    blur(8px);
-
-  transition:
-    color 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-
-.jivara-product-card__wishlist:hover {
-  color:
-    var(--antique-gold);
-
-  background:
-    var(--ivory);
-
-  border-color:
-    rgba(
-      155,
-      122,
-      66,
-      0.4
-    );
-
-  transform:
-    scale(1.06);
-}
-
-
-/* =========================================================
-   ACTIVE / SAVED
-========================================================= */
-
-.jivara-product-card__wishlist--active {
-  color:
-    var(--antique-gold);
-
-  border-color:
-    rgba(
-      155,
-      122,
-      66,
-      0.45
-    );
-
-  background:
-    var(--ivory);
-}
-
-
-.jivara-product-card__wishlist--active:hover {
-  color:
-    var(--antique-gold);
-}
-
-
-/* =========================================================
-   PRODUCT TITLE LINK
-========================================================= */
-
-.jivara-product-card__title {
-  color:
-    inherit;
-
-  text-decoration:
-    none;
-}
-
-
-.jivara-product-card__title h3 {
-  transition:
-    color 0.2s ease;
-}
-
-
-.jivara-product-card__title:hover h3 {
-  color:
-    var(--antique-gold);
-}
-
-
-/* =========================================================
-   PRODUCT VIEW LINK
-========================================================= */
-
-.jivara-product-card__link {
-  text-decoration:
-    none;
-
-  color:
-    inherit;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (
-  max-width: 600px
-) {
 
   .jivara-product-card__wishlist {
     width: 38px;
+
     height: 38px;
 
     top: 12px;
+
     right: 12px;
   }
 

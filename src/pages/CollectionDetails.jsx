@@ -51,11 +51,27 @@ function CollectionDetails() {
   ===================================================== */
 
   const collectionProducts =
-    products.filter(
-      (product) =>
+    products.filter((product) => {
+
+      if (
+        Array.isArray(
+          product.collectionId
+        )
+      ) {
+
+        return product.collectionId.includes(
+          collectionId
+        );
+
+      }
+
+
+      return (
         product.collectionId ===
         collectionId
-    );
+      );
+
+    });
 
 
   /* =====================================================
@@ -104,23 +120,6 @@ function CollectionDetails() {
 
         <section className="collection-details-hero">
 
-          <div className="collection-details-hero__image">
-
-            <img
-              src={
-                collection.image
-              }
-              alt={
-                collection.name
-              }
-            />
-
-
-            <div className="collection-details-hero__overlay"></div>
-
-          </div>
-
-
           <div className="collection-details-hero__content">
 
             <p className="collection-details-hero__eyebrow">
@@ -133,7 +132,7 @@ function CollectionDetails() {
             </h1>
 
 
-            <p>
+            <p className="collection-details-hero__description">
               {collection.description}
             </p>
 
@@ -161,21 +160,7 @@ function CollectionDetails() {
 
         <section className="collection-products">
 
-          <div className="collection-products__heading">
 
-            <p>
-              ORIGINAL JIVARA DESIGNS
-            </p>
-
-
-            <h2>
-              Explore the
-              <span>
-                Collection.
-              </span>
-            </h2>
-
-          </div>
 
 
           {/* =================================================
@@ -183,7 +168,7 @@ function CollectionDetails() {
           ================================================= */}
 
           {collectionProducts.length ===
-          0 ? (
+            0 ? (
 
             <div className="collection-products__empty">
 
