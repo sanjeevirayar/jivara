@@ -1293,8 +1293,8 @@ input[type="search"]::-webkit-search-results-decoration {
     .header-logo img {
     display: block;
 
-    width: 135px;
-    max-width: 135px;
+    width: 115px;
+    max-width: 115px;
 
     height: auto;
     max-height: none;
@@ -1406,8 +1406,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
   .header-logo img {
-    width: 125px;
-    max-width: 125px;
+    width: 105px;
+    max-width: 105px;
 
     height: auto;
     max-height: none;
