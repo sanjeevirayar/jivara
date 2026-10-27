@@ -1290,14 +1290,14 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
 
-  .header-logo img {
+    .header-logo img {
     display: block;
 
-    width: 170px;
+    width: 135px;
+    max-width: 135px;
 
-    max-width: 170px;
-
-    max-height: 80px;
+    height: auto;
+    max-height: none;
 
     object-fit: contain;
 
@@ -1406,11 +1406,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
   .header-logo img {
-    width: 150px;
+    width: 125px;
+    max-width: 125px;
 
-    max-width: 150px;
-
-    max-height: 74px;
+    height: auto;
+    max-height: none;
   }
 
 
