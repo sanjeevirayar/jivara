@@ -1293,9 +1293,9 @@ input[type="search"]::-webkit-search-results-decoration {
   .header-logo img {
     display: block;
 
-    width: 145px;
+    width: 170px;
 
-    max-width: 145px;
+    max-width: 170px;
 
     max-height: 80px;
 
@@ -1406,9 +1406,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
   .header-logo img {
-    width: 135px;
+    width: 150px;
 
-    max-width: 135px;
+    max-width: 150px;
 
     max-height: 74px;
   }
