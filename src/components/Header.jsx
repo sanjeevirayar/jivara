@@ -204,6 +204,7 @@ function Header() {
         ) {
 
           setSearchOpen(false);
+
           setSearchQuery("");
 
         }
@@ -243,7 +244,9 @@ function Header() {
 
 
       if (!query) {
+
         return [];
+
       }
 
 
@@ -305,7 +308,9 @@ function Header() {
 
 
       if (!query) {
+
         return;
+
       }
 
 
@@ -364,7 +369,9 @@ function Header() {
         <div className="header-main">
 
 
-          {/* LEFT SIDE */}
+          {/* =================================================
+              LEFT SIDE
+          ================================================= */}
 
           <div className="header-left">
 
@@ -417,7 +424,7 @@ function Header() {
 
             <button
               type="button"
-              className="header-icon"
+              className="header-icon search-button"
               aria-label="Search Jivara"
               onClick={() =>
                 setSearchOpen(true)
@@ -441,10 +448,11 @@ function Header() {
               className="header-icon wishlist-button"
               aria-label={
                 wishlistCount > 0
-                  ? `Wishlist with ${wishlistCount} saved ${wishlistCount === 1
-                    ? "design"
-                    : "designs"
-                  }`
+                  ? `Wishlist with ${wishlistCount} saved ${
+                      wishlistCount === 1
+                        ? "design"
+                        : "designs"
+                    }`
                   : "Wishlist"
               }
             >
@@ -477,7 +485,7 @@ function Header() {
 
             <Link
               to="/account"
-              className="header-icon"
+              className="header-icon account-button"
               aria-label="My Jivara account"
             >
 
@@ -497,9 +505,10 @@ function Header() {
               to="/bag"
               className="header-icon bag-button"
               aria-label={
-                `Shopping bag with ${bagCount} ${bagCount === 1
-                  ? "item"
-                  : "items"
+                `Shopping bag with ${bagCount} ${
+                  bagCount === 1
+                    ? "item"
+                    : "items"
                 }`
               }
             >
@@ -707,7 +716,7 @@ function Header() {
               <div className="header-search__results">
 
                 {searchSuggestions.length >
-                  0 ? (
+                0 ? (
 
                   <>
 
@@ -734,17 +743,17 @@ function Header() {
                             {(product.image ||
                               product.images?.[0]) && (
 
-                                <img
-                                  src={
-                                    product.image ||
-                                    product.images?.[0]
-                                  }
-                                  alt={
-                                    product.name
-                                  }
-                                />
+                              <img
+                                src={
+                                  product.image ||
+                                  product.images?.[0]
+                                }
+                                alt={
+                                  product.name
+                                }
+                              />
 
-                              )}
+                            )}
 
                           </div>
 
@@ -766,28 +775,28 @@ function Header() {
                             {typeof product.price ===
                               "number" && (
 
-                                <p>
+                              <p>
 
-                                  {new Intl.NumberFormat(
-                                    "en-IN",
-                                    {
-                                      style:
-                                        "currency",
+                                {new Intl.NumberFormat(
+                                  "en-IN",
+                                  {
+                                    style:
+                                      "currency",
 
-                                      currency:
-                                        product.currency ||
-                                        "INR",
+                                    currency:
+                                      product.currency ||
+                                      "INR",
 
-                                      maximumFractionDigits:
-                                        0,
-                                    }
-                                  ).format(
-                                    product.price
-                                  )}
+                                    maximumFractionDigits:
+                                      0,
+                                  }
+                                ).format(
+                                  product.price
+                                )}
 
-                                </p>
+                              </p>
 
-                              )}
+                            )}
 
                           </div>
 
