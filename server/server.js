@@ -77,7 +77,8 @@ const app =
 
 const allowedOrigins = [
   "http://localhost:5173",
-  process.env.CLIENT_ORIGIN,
+  "https://jivara.netlify.app",
+  "https://jivarabyradhey.com",
 ].filter(Boolean);
 
 
