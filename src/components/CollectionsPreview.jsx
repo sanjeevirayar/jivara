@@ -7,13 +7,13 @@ const collections = [
 
   {
     name: "Lehengas",
-    image: "/images/collections/lehengas.png",
+    image: "/images/collections/lehengas.png?v=3",
     link: "/collections/lehengas",
   },
 
   {
     name: "Handworked Blouses",
-    image: "/images/collections/handworked-blouses.png",
+    image: "/images/collections/handworked-blouses.png?v=3",
     link: "/collections/handwork-blouses",
   },
 
@@ -25,13 +25,13 @@ const collections = [
 
   {
     name: "Gharchola Sarees",
-    image: "/images/collections/gharchola-sarees.png",
+    image: "/images/collections/gharchola-sarees.png?v=3",
     link: "/collections/gharchola-sarees",
   },
 
   {
     name: "Indo-Western",
-    image: "/images/collections/indo-western.png",
+    image: "/images/collections/indo-western.png?v=3",
     link: "/collections/indo-western",
   },
 
