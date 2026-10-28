@@ -285,6 +285,21 @@
 
 
 /* =========================================================
+   CENTER FINAL ODD CARD — DESKTOP
+========================================================= */
+
+@media (min-width: 901px) {
+
+  .category-collections-grid
+  > .category-collection-card:last-child:nth-child(3n + 1) {
+    grid-column:
+      2;
+  }
+
+}
+
+
+/* =========================================================
    CARD
 ========================================================= */
 
@@ -309,8 +324,11 @@
   position:
     relative;
 
+  width:
+    100%;
+
   aspect-ratio:
-    3 / 4;
+    2 / 3;
 
   overflow:
     hidden;
@@ -334,21 +352,139 @@
     cover;
 
   object-position:
-    center;
+    center center;
 
   transition:
     transform
     0.55s
+    ease,
+    filter
+    0.4s
     ease;
 }
 
 
+/* =========================================================
+   INDIVIDUAL COLLECTION IMAGE POSITIONING
+========================================================= */
+
+
+/* BRIDAL */
+
+.category-collection-card--bridal
+.category-collection-card__image img {
+  object-position:
+    center center;
+}
+
+
+/* LEHENGAS */
+
+.category-collection-card--lehengas
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* HANDWORK BLOUSES */
+
+.category-collection-card--handwork-blouses
+.category-collection-card__image img {
+  object-position:
+    center center;
+}
+
+
+/* HANDWORKED SAREES */
+
+.category-collection-card--handworked-sarees
+.category-collection-card__image img {
+  object-position:
+    center center;
+}
+
+
+/* GHARCHOLA SAREES */
+
+.category-collection-card--gharchola-sarees
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* INDO-WESTERN */
+
+.category-collection-card--indo-western
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* WESTERN GOWNS */
+
+.category-collection-card--western-gowns
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* BRIDE & GROOM */
+
+.category-collection-card--bride-groom
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* ETERNAL LOVE */
+
+.category-collection-card--eternal-love-radha-krishna
+.category-collection-card__image img {
+  object-position:
+    center center;
+}
+
+
+/* MENSWEAR */
+
+.category-collection-card--menswear
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* KIDSWEAR */
+
+.category-collection-card--kidswear
+.category-collection-card__image img {
+  object-position:
+    center top;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
 .category-collection-card:hover
 .category-collection-card__image img {
   transform:
-    scale(1.025);
+    scale(1.012);
+
+  filter:
+    brightness(0.97);
 }
 
+
+/* =========================================================
+   IMAGE SHADE
+========================================================= */
 
 .category-collection-card__shade {
   position:
@@ -657,6 +793,31 @@
 
 
 /* =========================================================
+   CENTER FINAL ODD CARD — TABLET
+========================================================= */
+
+@media (
+  min-width: 601px
+) and (
+  max-width: 900px
+) {
+
+  .category-collections-grid
+  > .category-collection-card:last-child:nth-child(2n + 1) {
+    width:
+      48%;
+
+    grid-column:
+      1 / -1;
+
+    justify-self:
+      center;
+  }
+
+}
+
+
+/* =========================================================
    MOBILE
 ========================================================= */
 
@@ -766,9 +927,13 @@
   }
 
 
+  /* =======================================================
+     MOBILE IMAGE FIT
+  ======================================================= */
+
   .category-collection-card__image {
     aspect-ratio:
-      4 / 5;
+      2 / 3;
   }
 
 

@@ -960,3 +960,30 @@
   }
 
 }
+
+/* =========================================================
+   CONTACT PERSON NAME
+========================================================= */
+
+.contact-method__name {
+  margin:
+    5px
+    0
+    3px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    15px;
+
+  font-weight:
+    400;
+
+  line-height:
+    1.3;
+}

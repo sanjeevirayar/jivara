@@ -160,7 +160,9 @@ function CategoryCollections({
       <Header />
 
 
-      <main className="category-collections-page">
+      <main
+  className={`category-collections-page category-collections-page--${category}`}
+>
 
 
         {/* =================================================
@@ -220,7 +222,7 @@ function CategoryCollections({
                   to={
                     collection.link
                   }
-                  className="category-collection-card"
+                  className={`category-collection-card category-collection-card--${collection.id}`}
                   key={
                     collection.id
                   }

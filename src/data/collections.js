@@ -86,6 +86,24 @@ const collections = [
     },
 
     {
+        id:
+            "couple-edit",
+
+        name:
+            "The Couple Edit",
+
+        description:
+            "Coordinated looks thoughtfully designed for two, with each ensemble created to complement one another.",
+
+        image:
+            "/images/collections/couple-edit.png",
+
+        link:
+            "/couple-edit",
+    },
+
+
+    {
         id: "gharchola-sarees",
 
         name: "Gharchola Sarees",
@@ -101,6 +119,7 @@ const collections = [
         link:
             "/collections/gharchola-sarees",
     },
+
 
     {
         id: "indo-western",

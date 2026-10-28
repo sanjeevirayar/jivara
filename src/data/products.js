@@ -4702,6 +4702,90 @@ const products = [
   ],
 },
 
+/* =====================================================
+   THE COUPLE EDIT
+===================================================== */
+
+{
+  id: 74,
+
+  slug:
+    "emerald-rose-coordinated-couple-set",
+
+  name:
+    "Emerald & Rose Coordinated Couple Set",
+
+  category:
+    "The Couple Edit",
+
+  collectionId:
+    "couple-edit",
+
+  price:
+    28000,
+
+  currency:
+    "INR",
+
+  image:
+    "/images/couple-edit/emerald-rose-couple-set.png",
+
+  images: [
+    "/images/couple-edit/emerald-rose-couple-set.png",
+  ],
+
+  description:
+    "A coordinated Jivara couple ensemble designed as two individual looks brought together beautifully.",
+
+
+  /* WOMAN'S OUTFIT */
+
+  womensOutfit: {
+    name:
+      "Woman's Outfit",
+
+    measurementType:
+      "indoWestern",
+  },
+
+
+  /* MAN'S OUTFIT */
+
+  mensOutfit: {
+    name:
+      "Man's Outfit",
+
+    measurementType:
+      "menswear",
+  },
+
+
+  /* COUPLE MEASUREMENT TYPE */
+
+  measurementType:
+    "couple",
+
+
+  orderable:
+    true,
+
+  customisable:
+    true,
+
+  madeToMeasure:
+    true,
+
+  leadTime: {
+    minDays: 14,
+    maxDays: 21,
+  },
+
+  colorOptions: [
+    "Original",
+    "Custom Colour",
+  ],
+},
+
 ];
 
 export default products;

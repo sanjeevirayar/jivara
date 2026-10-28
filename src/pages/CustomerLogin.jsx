@@ -360,7 +360,7 @@ function CustomerLogin() {
         );
 
       } catch (
-        submitError
+      submitError
       ) {
 
         console.error(
@@ -439,11 +439,46 @@ function CustomerLogin() {
       </section>
 
 
+
       {/* =================================================
           AUTH PANEL
       ================================================= */}
 
       <section className="customer-auth__panel">
+
+        <div className="customer-auth__mobile-header">
+
+          <Link
+            to="/"
+            className="customer-auth__mobile-back"
+          >
+
+            <ArrowLeft
+              size={15}
+              strokeWidth={1.4}
+            />
+
+            <span>
+              RETURN TO JIVARA
+            </span>
+
+          </Link>
+
+
+          <Link
+            to="/"
+            className="customer-auth__mobile-logo"
+            aria-label="Return to Jivara home"
+          >
+
+            <img
+              src="/images/jivara-logo.png"
+              alt="Jivara"
+            />
+
+          </Link>
+
+        </div>
 
         <div className="customer-auth__content">
 
@@ -451,7 +486,7 @@ function CustomerLogin() {
           <div className="customer-auth__icon">
 
             {mode ===
-            "login" ? (
+              "login" ? (
 
               <LockKeyhole
                 size={24}
@@ -473,7 +508,7 @@ function CustomerLogin() {
           <p className="customer-auth__eyebrow">
 
             {mode ===
-            "login"
+              "login"
               ? "WELCOME BACK"
               : "JOIN JIVARA"}
 
@@ -483,7 +518,7 @@ function CustomerLogin() {
           <h2>
 
             {mode ===
-            "login"
+              "login"
               ? (
                 <>
                   Sign
@@ -509,7 +544,7 @@ function CustomerLogin() {
           <p className="customer-auth__intro">
 
             {mode ===
-            "login"
+              "login"
               ? "Access your orders, measurements and made-to-order journey."
               : "Create an account to keep your Jivara orders and tailoring details together."}
 
@@ -526,7 +561,7 @@ function CustomerLogin() {
               type="button"
               className={
                 mode ===
-                "login"
+                  "login"
                   ? "active"
                   : ""
               }
@@ -544,7 +579,7 @@ function CustomerLogin() {
               type="button"
               className={
                 mode ===
-                "register"
+                  "register"
                   ? "active"
                   : ""
               }
@@ -574,56 +609,56 @@ function CustomerLogin() {
             {mode ===
               "register" && (
 
-              <div className="customer-auth__name-grid">
+                <div className="customer-auth__name-grid">
 
-                <label>
+                  <label>
 
-                  <span>
-                    FIRST NAME
-                  </span>
-
-
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={
-                      form.firstName
-                    }
-                    onChange={
-                      handleChange
-                    }
-                    autoComplete="given-name"
-                    required
-                  />
-
-                </label>
+                    <span>
+                      FIRST NAME
+                    </span>
 
 
-                <label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={
+                        form.firstName
+                      }
+                      onChange={
+                        handleChange
+                      }
+                      autoComplete="given-name"
+                      required
+                    />
 
-                  <span>
-                    LAST NAME
-                  </span>
+                  </label>
 
 
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={
-                      form.lastName
-                    }
-                    onChange={
-                      handleChange
-                    }
-                    autoComplete="family-name"
-                    required
-                  />
+                  <label>
 
-                </label>
+                    <span>
+                      LAST NAME
+                    </span>
 
-              </div>
 
-            )}
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={
+                        form.lastName
+                      }
+                      onChange={
+                        handleChange
+                      }
+                      autoComplete="family-name"
+                      required
+                    />
+
+                  </label>
+
+                </div>
+
+              )}
 
 
             <label>
@@ -652,28 +687,28 @@ function CustomerLogin() {
             {mode ===
               "register" && (
 
-              <label>
+                <label>
 
-                <span>
-                  PHONE
-                </span>
+                  <span>
+                    PHONE
+                  </span>
 
 
-                <input
-                  type="tel"
-                  name="phone"
-                  value={
-                    form.phone
-                  }
-                  onChange={
-                    handleChange
-                  }
-                  autoComplete="tel"
-                />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={
+                      form.phone
+                    }
+                    onChange={
+                      handleChange
+                    }
+                    autoComplete="tel"
+                  />
 
-              </label>
+                </label>
 
-            )}
+              )}
 
 
             <label>
@@ -700,7 +735,7 @@ function CustomerLogin() {
                   }
                   autoComplete={
                     mode ===
-                    "register"
+                      "register"
                       ? "new-password"
                       : "current-password"
                   }
@@ -749,33 +784,33 @@ function CustomerLogin() {
             {mode ===
               "register" && (
 
-              <label>
+                <label>
 
-                <span>
-                  CONFIRM PASSWORD
-                </span>
+                  <span>
+                    CONFIRM PASSWORD
+                  </span>
 
 
-                <input
-                  type={
-                    showPassword
-                      ? "text"
-                      : "password"
-                  }
-                  name="confirmPassword"
-                  value={
-                    form.confirmPassword
-                  }
-                  onChange={
-                    handleChange
-                  }
-                  autoComplete="new-password"
-                  required
-                />
+                  <input
+                    type={
+                      showPassword
+                        ? "text"
+                        : "password"
+                    }
+                    name="confirmPassword"
+                    value={
+                      form.confirmPassword
+                    }
+                    onChange={
+                      handleChange
+                    }
+                    autoComplete="new-password"
+                    required
+                  />
 
-              </label>
+                </label>
 
-            )}
+              )}
 
 
             {error && (
@@ -837,7 +872,7 @@ function CustomerLogin() {
           <p className="customer-auth__switch">
 
             {mode ===
-            "login"
+              "login"
               ? "New to Jivara?"
               : "Already have an account?"}
 
@@ -847,7 +882,7 @@ function CustomerLogin() {
               onClick={() =>
                 changeMode(
                   mode ===
-                  "login"
+                    "login"
                     ? "register"
                     : "login"
                 )
@@ -855,7 +890,7 @@ function CustomerLogin() {
             >
 
               {mode ===
-              "login"
+                "login"
                 ? "Create an account"
                 : "Sign in"}
 

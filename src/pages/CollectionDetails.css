@@ -200,13 +200,13 @@
 
   width: 100%;
 
-  aspect-ratio: 4 / 5;
+  /* Taller fashion portrait ratio */
+  aspect-ratio: 2 / 3;
 
   overflow: hidden;
 
   background: #eee8dd;
 }
-
 
 .jivara-product-card__image-link {
   width: 100%;
@@ -220,6 +220,7 @@
 }
 
 
+
 .jivara-product-card__image img,
 .jivara-product-card__image-link img {
   width: 100%;
@@ -228,20 +229,24 @@
   display: block;
 
   object-fit: cover;
-  object-position: center;
+
+  object-position: center center;
 
   transition:
-    transform 0.45s ease,
     filter 0.4s ease;
 }
 
 
 .jivara-product-card:hover
-.jivara-product-card__image img {
-  transform: scale(1.025);
+.jivara-product-card__image img,
+.jivara-product-card:hover
+.jivara-product-card__image-link img {
+  transform: none;
 
   filter: brightness(0.96);
 }
+
+
 
 
 /* =========================================================
@@ -685,3 +690,4 @@
   }
 
 }
+

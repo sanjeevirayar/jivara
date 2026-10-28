@@ -39,11 +39,14 @@ function BrideGroomFeature() {
       <div className="couple-feature__gallery">
 
 
-        {/* FIRST COUPLE LOOK */}
+        {/* =================================================
+            FIRST LOOK — BRIDE & GROOM
+        ================================================= */}
 
         <Link
           to="/collections/bride-groom"
           className="couple-feature__image"
+          aria-label="Explore Bride and Groom Collection"
         >
 
           <img
@@ -63,11 +66,14 @@ function BrideGroomFeature() {
         </Link>
 
 
-        {/* SECOND COUPLE LOOK */}
+        {/* =================================================
+            SECOND LOOK — THE COUPLE EDIT
+        ================================================= */}
 
         <Link
-          to="/collections/bride-groom"
+          to="/couple-edit"
           className="couple-feature__image"
+          aria-label="Explore The Couple Edit"
         >
 
           <img
@@ -80,7 +86,7 @@ function BrideGroomFeature() {
 
           <img
             src="/images/bride-groom/bride-groom-2.png"
-            alt="Jivara coordinated bride and groom outfits"
+            alt="Jivara The Couple Edit coordinated outfits"
             className="couple-feature__image-main"
           />
 

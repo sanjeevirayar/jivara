@@ -84,7 +84,7 @@ function Contact() {
         setError("");
       }
 
-  };
+    };
 
 
   /* =====================================================
@@ -302,6 +302,10 @@ function Contact() {
                 <span>
                   CALL US
                 </span>
+
+                <p className="contact-method__name">
+                  Jigna Thakkar (Radhey)
+                </p>
 
 
                 <strong>

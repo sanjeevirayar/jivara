@@ -28,6 +28,7 @@ import CategoryCollections from "./pages/CategoryCollections";
 import OurStory from "./pages/OurStory";
 import Contact from "./pages/Contact";
 import Lookbook from "./pages/Lookbook";
+import CoupleEdit from "./pages/CoupleEdit";
 
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -237,6 +238,11 @@ function App() {
         <Route
           path="/lookbook"
           element={<Lookbook />}
+        />
+
+        <Route
+          path="/couple-edit"
+          element={<CoupleEdit />}
         />
 
 
