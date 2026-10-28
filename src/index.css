@@ -4118,7 +4118,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* =========================================================
-   FOUNDER IMAGE
+   FOUNDER IMAGE — DESKTOP
 ========================================================= */
 
 .about-jivara__visual img {
@@ -4127,9 +4127,10 @@ input[type="search"]::-webkit-search-results-decoration {
   top: 50%;
   left: 50%;
 
-  width: 70%;
-  height: 70%;
-
+  width: 82%;
+  height: 78%;
+  max-width: 600px;
+  max-height: 620px;
   transform: translate(-50%, -50%);
 
   display: block;
@@ -4142,7 +4143,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* =========================================================
-   SUBTLE FRAME AROUND IMAGE
+   SUBTLE FRAME AROUND IMAGE — DESKTOP
 ========================================================= */
 
 .about-jivara__visual::before {
@@ -4196,6 +4197,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+
 /* =========================================================
    IMAGE TEXT
 ========================================================= */
@@ -4218,7 +4220,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-.about-jivara__visual-copy>span {
+.about-jivara__visual-copy > span {
   font-family: "Cormorant Garamond", serif;
 
   font-size: 22px;
@@ -4244,6 +4246,177 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--antique-gold);
 }
 
+
+/* =========================================================
+   ABOUT JIVARA — MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .about-jivara {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+
+  /* VISUAL SECTION */
+
+  .about-jivara__visual {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 65px 32px 48px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow: visible;
+
+    background: #eee7dc;
+  }
+
+
+  /* FULL IMAGE — NO CROPPING */
+
+  .about-jivara__visual img {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 78%;
+    max-width: 520px;
+
+    height: auto;
+    max-height: none;
+
+    transform: none;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    outline: 1px solid rgba(155, 122, 66, 0.28);
+    outline-offset: 14px;
+
+    z-index: 2;
+  }
+
+
+  /* DESKTOP FRAME IS NOT NEEDED ON MOBILE */
+
+  .about-jivara__visual::before {
+    display: none;
+  }
+
+
+  /* DECORATIVE DIAMOND */
+
+  .about-jivara__visual::after {
+    top: 35px;
+    right: 8%;
+
+    font-size: 27px;
+  }
+
+
+  /* IMAGE CAPTION */
+
+  .about-jivara__visual-copy {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 38px;
+
+    transform: none;
+
+    text-align: center;
+  }
+
+
+  .about-jivara__visual-copy > span {
+    font-size: 22px;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .about-jivara__visual-copy p {
+    margin-top: 5px;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+  }
+
+}
+
+
+/* =========================================================
+   ABOUT JIVARA — SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-jivara__visual {
+    padding:
+      55px
+      24px
+      44px;
+  }
+
+
+  .about-jivara__visual img {
+    width: 84%;
+
+    max-width: none;
+
+    height: auto;
+
+    object-fit: contain;
+
+    outline-offset: 11px;
+  }
+
+
+  .about-jivara__visual::after {
+    top: 30px;
+    right: 6%;
+
+    font-size: 24px;
+  }
+
+
+  .about-jivara__visual-copy {
+    margin-top: 32px;
+  }
+
+
+  .about-jivara__visual-copy > span {
+    font-size: 20px;
+  }
+
+
+  .about-jivara__visual-copy p {
+    font-size: 15px;
+  }
+
+}
 /* =========================================================
    CONTENT
 ========================================================= */
@@ -4589,11 +4762,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /* =========================================================
-   ABOUT JIVARA — RESPONSIVE SIZE FIX ONLY
+   ABOUT JIVARA — RESPONSIVE
 ========================================================= */
 
 
-/* Desktop / large screens */
+/* =========================================================
+   DESKTOP / LARGE SCREENS
+========================================================= */
 
 .about-jivara {
   min-height: clamp(620px, 55vw, 760px);
@@ -4605,19 +4780,16 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* Keep the same 70% image size,
-   but stop it becoming excessively large */
-
 .about-jivara__visual img {
   width: 70%;
   height: 70%;
 
   max-width: 520px;
   max-height: 540px;
+
+  object-fit: cover;
 }
 
-
-/* Keep frame matching the image */
 
 .about-jivara__visual::before {
   width: min(calc(70% + 28px), 548px);
@@ -4665,6 +4837,8 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (max-width: 1000px) {
 
   .about-jivara {
+    grid-template-columns: 43% 57%;
+
     min-height: clamp(540px, 68vw, 650px);
   }
 
@@ -4688,6 +4862,11 @@ input[type="search"]::-webkit-search-results-decoration {
     height: min(calc(68% + 28px), 468px);
   }
 
+
+  .about-jivara__content {
+    padding: 65px 7%;
+  }
+
 }
 
 
@@ -4698,27 +4877,166 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (max-width: 720px) {
 
   .about-jivara {
-    min-height: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: auto;
   }
 
+
+  /* =====================================================
+     IMAGE AREA
+  ===================================================== */
 
   .about-jivara__visual {
-    min-height: clamp(480px, 120vw, 540px);
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding:
+      60px
+      28px
+      45px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow: visible;
+
+    background: #eee7dc;
   }
 
+
+  /* =====================================================
+     FULL PORTRAIT — NO CROPPING
+  ===================================================== */
 
   .about-jivara__visual img {
-    width: 70%;
-    height: 68%;
+    position: relative;
 
-    max-width: 360px;
-    max-height: 380px;
+    top: auto;
+    left: auto;
+
+    width: 80%;
+    max-width: 420px;
+
+    height: auto;
+    max-height: none;
+
+    transform: none;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    outline:
+      1px solid
+      rgba(155, 122, 66, 0.28);
+
+    outline-offset: 13px;
+
+    z-index: 2;
   }
 
 
+  /* =====================================================
+     REMOVE OLD FIXED DESKTOP FRAME
+  ===================================================== */
+
   .about-jivara__visual::before {
-    width: min(calc(70% + 28px), 388px);
-    height: min(calc(68% + 28px), 408px);
+    display: none;
+  }
+
+
+  /* =====================================================
+     DECORATIVE DIAMOND
+  ===================================================== */
+
+  .about-jivara__visual::after {
+    top: 32px;
+    right: 7%;
+
+    font-size: 26px;
+  }
+
+
+  /* =====================================================
+     IMAGE TEXT
+  ===================================================== */
+
+  .about-jivara__visual-copy {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 36px;
+
+    transform: none;
+
+    text-align: center;
+  }
+
+
+  .about-jivara__visual-copy > span {
+    font-size: 22px;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .about-jivara__visual-copy p {
+    margin: 5px 0 0;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+  }
+
+
+  /* =====================================================
+     CONTENT
+  ===================================================== */
+
+  .about-jivara__content {
+    width: 100%;
+
+    padding:
+      60px
+      22px
+      70px;
+  }
+
+
+  .about-jivara__content h2 {
+    font-size: 48px;
+  }
+
+
+  .about-jivara__lead {
+    font-size: 17px;
+  }
+
+
+  .about-jivara__quote p {
+    font-size: 20px;
+  }
+
+
+  .about-jivara__button {
+    width: 100%;
+
+    justify-content: space-between;
   }
 
 }
@@ -4731,26 +5049,63 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (max-width: 480px) {
 
   .about-jivara__visual {
-    min-height: 470px;
+    padding:
+      52px
+      24px
+      42px;
   }
 
 
   .about-jivara__visual img {
-    width: 72%;
-    height: 66%;
+    width: 84%;
 
-    max-width: 300px;
-    max-height: 330px;
+    max-width: 340px;
+
+    height: auto;
+    max-height: none;
+
+    object-fit: contain;
+
+    outline-offset: 10px;
   }
 
 
-  .about-jivara__visual::before {
-    width: min(calc(72% + 28px), 328px);
-    height: min(calc(66% + 28px), 358px);
+  .about-jivara__visual::after {
+    top: 27px;
+    right: 6%;
+
+    font-size: 23px;
+  }
+
+
+  .about-jivara__visual-copy {
+    margin-top: 31px;
+  }
+
+
+  .about-jivara__visual-copy > span {
+    font-size: 20px;
+  }
+
+
+  .about-jivara__visual-copy p {
+    font-size: 15px;
+  }
+
+
+  .about-jivara__content {
+    padding:
+      55px
+      20px
+      65px;
+  }
+
+
+  .about-jivara__content h2 {
+    font-size: 44px;
   }
 
 }
-
 /* =========================================================
    CLOSING CTA
 ========================================================= */

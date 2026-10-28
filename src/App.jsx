@@ -27,6 +27,7 @@ import SearchResults from "./pages/SearchResults";
 import CategoryCollections from "./pages/CategoryCollections";
 import OurStory from "./pages/OurStory";
 import Contact from "./pages/Contact";
+import Lookbook from "./pages/Lookbook";
 
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -231,6 +232,11 @@ function App() {
         <Route
           path="/admin/orders/:id"
           element={<AdminOrderDetails />}
+        />
+
+        <Route
+          path="/lookbook"
+          element={<Lookbook />}
         />
 
 

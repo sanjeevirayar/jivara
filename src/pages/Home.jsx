@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import CollectionsPreview from "../components/CollectionsPreview";
 import BrideGroomFeature from "../components/BrideGroomFeature";
 import CraftsmanshipFeature from "../components/CraftsmanshipFeature";
-import WornByJivara from "../components/WornByJivara";
+import JivaraLookbook from "../components/JivaraLookbook";
 import AboutJivara from "../components/AboutJivara";
 import ClosingCTA from "../components/ClosingCTA";
 import Footer from "../components/Footer";
@@ -27,7 +27,7 @@ function Home() {
 
       <CraftsmanshipFeature />
 
-      <WornByJivara />
+      <JivaraLookbook />
 
       <AboutJivara />
 

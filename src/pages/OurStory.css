@@ -1,23 +1,244 @@
 /* =========================================================
-   PAGE
+   OUR STORY — JIVARA
 ========================================================= */
 
 .our-story-page {
-  background:
-    var(--ivory-light);
+  width: 100%;
 
-  color:
-    var(--charcoal);
+  overflow: hidden;
+
+  background: var(--ivory-light);
+
+  color: var(--charcoal);
 }
 
 
 /* =========================================================
-   COMMON
+   PAGE HERO
 ========================================================= */
 
-.our-story-eyebrow {
-  margin:
-    0 0 13px;
+.our-story-hero {
+  width: 100%;
+
+  padding:
+    62px
+    24px
+    72px;
+
+  background: var(--ivory);
+
+  text-align: center;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.our-story-hero__inner {
+  width: min(
+    880px,
+    100%
+  );
+
+  margin: 0 auto;
+}
+
+
+.our-story-hero__eyebrow {
+  margin: 0 0 17px;
+
+  color: var(--antique-gold);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+}
+
+
+.our-story-hero h1 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      54px,
+      5vw,
+      78px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.98;
+}
+
+
+.our-story-hero__tagline {
+  margin: 20px 0 0;
+
+  color: var(--antique-gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 22px;
+
+  font-style: italic;
+}
+
+
+.our-story-hero__intro {
+  margin: 13px 0 0;
+
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+}
+
+
+.our-story-hero__divider {
+  width: 430px;
+
+  max-width: 65%;
+
+  margin: 37px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.our-story-hero__divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(
+      155,
+      122,
+      66,
+      0.42
+    );
+}
+
+
+.our-story-hero__divider b {
+  color: var(--antique-gold);
+
+  font-size: 12px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SHARED STORY SECTION
+========================================================= */
+
+.our-story-section {
+  width: 100%;
+
+  padding:
+    105px
+    clamp(
+      25px,
+      7vw,
+      120px
+    );
+}
+
+
+.our-story-section--light {
+  background:
+    var(--ivory-light);
+}
+
+
+.our-story-section--cream {
+  background:
+    var(--ivory);
+}
+
+
+.our-story-section__inner {
+  width: min(
+    1180px,
+    100%
+  );
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    150px 1fr;
+
+  gap: 70px;
+}
+
+
+.our-story-section__meta {
+  padding-top: 8px;
+}
+
+
+.our-story-section__meta span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 45px;
+
+  font-style: italic;
+}
+
+
+.our-story-section__meta p {
+  margin: 8px 0 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.22em;
+}
+
+
+.our-story-section__content {
+  max-width: 790px;
+}
+
+
+.our-story-section__eyebrow {
+  margin: 0 0 14px;
 
   color:
     var(--antique-gold);
@@ -26,26 +247,35 @@
     "Inter",
     sans-serif;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 500;
 
-  letter-spacing:
-    0.2em;
+  letter-spacing: 0.24em;
 }
 
 
-.our-story-page h1,
-.our-story-page h2,
-.our-story-page h3 {
+.our-story-section__content h2 {
+  margin: 0;
+
   font-family:
     "Cormorant Garamond",
     serif;
+
+  font-size:
+    clamp(
+      47px,
+      5vw,
+      68px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.95;
 }
 
 
-.our-story-page h2 span,
-.our-story-page h1 span {
+.our-story-section__content h2 span {
   display: block;
 
   color:
@@ -56,224 +286,21 @@
 
 
 /* =========================================================
-   HERO
+   PROSE
 ========================================================= */
 
-.our-story-hero {
-  min-height:
-    720px;
+.our-story-prose {
+  max-width: 720px;
 
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  border-bottom:
-    1px solid
-    var(--border);
+  margin-top: 34px;
 }
 
 
-.our-story-hero__content {
-  padding:
-    clamp(
-      70px,
-      8vw,
-      130px
-    );
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-}
-
-
-.our-story-hero h1 {
-  margin: 0;
-
-  font-size:
-    clamp(
-      65px,
-      7vw,
-      105px
-    );
-
-  font-weight: 400;
-
-  line-height: 0.84;
-}
-
-
-.our-story-hero__description {
-  max-width: 530px;
-
+.our-story-prose p {
   margin:
-    30px 0 0;
-
-  color:
-    var(--soft-charcoal);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(
-      17px,
-      1.5vw,
-      21px
-    );
-
-  line-height: 1.6;
-}
-
-
-.our-story-divider {
-  max-width: 380px;
-
-  margin-top:
-    38px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 14px;
-
-  color:
-    var(--antique-gold);
-}
-
-
-.our-story-divider span {
-  height: 1px;
-
-  flex: 1;
-
-  background:
-    rgba(
-      155,
-      122,
-      66,
-      0.3
-    );
-}
-
-
-.our-story-divider b {
-  font-weight: 400;
-}
-
-
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
-.our-story-hero__image {
-  min-height: 720px;
-
-  overflow: hidden;
-
-  background:
-    #eee8dd;
-}
-
-
-.our-story-hero__image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  object-position: center;
-}
-
-
-/* =========================================================
-   BEGINNING
-========================================================= */
-
-.our-story-beginning {
-  width:
-    min(
-      1180px,
-      88%
-    );
-
-  margin: auto;
-
-  padding:
-    clamp(
-      90px,
-      10vw,
-      150px
-    )
-    0;
-
-  display: grid;
-
-  grid-template-columns:
-    150px
-    minmax(
-      0,
-      700px
-    );
-
-  justify-content: center;
-
-  gap:
-    clamp(
-      40px,
-      7vw,
-      100px
-    );
-}
-
-
-.our-story-beginning__number {
-  color:
-    rgba(
-      155,
-      122,
-      66,
-      0.35
-    );
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 90px;
-
-  font-weight: 400;
-
-  line-height: 0.8;
-}
-
-
-.our-story-beginning h2 {
-  margin: 0;
-
-  font-size:
-    clamp(
-      48px,
-      5vw,
-      72px
-    );
-
-  font-weight: 400;
-
-  line-height: 0.9;
-}
-
-
-.our-story-beginning__content > p:not(.our-story-eyebrow) {
-  margin:
-    25px 0 0;
+    0
+    0
+    19px;
 
   color:
     var(--soft-charcoal);
@@ -284,206 +311,471 @@
 
   font-size: 18px;
 
-  line-height: 1.65;
+  line-height: 1.72;
 }
 
 
-/* =========================================================
-   REBIRTH
-========================================================= */
-
-.our-story-rebirth {
-  min-height:
-    650px;
-
-  padding:
-    clamp(
-      80px,
-      9vw,
-      140px
-    );
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(
-      0,
-      700px
-    )
-    1fr;
-
-  gap:
-    80px;
-
-  align-items: center;
-
-  background:
+.our-story-prose p:first-child {
+  color:
     var(--charcoal);
 
+  font-size: 21px;
+}
+
+
+.our-story-prose em {
   color:
-    var(--ivory);
+    var(--charcoal);
+
+  font-style: italic;
 }
 
 
-.our-story-rebirth h2 {
-  margin: 0;
+/* =========================================================
+   QUOTE
+========================================================= */
 
-  font-size:
-    clamp(
-      50px,
-      5.5vw,
-      80px
-    );
-
-  font-weight: 400;
-
-  line-height: 0.9;
-}
-
-
-.our-story-rebirth__content > p:not(.our-story-eyebrow) {
-  max-width: 610px;
+.our-story-quote {
+  max-width: 700px;
 
   margin:
-    26px 0 0;
-
-  color:
-    rgba(
-      248,
-      245,
-      237,
-      0.75
-    );
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 18px;
-
-  line-height: 1.65;
-}
-
-
-.our-story-rebirth blockquote {
-  max-width: 600px;
-
-  margin:
-    42px 0;
+    37px
+    0
+    0;
 
   padding:
-    10px 0
-    10px 28px;
+    25px
+    0
+    25px
+    30px;
 
   border-left:
     1px solid
     var(--antique-gold);
 
   color:
-    var(--gold-light);
+    var(--charcoal);
 
   font-family:
     "Cormorant Garamond",
     serif;
 
-  font-size:
-    clamp(
-      29px,
-      3vw,
-      42px
-    );
+  font-size: 24px;
 
   font-style: italic;
 
-  line-height: 1.2;
-}
-
-
-.our-story-rebirth__ornament {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color:
-    rgba(
-      200,
-      173,
-      119,
-      0.4
-    );
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(
-      150px,
-      20vw,
-      300px
-    );
+  line-height: 1.45;
 }
 
 
 /* =========================================================
-   PHILOSOPHY
+   FOUNDER
 ========================================================= */
 
-.our-story-philosophy {
-  width:
-    min(
-      1280px,
-      90%
-    );
-
-  margin: auto;
+.our-story-founder {
+  width: 100%;
 
   padding:
-    clamp(
-      90px,
-      10vw,
-      150px
-    )
-    0;
+    105px
+    clamp(25px, 7vw, 120px);
+
+  background: #eee7dc;
 }
 
 
-.our-story-section-heading {
+.our-story-founder__inner {
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.8fr)
+    minmax(0, 1.2fr);
+
+  align-items: center;
+
+  gap: clamp(55px, 7vw, 105px);
+}
+
+
+/* =========================================================
+   FOUNDER IMAGE
+========================================================= */
+
+.our-story-founder__image {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 470px;
+
+  margin: 0 auto;
+}
+
+
+.our-story-founder__image::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -14px;
+
+  border:
+    1px solid
+    rgba(155, 122, 66, 0.28);
+
+  pointer-events: none;
+}
+
+
+.our-story-founder__image::after {
+  content: "◇";
+
+  position: absolute;
+
+  top: -34px;
+  right: -31px;
+
+  color:
+    rgba(155, 122, 66, 0.18);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+}
+
+
+.our-story-founder__image img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+
+/* =========================================================
+   FOUNDER CONTENT
+========================================================= */
+
+.our-story-founder__content {
+  min-width: 0;
+}
+
+
+.our-story-founder__heading {
   max-width: 720px;
-
-  margin-bottom:
-    65px;
 }
 
 
-.our-story-section-heading h2 {
+.our-story-founder__heading h2 {
   margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(52px, 6vw, 80px);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+}
+
+
+.our-story-founder__heading h2 span {
+  display: block;
+
+  color: var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.our-story-founder__copy {
+  max-width: 700px;
+
+  margin-top: 34px;
+}
+
+
+.our-story-founder__copy p {
+  margin:
+    0
+    0
+    17px;
+
+  color: var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 19px;
+
+  line-height: 1.65;
+}
+
+
+.our-story-founder__copy p:first-child {
+  color: var(--charcoal);
+
+  font-size: 22px;
+}
+
+
+.our-story-founder__roles {
+  margin-top: 40px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.our-story-founder__roles span {
+  padding:
+    11px
+    16px;
+
+  border:
+    1px solid
+    rgba(155, 122, 66, 0.3);
+
+  background:
+    rgba(252, 250, 245, 0.58);
+
+  color: var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FOUNDER — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .our-story-founder__inner {
+    grid-template-columns:
+      minmax(240px, 0.8fr)
+      minmax(0, 1.2fr);
+
+    gap: 45px;
+  }
+
+
+  .our-story-founder__heading h2 {
+    font-size: 55px;
+  }
+
+}
+
+
+/* =========================================================
+   FOUNDER — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .our-story-founder {
+    padding:
+      80px
+      22px;
+  }
+
+
+  .our-story-founder__inner {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 58px;
+  }
+
+
+  .our-story-founder__image {
+    width: 82%;
+
+    max-width: 390px;
+  }
+
+
+  .our-story-founder__image img {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+  }
+
+
+  .our-story-founder__image::before {
+    inset: -11px;
+  }
+
+
+  .our-story-founder__image::after {
+    top: -29px;
+    right: -25px;
+
+    font-size: 25px;
+  }
+
+
+  .our-story-founder__content {
+    width: 100%;
+  }
+
+
+  .our-story-founder__heading h2 {
+    font-size: 50px;
+  }
+
+
+  .our-story-founder__copy {
+    margin-top: 27px;
+  }
+
+
+  .our-story-founder__copy p {
+    font-size: 17px;
+  }
+
+
+  .our-story-founder__copy p:first-child {
+    font-size: 20px;
+  }
+
+
+  .our-story-founder__roles {
+    margin-top: 32px;
+
+    gap: 8px;
+  }
+
+
+  .our-story-founder__roles span {
+    padding:
+      10px
+      12px;
+
+    font-size: 7px;
+  }
+
+}
+/* =========================================================
+   FOUR VOWS
+========================================================= */
+
+.our-story-vows {
+  width: 100%;
+
+  padding:
+    110px
+    clamp(
+      25px,
+      7vw,
+      120px
+    );
+
+  background:
+    var(--ivory-light);
+}
+
+
+.our-story-vows__inner {
+  width: min(
+    1180px,
+    100%
+  );
+
+  margin: 0 auto;
+}
+
+
+.our-story-vows__heading {
+  max-width: 740px;
+}
+
+
+.our-story-vows__heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size:
     clamp(
       50px,
       5vw,
-      75px
+      70px
     );
 
   font-weight: 400;
 
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 
-.our-story-values {
+.our-story-vows__heading h2 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.our-story-vows__heading > p:last-child {
+  max-width: 610px;
+
+  margin-top: 25px;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.65;
+}
+
+
+.our-story-vows__grid {
+  margin-top: 57px;
+
   display: grid;
 
   grid-template-columns:
     repeat(
-      3,
-      minmax(
-        0,
-        1fr
-      )
+      4,
+      1fr
     );
 
   border-top:
@@ -496,34 +788,47 @@
 }
 
 
-.our-story-value {
+.our-story-vow {
+  min-height: 185px;
+
   padding:
-    45px
-    clamp(
-      20px,
-      3vw,
-      40px
-    );
-}
+    28px
+    24px;
 
-
-.our-story-value +
-.our-story-value {
-  border-left:
+  border-right:
     1px solid
     var(--border);
 }
 
 
-.our-story-value svg {
-  color:
-    var(--antique-gold);
+.our-story-vow:last-child {
+  border-right: 0;
 }
 
 
-.our-story-value h3 {
+.our-story-vow span {
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+}
+
+
+.our-story-vow h3 {
   margin:
-    25px 0 0;
+    45px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size: 27px;
 
@@ -531,9 +836,14 @@
 }
 
 
-.our-story-value p {
+.our-story-vows__closing {
+  max-width: 760px;
+
   margin:
-    13px 0 0;
+    42px
+    0
+    0
+    auto;
 
   color:
     var(--soft-charcoal);
@@ -542,85 +852,128 @@
     "Cormorant Garamond",
     serif;
 
-  font-size: 16px;
+  font-size: 17px;
 
-  line-height: 1.55;
+  line-height: 1.7;
 }
 
 
 /* =========================================================
-   SIGNATURE
+   DEVOTION
 ========================================================= */
 
-.our-story-signature {
-  min-height:
-    670px;
+.our-story-devotion {
+  width: 100%;
+
+  padding:
+    115px
+    clamp(
+      25px,
+      7vw,
+      120px
+    );
+
+  background:
+    #eee7dc;
+}
+
+
+.our-story-devotion__inner {
+  width: min(
+    1180px,
+    100%
+  );
+
+  margin: 0 auto;
 
   display: grid;
 
   grid-template-columns:
-    1fr 1fr;
+    190px 1fr;
 
-  background:
-    var(--ivory);
+  gap: 65px;
 }
 
 
-.our-story-signature__image {
-  overflow: hidden;
-
-  background:
-    #eee8dd;
-}
-
-
-.our-story-signature__image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-}
-
-
-.our-story-signature__content {
-  padding:
-    clamp(
-      60px,
-      8vw,
-      120px
+.our-story-devotion__number {
+  color:
+    rgba(
+      155,
+      122,
+      66,
+      0.42
     );
 
-  display: flex;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  flex-direction: column;
+  font-size:
+    clamp(
+      90px,
+      12vw,
+      170px
+    );
 
-  justify-content: center;
+  font-style: italic;
+
+  line-height: 0.8;
 }
 
 
-.our-story-signature__content h2 {
+.our-story-devotion__content {
+  max-width: 760px;
+}
+
+
+.our-story-devotion__content h2 {
   margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size:
     clamp(
       50px,
-      5.4vw,
-      80px
+      5vw,
+      72px
     );
 
   font-weight: 400;
 
-  line-height: 0.9;
+  line-height: 0.95;
 }
 
 
-.our-story-signature__content > p:not(.our-story-eyebrow) {
-  max-width: 530px;
+.our-story-devotion__content h2 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.our-story-devotion__lead {
+  margin-top: 30px;
+
+  color:
+    var(--charcoal) !important;
+
+  font-size:
+    21px !important;
+}
+
+
+.our-story-devotion__content > p {
+  max-width: 700px;
 
   margin:
-    28px 0 0;
+    17px
+    0
+    0;
 
   color:
     var(--soft-charcoal);
@@ -631,26 +984,55 @@
 
   font-size: 18px;
 
-  line-height: 1.6;
+  line-height: 1.68;
 }
 
 
-.our-story-signature__link {
+.our-story-devotion__content blockquote {
+  max-width: 650px;
+
+  margin:
+    38px
+    0
+    0;
+
+  padding-left: 28px;
+
+  border-left:
+    1px solid
+    var(--antique-gold);
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 25px;
+
+  font-style: italic;
+
+  line-height: 1.4;
+}
+
+
+.our-story-link {
   width: fit-content;
 
-  margin-top:
-    35px;
+  margin-top: 37px;
 
-  padding-bottom:
-    8px;
+  padding:
+    14px
+    20px;
 
   display: inline-flex;
 
   align-items: center;
 
-  gap: 12px;
+  gap: 28px;
 
-  border-bottom:
+  border:
     1px solid
     var(--charcoal);
 
@@ -665,62 +1047,258 @@
 
   font-weight: 500;
 
-  letter-spacing:
-    0.13em;
+  letter-spacing: 0.15em;
 
   text-decoration: none;
+
+  transition:
+    background
+    0.25s ease,
+    color
+    0.25s ease;
+}
+
+
+.our-story-link:hover {
+  background:
+    var(--charcoal);
+
+  color: #ffffff;
 }
 
 
 /* =========================================================
-   CLOSING
+   LOSS / REBIRTH
 ========================================================= */
 
-.our-story-closing {
+.our-story-rebirth {
+  width: 100%;
+
   padding:
-    clamp(
-      90px,
-      11vw,
-      160px
-    )
-    25px;
+    120px
+    24px;
 
-  text-align: center;
-}
-
-
-.our-story-closing__ornament {
-  display: block;
-
-  margin-bottom:
-    28px;
+  background:
+    var(--charcoal);
 
   color:
-    var(--antique-gold);
+    var(--ivory);
 }
 
 
-.our-story-closing h2 {
+.our-story-rebirth__inner {
+  width: min(
+    900px,
+    100%
+  );
+
+  margin: 0 auto;
+}
+
+
+.our-story-rebirth__year {
   margin: 0;
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 46px;
+
+  font-style: italic;
+}
+
+
+.our-story-rebirth__eyebrow {
+  margin:
+    12px
+    0
+    18px;
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.25em;
+}
+
+
+.our-story-rebirth h2 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color:
+    var(--ivory);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      49px,
+      6vw,
+      76px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.our-story-rebirth h2 span {
+  display: block;
+
+  color:
+    var(--gold-light);
+
+  font-style: italic;
+}
+
+
+.our-story-rebirth__copy {
+  max-width: 740px;
+
+  margin-top: 42px;
+}
+
+
+.our-story-rebirth__copy p {
+  margin:
+    0
+    0
+    19px;
+
+  color:
+    rgba(
+      248,
+      245,
+      237,
+      0.74
+    );
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+.our-story-rebirth__quote {
+  max-width: 700px;
+
+  margin:
+    45px
+    0
+    0;
+
+  padding:
+    25px
+    0
+    25px
+    28px;
+
+  border-left:
+    1px solid
+    var(--gold-light);
+
+  color:
+    var(--ivory);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 26px;
+
+  font-style: italic;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SOUL OF JIVARA
+========================================================= */
+
+.our-story-soul {
+  width: 100%;
+
+  padding:
+    115px
+    clamp(
+      25px,
+      7vw,
+      120px
+    );
+
+  background:
+    var(--ivory);
+}
+
+
+.our-story-soul__inner {
+  width: min(
+    1180px,
+    100%
+  );
+
+  margin: 0 auto;
+}
+
+
+.our-story-soul h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size:
     clamp(
       52px,
       6vw,
-      86px
+      78px
     );
 
   font-weight: 400;
 
-  line-height: 0.9;
+  line-height: 0.94;
 }
 
 
-.our-story-closing > p:not(.our-story-eyebrow) {
-  max-width: 520px;
+.our-story-soul h2 span {
+  display: block;
 
-  margin:
-    28px auto 0;
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.our-story-soul__intro {
+  max-width: 580px;
+
+  margin-top: 28px;
+}
+
+
+.our-story-soul__intro p {
+  margin: 0;
 
   color:
     var(--soft-charcoal);
@@ -729,36 +1307,52 @@
     "Cormorant Garamond",
     serif;
 
-  font-size: 17px;
-
-  line-height: 1.6;
+  font-size: 19px;
 }
 
 
-.our-story-closing__button {
-  min-height: 52px;
+.our-story-soul__grid {
+  margin-top: 60px;
 
-  margin-top:
-    35px;
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.our-story-soul__grid article {
+  min-height: 210px;
 
   padding:
-    0 22px;
+    27px
+    24px;
 
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 20px;
-
-  border:
+  border-right:
     1px solid
-    var(--charcoal);
+    var(--border);
 
-  background:
-    var(--charcoal);
+  border-bottom:
+    1px solid
+    var(--border);
+}
 
+
+.our-story-soul__grid article:nth-child(4n) {
+  border-right: 0;
+}
+
+
+.our-story-soul__grid article > span {
   color:
-    #ffffff;
+    var(--antique-gold);
 
   font-family:
     "Inter",
@@ -766,10 +1360,212 @@
 
   font-size: 8px;
 
-  letter-spacing:
-    0.13em;
+  letter-spacing: 0.16em;
+}
+
+
+.our-story-soul__grid h3 {
+  margin:
+    42px
+    0
+    8px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+}
+
+
+.our-story-soul__grid p {
+  margin: 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.our-story-signature {
+  width: 100%;
+
+  padding:
+    120px
+    24px;
+
+  text-align: center;
+
+  background:
+    var(--ivory-light);
+}
+
+
+.our-story-signature__inner {
+  width: min(
+    850px,
+    100%
+  );
+
+  margin: 0 auto;
+}
+
+
+.our-story-signature__ornament {
+  margin-bottom: 18px;
+
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 22px;
+}
+
+
+.our-story-signature__inner > p {
+  margin: 0;
+
+  color:
+    var(--soft-charcoal);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 19px;
+}
+
+
+.our-story-signature h2 {
+  margin:
+    22px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      72px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.our-story-signature h2 span {
+  display: block;
+
+  color:
+    var(--antique-gold);
+
+  font-style: italic;
+}
+
+
+.our-story-signature__name {
+  margin-top: 38px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.our-story-signature__name strong {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+
+.our-story-signature__name span {
+  color:
+    var(--antique-gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.22em;
+}
+
+
+.our-story-signature__button {
+  margin-top: 40px;
+
+  padding:
+    15px
+    23px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  border:
+    1px solid
+    var(--antique-gold);
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
 
   text-decoration: none;
+
+  transition:
+    background
+    0.25s ease,
+    color
+    0.25s ease;
+}
+
+
+.our-story-signature__button:hover {
+  background:
+    var(--antique-gold);
+
+  color: #ffffff;
 }
 
 
@@ -777,47 +1573,65 @@
    TABLET
 ========================================================= */
 
-@media (
-  max-width: 900px
-) {
+@media (max-width: 900px) {
 
-  .our-story-hero,
-  .our-story-signature {
+  .our-story-section__inner {
     grid-template-columns:
+      100px
       1fr;
+
+    gap: 40px;
   }
 
 
-  .our-story-hero__image {
-    min-height:
-      550px;
-  }
-
-
-  .our-story-rebirth {
+  .our-story-devotion__inner {
     grid-template-columns:
+      130px
       1fr;
+
+    gap: 35px;
   }
 
 
-  .our-story-rebirth__ornament {
-    display: none;
-  }
-
-
-  .our-story-values {
+  .our-story-vows__grid {
     grid-template-columns:
-      1fr;
+      repeat(
+        2,
+        1fr
+      );
   }
 
 
-  .our-story-value +
-  .our-story-value {
-    border-left: 0;
+  .our-story-vow:nth-child(2) {
+    border-right: 0;
+  }
 
-    border-top:
+
+  .our-story-vow:nth-child(-n + 2) {
+    border-bottom:
       1px solid
       var(--border);
+  }
+
+
+  .our-story-soul__grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .our-story-soul__grid article:nth-child(4n) {
+    border-right:
+      1px solid
+      var(--border);
+  }
+
+
+  .our-story-soul__grid article:nth-child(2n) {
+    border-right: 0;
   }
 
 }
@@ -827,77 +1641,359 @@
    MOBILE
 ========================================================= */
 
-@media (
-  max-width: 600px
-) {
+@media (max-width: 650px) {
 
   .our-story-hero {
-    min-height: 0;
-  }
-
-
-  .our-story-hero__content {
     padding:
-      65px 24px;
+      45px
+      20px
+      50px;
   }
 
 
-  .our-story-hero__image {
-    min-height:
-      420px;
+  .our-story-hero h1 {
+    font-size: 46px;
   }
 
 
-  .our-story-beginning {
+  .our-story-hero__tagline {
+    font-size: 19px;
+  }
+
+
+  .our-story-hero__intro {
+    font-size: 17px;
+  }
+
+
+  .our-story-hero__divider {
+    width: 260px;
+
+    max-width: 82%;
+
+    margin-top: 29px;
+  }
+
+
+  /* SHARED SECTIONS */
+
+  .our-story-section {
     padding:
-      75px 0;
+      75px
+      21px;
+  }
+
+
+  .our-story-section__inner {
+    display: block;
+  }
+
+
+  .our-story-section__meta {
+    margin-bottom: 25px;
+  }
+
+
+  .our-story-section__meta span {
+    font-size: 35px;
+  }
+
+
+  .our-story-section__content h2 {
+    font-size: 46px;
+  }
+
+
+  .our-story-prose {
+    margin-top: 27px;
+  }
+
+
+  .our-story-prose p {
+    font-size: 17px;
+  }
+
+
+  .our-story-prose p:first-child {
+    font-size: 19px;
+  }
+
+
+  .our-story-quote {
+    padding-left: 21px;
+
+    font-size: 21px;
+  }
+
+
+  /* FOUNDER */
+
+  .our-story-founder {
+    padding:
+      78px
+      21px;
+  }
+
+
+  .our-story-founder__heading h2 {
+    font-size: 51px;
+  }
+
+
+  .our-story-founder__copy p {
+    font-size: 17px;
+  }
+
+
+  .our-story-founder__roles {
+    margin-top: 35px;
+
+    gap: 8px;
+  }
+
+
+  .our-story-founder__roles span {
+    padding:
+      10px
+      12px;
+
+    font-size: 7px;
+  }
+
+
+  /* VOWS */
+
+  .our-story-vows {
+    padding:
+      78px
+      21px;
+  }
+
+
+  .our-story-vows__heading h2 {
+    font-size: 47px;
+  }
+
+
+  .our-story-vows__grid {
+    margin-top: 40px;
 
     grid-template-columns:
       1fr;
-
-    gap: 35px;
   }
 
 
-  .our-story-beginning__number {
-    font-size: 60px;
+  .our-story-vow {
+    min-height: auto;
+
+    padding:
+      22px
+      5px;
+
+    display: grid;
+
+    grid-template-columns:
+      45px
+      1fr;
+
+    align-items: center;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      var(--border);
   }
 
+
+  .our-story-vow:nth-child(-n + 2) {
+    border-bottom:
+      1px solid
+      var(--border);
+  }
+
+
+  .our-story-vow h3 {
+    margin: 0;
+
+    font-size: 23px;
+  }
+
+
+  .our-story-vows__closing {
+    margin-top: 31px;
+
+    font-size: 16px;
+  }
+
+
+  /* DEVOTION */
+
+  .our-story-devotion {
+    padding:
+      80px
+      21px;
+  }
+
+
+  .our-story-devotion__inner {
+    display: block;
+  }
+
+
+  .our-story-devotion__number {
+    margin-bottom: 25px;
+
+    font-size: 85px;
+  }
+
+
+  .our-story-devotion__content h2 {
+    font-size: 48px;
+  }
+
+
+  .our-story-devotion__content > p {
+    font-size: 17px;
+  }
+
+
+  .our-story-devotion__content blockquote {
+    padding-left: 21px;
+
+    font-size: 22px;
+  }
+
+
+  /* REBIRTH */
 
   .our-story-rebirth {
-    min-height: 0;
+    padding:
+      82px
+      21px;
+  }
+
+
+  .our-story-rebirth h2 {
+    font-size: 47px;
+  }
+
+
+  .our-story-rebirth__copy {
+    margin-top: 32px;
+  }
+
+
+  .our-story-rebirth__copy p {
+    font-size: 17px;
+  }
+
+
+  .our-story-rebirth__quote {
+    padding-left: 21px;
+
+    font-size: 22px;
+  }
+
+
+  /* SOUL */
+
+  .our-story-soul {
+    padding:
+      80px
+      21px;
+  }
+
+
+  .our-story-soul h2 {
+    font-size: 49px;
+  }
+
+
+  .our-story-soul__grid {
+    margin-top: 42px;
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .our-story-soul__grid article {
+    min-height: auto;
 
     padding:
-      75px 24px;
+      24px
+      5px;
+
+    border-right: 0 !important;
   }
 
 
-  .our-story-philosophy {
-    padding:
-      75px 0;
+  .our-story-soul__grid h3 {
+    margin-top: 20px;
   }
 
 
-  .our-story-section-heading {
-    margin-bottom:
-      45px;
-  }
-
+  /* CLOSING */
 
   .our-story-signature {
-    min-height: 0;
-  }
-
-
-  .our-story-signature__image {
-    min-height:
-      450px;
-  }
-
-
-  .our-story-signature__content {
     padding:
-      65px 24px;
+      82px
+      21px;
+  }
+
+
+  .our-story-signature h2 {
+    font-size: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .our-story-hero h1 {
+    font-size: 42px;
+  }
+
+
+  .our-story-section__content h2,
+  .our-story-vows__heading h2,
+  .our-story-devotion__content h2,
+  .our-story-rebirth h2,
+  .our-story-soul h2,
+  .our-story-signature h2 {
+    font-size: 42px;
+  }
+
+
+  .our-story-founder__heading h2 {
+    font-size: 46px;
+  }
+
+}
+
+/* =========================================================
+   OUR STORY — MOBILE HERO SPACING FIX
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .our-story-hero {
+    padding:
+      42px
+      20px
+      36px;
+  }
+
+
+  /* First section directly after hero */
+  .our-story-hero + .our-story-section {
+    padding-top: 38px;
   }
 
 }

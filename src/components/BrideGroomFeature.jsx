@@ -1,85 +1,124 @@
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+} from "lucide-react";
+
+import {
+  Link,
+} from "react-router-dom";
+
 
 function BrideGroomFeature() {
-    return (
-        <section className="couple-feature">
 
-            {/* HEADING */}
-            <div className="couple-feature__heading">
+  return (
 
-                <h2>
-                    MADE FOR TWO
-                </h2>
-
-                <p>
-                    Two individuals. One celebration. Designed beautifully together.
-                </p>
-
-            </div>
+    <section className="couple-feature">
 
 
-            {/* IMAGES */}
-            <div className="couple-feature__gallery">
+      {/* =====================================================
+          HEADING
+      ===================================================== */}
 
-                <a
-                    href="/collections/bride-groom"
-                    className="couple-feature__image"
-                >
-                    <img
-                        src="/images/bride-groom/bride-groom-1.png"
-                        alt=""
-                        aria-hidden="true"
-                        className="couple-feature__image-bg"
-                    />
+      <div className="couple-feature__heading">
 
-                    <img
-                        src="/images/bride-groom/bride-groom-1.png"
-                        alt="Jivara bride and groom collection"
-                        className="couple-feature__image-main"
-                    />
-                </a>
+        <h2>
+          MADE FOR TWO
+        </h2>
 
 
-                <a
-                    href="/collections/matching-couple"
-                    className="couple-feature__image"
-                >
-                    <img
-                        src="/images/bride-groom/bride-groom-2.png"
-                        alt=""
-                        aria-hidden="true"
-                        className="couple-feature__image-bg"
-                    />
+        <p>
+          Two individuals. One celebration. Designed beautifully together.
+        </p>
 
-                    <img
-                        src="/images/bride-groom/bride-groom-2.png"
-                        alt="Jivara matching couple outfits"
-                        className="couple-feature__image-main"
-                    />
-                </a>
-
-            </div>
+      </div>
 
 
-            {/* BUTTON */}
-            <div className="couple-feature__footer">
+      {/* =====================================================
+          IMAGES
+      ===================================================== */}
 
-                <a
-                    href="/collections/bride-groom"
-                    className="couple-feature__button"
-                >
-                    <span>EXPLORE COUPLE LOOKS</span>
+      <div className="couple-feature__gallery">
 
-                    <ArrowRight
-                        size={15}
-                        strokeWidth={1.4}
-                    />
-                </a>
 
-            </div>
+        {/* FIRST COUPLE LOOK */}
 
-        </section>
-    );
+        <Link
+          to="/collections/bride-groom"
+          className="couple-feature__image"
+        >
+
+          <img
+            src="/images/bride-groom/bride-groom-1.png"
+            alt=""
+            aria-hidden="true"
+            className="couple-feature__image-bg"
+          />
+
+
+          <img
+            src="/images/bride-groom/bride-groom-1.png"
+            alt="Jivara bride and groom collection"
+            className="couple-feature__image-main"
+          />
+
+        </Link>
+
+
+        {/* SECOND COUPLE LOOK */}
+
+        <Link
+          to="/collections/bride-groom"
+          className="couple-feature__image"
+        >
+
+          <img
+            src="/images/bride-groom/bride-groom-2.png"
+            alt=""
+            aria-hidden="true"
+            className="couple-feature__image-bg"
+          />
+
+
+          <img
+            src="/images/bride-groom/bride-groom-2.png"
+            alt="Jivara coordinated bride and groom outfits"
+            className="couple-feature__image-main"
+          />
+
+        </Link>
+
+      </div>
+
+
+      {/* =====================================================
+          BUTTON
+      ===================================================== */}
+
+      <div className="couple-feature__footer">
+
+        <Link
+          to="/collections/bride-groom"
+          className="couple-feature__button"
+        >
+
+          <span>
+            EXPLORE COUPLE LOOKS
+          </span>
+
+
+          <ArrowRight
+            size={15}
+            strokeWidth={1.4}
+          />
+
+        </Link>
+
+      </div>
+
+    </section>
+
+  );
+
 }
+
 
 export default BrideGroomFeature;
