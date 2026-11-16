@@ -37,8 +37,9 @@ const categoryData = {
 
     collectionIds: [
       "eternal-love-radha-krishna",
-      "bridal",
       "bride-groom",
+      "bridal",
+      "groom",
     ],
 
   },
@@ -161,8 +162,8 @@ function CategoryCollections({
 
 
       <main
-  className={`category-collections-page category-collections-page--${category}`}
->
+        className={`category-collections-page category-collections-page--${category}`}
+      >
 
 
         {/* =================================================

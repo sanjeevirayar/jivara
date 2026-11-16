@@ -12,57 +12,80 @@
 
 
 /* =========================================================
-   LOOKBOOK PAGE HEADER
+   LOOKBOOK HERO
 ========================================================= */
 
 .lookbook-hero {
   width: 100%;
 
-  padding: 58px 24px 72px;
+  padding:
+    48px
+    24px
+    46px;
 
   background: var(--ivory);
 
   text-align: center;
 
-  border-bottom: 1px solid var(--border);
+  border-bottom:
+    1px solid
+    var(--border);
 }
 
 
 .lookbook-hero__inner {
-  width: min(900px, 100%);
+  width: min(
+    900px,
+    100%
+  );
 
   margin: 0 auto;
 }
 
 
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
 .lookbook-hero__eyebrow {
-  margin: 0 0 18px;
+  margin:
+    0
+    0
+    12px;
 
   color: var(--antique-gold);
 
-  font-family: "Inter", sans-serif;
+  font-family:
+    "Inter",
+    sans-serif;
 
-  font-size: 10px;
+  font-size: 8px;
 
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.8px;
 
   text-transform: uppercase;
 }
 
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
 
 .lookbook-hero h1 {
   margin: 0;
 
   color: var(--charcoal);
 
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size: clamp(
-    52px,
-    5vw,
-    76px
+    46px,
+    4.2vw,
+    64px
   );
 
   font-weight: 400;
@@ -73,29 +96,45 @@
 }
 
 
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
 .lookbook-hero__description {
   max-width: 720px;
 
-  margin: 28px auto 0;
+  margin:
+    22px
+    auto
+    0;
 
   color: var(--soft-charcoal);
 
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-size: 22px;
+  font-size: 18px;
 
   font-weight: 400;
 
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
 .lookbook-hero__divider {
-  width: 480px;
+  width: 385px;
 
-  max-width: 65%;
+  max-width: 70%;
 
-  margin: 42px auto 0;
+  margin:
+    27px
+    auto
+    0;
 
   display: flex;
 
@@ -103,7 +142,7 @@
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 15px;
 }
 
 
@@ -112,16 +151,24 @@
 
   height: 1px;
 
-  background: rgba(155, 122, 66, 0.45);
+  background:
+    rgba(
+      155,
+      122,
+      66,
+      0.45
+    );
 }
 
 
 .lookbook-hero__divider b {
   color: var(--antique-gold);
 
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-size: 14px;
+  font-size: 12px;
 
   font-weight: 400;
 
@@ -141,7 +188,9 @@
 
   margin: 0 auto;
 
-  padding: 48px 0;
+  padding:
+    36px
+    0;
 
   display: flex;
 
@@ -167,24 +216,30 @@
 
   color: var(--soft-charcoal);
 
-  font-family: "Inter", sans-serif;
+  font-family:
+    "Inter",
+    sans-serif;
 
   font-size: 9px;
+
+  font-weight: 400;
 
   letter-spacing: 2.4px;
 
   white-space: nowrap;
+
+  text-transform: uppercase;
 }
 
 
 /* =========================================================
-   LOOKBOOK GALLERY
+   LOOKBOOK PHOTO GALLERY
 ========================================================= */
 
 .lookbook-gallery {
   width: min(
-    1380px,
-    calc(100% - 60px)
+    1450px,
+    calc(100% - 70px)
   );
 
   margin: 0 auto;
@@ -193,32 +248,26 @@
 
   grid-template-columns:
     repeat(
-      3,
+      4,
       minmax(0, 1fr)
     );
 
-  gap: 44px 24px;
+  gap: 12px;
 
-  padding-bottom: 110px;
+  align-items: start;
+
+  padding-bottom: 30px;
 }
 
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
 
 .lookbook-card {
-  min-width: 0;
-}
-
-
-.lookbook-card--large {
-  grid-column: span 2;
-}
-
-
-.lookbook-card__image {
-  position: relative;
-
   width: 100%;
 
-  aspect-ratio: 3 / 4;
+  min-width: 0;
 
   overflow: hidden;
 
@@ -226,11 +275,63 @@
 }
 
 
-.lookbook-card--large
-.lookbook-card__image {
-  aspect-ratio: 16 / 10;
+/* =========================================================
+   CLICKABLE GALLERY BUTTON
+========================================================= */
+
+.lookbook-card__button {
+  width: 100%;
+
+  padding: 0;
+
+  display: block;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: inherit;
+
+  font: inherit;
+
+  text-align: inherit;
+
+  cursor: pointer;
 }
 
+
+.lookbook-card__button:focus-visible {
+  outline:
+    2px solid
+    var(--antique-gold);
+
+  outline-offset:
+    3px;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.lookbook-card__image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: #eee9dd;
+}
+
+
+/* =========================================================
+   GALLERY IMAGE
+========================================================= */
 
 .lookbook-card__image img {
   width: 100%;
@@ -241,153 +342,25 @@
 
   object-fit: cover;
 
+  object-position: center;
+
   transition:
-    transform 0.7s ease;
-}
-
-
-.lookbook-card__overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      transparent 60%,
-      rgba(
-        20,
-        18,
-        15,
-        0.14
-      )
-    );
-
-  pointer-events: none;
-}
-
-
-.lookbook-card:hover
-.lookbook-card__image img {
-  transform: scale(1.025);
-}
-
-
-.lookbook-card__copy {
-  padding: 15px 2px 0;
-}
-
-
-.lookbook-card__copy span {
-  display: block;
-
-  margin-bottom: 5px;
-
-  color: var(--antique-gold);
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 8px;
-
-  letter-spacing: 1.9px;
-
-  text-transform: uppercase;
-}
-
-
-.lookbook-card__copy h2 {
-  margin: 0;
-
-  color: var(--charcoal);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 24px;
-
-  font-weight: 400;
-
-  line-height: 1.2;
+    transform 0.5s ease,
+    filter 0.35s ease;
 }
 
 
 /* =========================================================
-   LOOKBOOK STORY
+   GALLERY HOVER
 ========================================================= */
 
-.lookbook-story {
-  padding: 110px 24px;
+.lookbook-card:hover
+.lookbook-card__image img {
+  transform:
+    scale(1.015);
 
-  background: var(--ivory);
-}
-
-
-.lookbook-story__inner {
-  width: min(
-    760px,
-    100%
-  );
-
-  margin: 0 auto;
-
-  text-align: center;
-}
-
-
-.lookbook-story__eyebrow {
-  margin: 0;
-
-  color: var(--antique-gold);
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 9px;
-
-  font-weight: 400;
-
-  letter-spacing: 2.4px;
-
-  text-transform: uppercase;
-}
-
-
-.lookbook-story h2 {
-  margin: 18px 0 26px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(
-    42px,
-    5vw,
-    65px
-  );
-
-  font-weight: 400;
-
-  line-height: 1;
-}
-
-
-.lookbook-story h2 span {
-  display: block;
-
-  color: var(--antique-gold);
-
-  font-style: italic;
-}
-
-
-.lookbook-story p:last-child {
-  max-width: 580px;
-
-  margin: 0 auto;
-
-  color: var(--soft-charcoal);
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 11px;
-
-  line-height: 1.9;
+  filter:
+    brightness(0.97);
 }
 
 
@@ -396,7 +369,10 @@
 ========================================================= */
 
 .lookbook-cta {
-  padding: 120px 24px;
+  padding:
+    55px
+    24px
+    85px;
 
   text-align: center;
 
@@ -404,12 +380,21 @@
 }
 
 
+/* =========================================================
+   CTA EYEBROW
+========================================================= */
+
 .lookbook-cta__eyebrow {
-  margin: 0 0 16px;
+  margin:
+    0
+    0
+    16px;
 
   color: var(--antique-gold);
 
-  font-family: "Inter", sans-serif;
+  font-family:
+    "Inter",
+    sans-serif;
 
   font-size: 9px;
 
@@ -421,12 +406,18 @@
 }
 
 
+/* =========================================================
+   CTA TITLE
+========================================================= */
+
 .lookbook-cta h2 {
   margin: 0;
 
   color: var(--charcoal);
 
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size: clamp(
     40px,
@@ -440,16 +431,25 @@
 }
 
 
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
 .lookbook-cta > p:not(
   .lookbook-cta__eyebrow
 ) {
   max-width: 480px;
 
-  margin: 18px auto 30px;
+  margin:
+    18px
+    auto
+    30px;
 
   color: var(--soft-charcoal);
 
-  font-family: "Inter", sans-serif;
+  font-family:
+    "Inter",
+    sans-serif;
 
   font-size: 11px;
 
@@ -457,10 +457,16 @@
 }
 
 
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
 .lookbook-cta__button {
   min-height: 48px;
 
-  padding: 0 25px;
+  padding:
+    0
+    25px;
 
   display: inline-flex;
 
@@ -474,11 +480,13 @@
     1px solid
     var(--antique-gold);
 
-  color: var(--charcoal);
-
   background: transparent;
 
-  font-family: "Inter", sans-serif;
+  color: var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
 
   font-size: 9px;
 
@@ -505,34 +513,560 @@
 
 
 /* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lookbook-lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    28px
+    90px
+    34px;
+
+  background:
+    rgba(
+      16,
+      15,
+      13,
+      0.94
+    );
+
+  backdrop-filter: blur(5px);
+
+  -webkit-backdrop-filter: blur(5px);
+
+  animation:
+    lookbook-lightbox-fade
+    0.25s ease;
+}
+
+
+/* =========================================================
+   LIGHTBOX FADE
+========================================================= */
+
+@keyframes lookbook-lightbox-fade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   LIGHTBOX CONTENT
+========================================================= */
+
+.lookbook-lightbox__content {
+  position: relative;
+
+  width: min(
+    1150px,
+    100%
+  );
+
+  max-height:
+    calc(100vh - 60px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   LIGHTBOX IMAGE WRAPPER
+========================================================= */
+
+.lookbook-lightbox__image {
+  width: 100%;
+
+  max-height:
+    calc(100vh - 120px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LIGHTBOX FULL IMAGE
+========================================================= */
+
+.lookbook-lightbox__image img {
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  max-height:
+    calc(100vh - 120px);
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  box-shadow:
+    0
+    20px
+    60px
+    rgba(
+      0,
+      0,
+      0,
+      0.28
+    );
+}
+
+
+/* =========================================================
+   LIGHTBOX CLOSE BUTTON
+========================================================= */
+
+.lookbook-lightbox__close {
+  position: absolute;
+
+  top: 22px;
+
+  right: 28px;
+
+  z-index: 10;
+
+  width: 46px;
+
+  height: 46px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.3
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.06
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.lookbook-lightbox__close:hover {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+
+  transform:
+    scale(1.04);
+}
+
+
+.lookbook-lightbox__close:focus-visible {
+  outline:
+    2px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+  outline-offset:
+    3px;
+}
+
+
+/* =========================================================
+   LIGHTBOX NAVIGATION
+========================================================= */
+
+.lookbook-lightbox__nav {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 10;
+
+  width: 54px;
+
+  height: 76px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 0;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.035
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+  cursor: pointer;
+
+  transform:
+    translateY(-50%);
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.lookbook-lightbox__nav:hover {
+  color: #ffffff;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.1
+    );
+}
+
+
+.lookbook-lightbox__nav:focus-visible {
+  outline:
+    2px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+  outline-offset:
+    2px;
+}
+
+
+/* =========================================================
+   PREVIOUS ARROW
+========================================================= */
+
+.lookbook-lightbox__nav--previous {
+  left: 22px;
+}
+
+
+/* =========================================================
+   NEXT ARROW
+========================================================= */
+
+.lookbook-lightbox__nav--next {
+  right: 22px;
+}
+
+
+/* =========================================================
+   IMAGE COUNTER
+========================================================= */
+
+.lookbook-lightbox__counter {
+  margin-top: 14px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.68
+    );
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+}
+
+
+.lookbook-lightbox__counter span {
+  margin:
+    0
+    7px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.32
+    );
+}
+
+
+/* =========================================================
+   FUTURE IMAGE DESCRIPTION
+========================================================= */
+
+.lookbook-lightbox__description {
+  width: min(
+    680px,
+    calc(100% - 30px)
+  );
+
+  margin:
+    16px
+    auto
+    0;
+
+  text-align: center;
+}
+
+
+.lookbook-lightbox__description p {
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  /* =====================================================
+     GALLERY
+  ===================================================== */
+
+  .lookbook-gallery {
+    width:
+      calc(100% - 48px);
+
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+
+    gap: 10px;
+  }
+
+
+  /* =====================================================
+     LIGHTBOX
+  ===================================================== */
+
+  .lookbook-lightbox {
+    padding:
+      28px
+      72px
+      32px;
+  }
+
+
+  .lookbook-lightbox__nav--previous {
+    left: 10px;
+  }
+
+
+  .lookbook-lightbox__nav--next {
+    right: 10px;
+  }
+
+}
+
+
+/* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
 
+  /* =====================================================
+     HERO
+  ===================================================== */
+
   .lookbook-hero {
-    padding: 54px 24px 64px;
+    padding:
+      44px
+      24px
+      43px;
   }
 
 
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
+  .lookbook-intro {
+    width:
+      calc(100% - 46px);
+
+    padding:
+      34px
+      0;
+  }
+
+
+  /* =====================================================
+     GALLERY
+  ===================================================== */
+
   .lookbook-gallery {
-    width: calc(100% - 36px);
+    width:
+      calc(100% - 36px);
 
     grid-template-columns:
       repeat(
-        2,
+        3,
         minmax(0, 1fr)
       );
+
+    gap: 9px;
+
+    padding-bottom: 28px;
   }
 
 
-  .lookbook-card--large {
-    grid-column: span 2;
+  /* =====================================================
+     CTA
+  ===================================================== */
+
+  .lookbook-cta {
+    padding:
+      55px
+      22px
+      75px;
   }
 
 
-  .lookbook-intro {
-    width: calc(100% - 46px);
+  /* =====================================================
+     LIGHTBOX
+  ===================================================== */
+
+  .lookbook-lightbox {
+    padding:
+      28px
+      66px
+      32px;
+  }
+
+
+  .lookbook-lightbox__content {
+    max-height:
+      calc(100vh - 60px);
+  }
+
+
+  .lookbook-lightbox__image {
+    max-height:
+      calc(100vh - 120px);
+  }
+
+
+  .lookbook-lightbox__image img {
+    max-height:
+      calc(100vh - 120px);
+  }
+
+
+  .lookbook-lightbox__nav {
+    width: 48px;
+
+    height: 68px;
   }
 
 }
@@ -542,26 +1076,33 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+
+  /* =====================================================
+     HERO
+  ===================================================== */
 
   .lookbook-hero {
-    padding: 46px 20px 52px;
+    padding:
+      40px
+      20px
+      40px;
   }
 
 
   .lookbook-hero__eyebrow {
-    margin-bottom: 14px;
+    margin-bottom: 11px;
 
-    font-size: 8px;
+    font-size: 7px;
 
-    letter-spacing: 2.4px;
+    letter-spacing: 2.2px;
   }
 
 
   .lookbook-hero h1 {
-    font-size: 46px;
+    font-size: 43px;
 
-    line-height: 1.05;
+    line-height: 1.04;
 
     letter-spacing: -0.3px;
   }
@@ -570,22 +1111,22 @@
   .lookbook-hero__description {
     max-width: 340px;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
-    font-size: 18px;
+    font-size: 17px;
 
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
 
   .lookbook-hero__divider {
-    width: 280px;
+    width: 270px;
 
-    max-width: 85%;
+    max-width: 82%;
 
-    margin-top: 30px;
+    margin-top: 24px;
 
-    gap: 14px;
+    gap: 13px;
   }
 
 
@@ -594,9 +1135,12 @@
   ===================================================== */
 
   .lookbook-intro {
-    width: calc(100% - 36px);
+    width:
+      calc(100% - 36px);
 
-    padding: 38px 0;
+    padding:
+      32px
+      0;
 
     gap: 12px;
   }
@@ -614,7 +1158,8 @@
   ===================================================== */
 
   .lookbook-gallery {
-    width: calc(100% - 28px);
+    width:
+      calc(100% - 24px);
 
     grid-template-columns:
       repeat(
@@ -622,71 +1167,14 @@
         minmax(0, 1fr)
       );
 
-    gap: 28px 10px;
+    gap: 7px;
 
-    padding-bottom: 70px;
+    padding-bottom: 24px;
   }
 
 
-  .lookbook-card--large {
-    grid-column: span 2;
-  }
-
-
-  .lookbook-card--large
   .lookbook-card__image {
     aspect-ratio: 4 / 3;
-  }
-
-
-  .lookbook-card__copy {
-    padding-top: 10px;
-  }
-
-
-  .lookbook-card__copy span {
-    margin-bottom: 4px;
-
-    font-size: 6px;
-
-    letter-spacing: 1.2px;
-  }
-
-
-  .lookbook-card__copy h2 {
-    font-size: 18px;
-  }
-
-
-  /* =====================================================
-     STORY
-  ===================================================== */
-
-  .lookbook-story {
-    padding: 78px 22px;
-  }
-
-
-  .lookbook-story__eyebrow {
-    font-size: 8px;
-
-    letter-spacing: 2px;
-  }
-
-
-  .lookbook-story h2 {
-    margin-top: 16px;
-
-    font-size: 44px;
-
-    line-height: 1;
-  }
-
-
-  .lookbook-story p:last-child {
-    font-size: 10px;
-
-    line-height: 1.8;
   }
 
 
@@ -695,7 +1183,10 @@
   ===================================================== */
 
   .lookbook-cta {
-    padding: 82px 22px;
+    padding:
+      48px
+      22px
+      70px;
   }
 
 
@@ -723,11 +1214,127 @@
   .lookbook-cta__button {
     min-height: 46px;
 
-    padding: 0 20px;
+    padding:
+      0
+      20px;
 
     font-size: 8px;
 
     letter-spacing: 1.4px;
+  }
+
+
+  /* =====================================================
+     MOBILE LIGHTBOX
+  ===================================================== */
+
+  .lookbook-lightbox {
+    padding:
+      70px
+      10px
+      50px;
+  }
+
+
+  .lookbook-lightbox__content {
+    width: 100%;
+
+    max-height:
+      calc(100vh - 120px);
+  }
+
+
+  .lookbook-lightbox__image {
+    width: 100%;
+
+    max-height:
+      calc(100vh - 175px);
+  }
+
+
+  .lookbook-lightbox__image img {
+    max-width: 100%;
+
+    max-height:
+      calc(100vh - 175px);
+  }
+
+
+  /* =====================================================
+     MOBILE CLOSE
+  ===================================================== */
+
+  .lookbook-lightbox__close {
+    top: 15px;
+
+    right: 15px;
+
+    width: 42px;
+
+    height: 42px;
+  }
+
+
+  /* =====================================================
+     MOBILE NAVIGATION
+  ===================================================== */
+
+  .lookbook-lightbox__nav {
+    width: 42px;
+
+    height: 58px;
+
+    border-radius: 4px;
+
+    background:
+      rgba(
+        0,
+        0,
+        0,
+        0.28
+      );
+  }
+
+
+  .lookbook-lightbox__nav--previous {
+    left: 5px;
+  }
+
+
+  .lookbook-lightbox__nav--next {
+    right: 5px;
+  }
+
+
+  /* =====================================================
+     MOBILE COUNTER
+  ===================================================== */
+
+  .lookbook-lightbox__counter {
+    margin-top: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.6px;
+  }
+
+
+  /* =====================================================
+     MOBILE DESCRIPTION
+  ===================================================== */
+
+  .lookbook-lightbox__description {
+    width:
+      calc(100% - 36px);
+
+    margin-top: 12px;
+  }
+
+
+  .lookbook-lightbox__description p {
+    font-size: 16px;
+
+    line-height: 1.45;
   }
 
 }
@@ -739,30 +1346,44 @@
 
 @media (max-width: 420px) {
 
+  /* =====================================================
+     HERO
+  ===================================================== */
+
   .lookbook-hero {
-    padding: 42px 18px 48px;
+    padding:
+      36px
+      18px
+      38px;
   }
 
 
   .lookbook-hero h1 {
-    font-size: 40px;
+    font-size: 39px;
   }
 
 
   .lookbook-hero__description {
     max-width: 310px;
 
-    font-size: 17px;
+    font-size: 16px;
   }
 
 
   .lookbook-hero__divider {
-    width: 240px;
+    width: 235px;
+
+    margin-top: 22px;
   }
 
 
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
   .lookbook-intro {
-    width: calc(100% - 28px);
+    width:
+      calc(100% - 28px);
 
     gap: 9px;
   }
@@ -775,25 +1396,71 @@
   }
 
 
+  /* =====================================================
+     GALLERY
+  ===================================================== */
+
   .lookbook-gallery {
-    width: calc(100% - 20px);
+    width:
+      calc(100% - 16px);
 
-    gap: 24px 8px;
+    gap: 5px;
+
+    padding-bottom: 24px;
   }
 
 
-  .lookbook-card__copy h2 {
-    font-size: 16px;
-  }
-
-
-  .lookbook-story h2 {
-    font-size: 39px;
-  }
-
+  /* =====================================================
+     CTA
+  ===================================================== */
 
   .lookbook-cta h2 {
     font-size: 38px;
+  }
+
+
+  /* =====================================================
+     LIGHTBOX
+  ===================================================== */
+
+  .lookbook-lightbox {
+    padding:
+      65px
+      8px
+      46px;
+  }
+
+
+  .lookbook-lightbox__nav {
+    width: 38px;
+
+    height: 54px;
+  }
+
+
+  .lookbook-lightbox__nav--previous {
+    left: 3px;
+  }
+
+
+  .lookbook-lightbox__nav--next {
+    right: 3px;
+  }
+
+
+  .lookbook-lightbox__close {
+    top: 13px;
+
+    right: 13px;
+
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .lookbook-lightbox__description p {
+    font-size: 15px;
   }
 
 }

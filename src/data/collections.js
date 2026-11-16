@@ -205,6 +205,22 @@ const collections = [
         link:
             "/collections/western-gowns",
     },
+        {
+        id:
+            "groom",
+
+        name:
+            "Groom Collection",
+
+        description:
+            "Refined groomwear created for weddings, engagements and celebrations, blending timeless tradition with contemporary Jivara detailing.",
+
+        image:
+            "/images/collections/groom.png",
+
+        link:
+            "/collections/groom",
+    },
 ];
 
 export default collections;

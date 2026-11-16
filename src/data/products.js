@@ -2648,8 +2648,9 @@ const products = [
   category:
     "Menswear",
 
-  collectionId:
+  collectionId:[
     "menswear",
+     "groom",],
 
   price: 30000,
   currency: "INR",
@@ -4785,7 +4786,138 @@ const products = [
     "Custom Colour",
   ],
 },
+/* =====================================================
+   BRIDE & GROOM COLLECTION
+===================================================== */
 
+{
+  id: 75,
+
+  slug:
+    "olive-floral-bride-groom-set",
+
+  name:
+    "Olive Floral Bride & Groom Set",
+
+  category:
+    "Bride & Groom",
+
+  collectionId:
+    "bride-groom",
+
+
+  /* =====================================================
+     PRICE
+  ===================================================== */
+
+  price: 50000,
+
+  currency:
+    "INR",
+
+
+  /* =====================================================
+     IMAGES
+  ===================================================== */
+
+  image:
+    "/images/bride-groom/olive-floral-bride-groom-set.png",
+
+  images: [
+    "/images/bride-groom/olive-floral-bride-groom-set.png",
+  ],
+
+
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
+
+  description:
+    "A beautifully coordinated olive green and ivory bride and groom ensemble featuring floral embroidery and complementary wedding detailing.",
+
+  details:
+    "The bride's ensemble features an olive green lehenga with intricate red, gold and floral embroidery, paired with a richly bordered red dupatta and coordinated blouse. The groom's look features an ivory sherwani with colourful floral detailing, paired with an olive green turban and matching drape. Both outfits can be recreated according to individual measurements and personalised styling preferences.",
+
+
+  /* =====================================================
+     DESIGN DETAILS
+  ===================================================== */
+
+  work:
+    "Floral embroidery, intricate bridal embellishment and coordinated groom detailing",
+
+  fabric:
+    "Customisable",
+
+  color:
+    "Olive Green, Ivory, Red and Gold",
+
+  occasion:
+    "Wedding, Bride & Groom, Traditional Celebration",
+
+
+  /* =====================================================
+     WOMAN'S OUTFIT
+  ===================================================== */
+
+  womensOutfit: {
+    name:
+      "Bridal Lehenga",
+
+    measurementType:
+      "lehenga",
+  },
+
+
+  /* =====================================================
+     MAN'S OUTFIT
+  ===================================================== */
+
+  mensOutfit: {
+    name:
+      "Groom Sherwani",
+
+    measurementType:
+      "menswear",
+  },
+
+
+  /* =====================================================
+     ORDER SETTINGS
+  ===================================================== */
+
+  measurementType:
+    "couple",
+
+  orderable:
+    true,
+
+  customisable:
+    true,
+
+  madeToMeasure:
+    true,
+
+
+  /* =====================================================
+     PRODUCTION TIME
+  ===================================================== */
+
+  leadTime: {
+    minDays: 21,
+    maxDays: 30,
+  },
+
+
+  /* =====================================================
+     COLOUR OPTIONS
+  ===================================================== */
+
+  colorOptions: [
+    "Original",
+    "Custom Colour",
+  ],
+},
 ];
 
 export default products;
