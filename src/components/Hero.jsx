@@ -25,7 +25,7 @@ function Hero() {
 
     {
       image:
-        "/images/hero/slide-1.png",
+        "/images/hero/slide-1.webp",
 
       alt:
         "Family wearing coordinated festive outfits by Jivara",
@@ -55,7 +55,7 @@ function Hero() {
 
     {
       image:
-        "/images/hero/slide-3.png",
+        "/images/hero/slide-3.webp",
 
       alt:
         "Women wearing colourful Jivara traditional outfits",
@@ -85,7 +85,7 @@ function Hero() {
 
     {
       image:
-        "/images/hero/slide-5.png",
+        "/images/hero/slide-5.webp",
 
       alt:
         "Jivara custom designer wear",
@@ -115,7 +115,7 @@ function Hero() {
 
     {
       image:
-        "/images/hero/slide-6.png",
+        "/images/hero/slide-6.webp",
 
       alt:
         "Jivara original creation",
@@ -145,7 +145,7 @@ function Hero() {
 
     {
       image:
-        "/images/hero/slide-7.png",
+        "/images/hero/slide-7.webp",
 
       alt:
         "Jivara mirrorwork lehenga with yellow dupatta",

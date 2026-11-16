@@ -21,7 +21,7 @@ import Footer from "../components/Footer";
 const looks = [
     {
         id: 1,
-        image: "/images/lookbook/look-1.png",
+        image: "/images/lookbook/look-1.webp",
         alt: "Jivara custom occasion wear",
         position: "center center",
 
@@ -31,7 +31,7 @@ const looks = [
 
     {
         id: 2,
-        image: "/images/lookbook/look-2.png",
+        image: "/images/lookbook/look-2.webp",
         alt: "Jivara handcrafted outfit",
         position: "center 15%",
 
@@ -41,41 +41,41 @@ const looks = [
 
     {
         id: 3,
-        image: "/images/lookbook/look-3.png",
+        image: "/images/lookbook/look-3.webp",
         alt: "Jivara celebration wear",
         position: "center 15%",
     },
 
     {
         id: 4,
-        image: "/images/lookbook/look-4.png",
+        image: "/images/lookbook/look-4.webp",
         alt: "Jivara custom designer look",
         position: "center 20%",
     },
 
     {
         id: 5,
-        image: "/images/lookbook/look-5.png",
+        image: "/images/lookbook/look-5.webp",
         alt: "Jivara original design worn by a client",
         position: "center 15%",
     },
 
     {
         id: 6,
-        image: "/images/lookbook/look-6.png",
+        image: "/images/lookbook/look-6.webp",
         alt: "Jivara client wearing an original design",
         position: "center 20%",
     },
         {
         id: 7,
-        image: "/images/lookbook/look-7.png",
+        image: "/images/lookbook/look-7.webp",
         alt: "Jivara original design worn by a client",
         position: "center center",
     },
 
     {
         id: 8,
-        image: "/images/lookbook/look-8.png",
+        image: "/images/lookbook/look-8.webp",
         alt: "Jivara client wearing an original design",
         position: "center center",
     },

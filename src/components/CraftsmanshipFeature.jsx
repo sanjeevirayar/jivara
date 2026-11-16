@@ -21,7 +21,7 @@ function CraftsmanshipFeature() {
       <div className="craft-feature__image">
 
         <img
-          src="/images/craftsmanship/handwork-detail.png"
+          src="/images/craftsmanship/handwork-detail.webp"
           alt="Detailed Jivara handwork"
         />
 

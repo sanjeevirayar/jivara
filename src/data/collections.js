@@ -8,7 +8,7 @@ const collections = [
         category: "Bridal",
 
         image:
-            "/images/collections/eternal-love-radha-krishna.png",
+            "/images/collections/eternal-love-radha-krishna.webp",
 
         description:
             "Inspired by the eternal love, devotion and union of Radha and Krishna, this signature collection was envisioned for brides and grooms.",
@@ -25,7 +25,7 @@ const collections = [
         category: "Bridal",
 
         image:
-            "/images/collections/bridal-collections.png",
+            "/images/collections/bridal-collections.webp",
 
         description:
             "A complete bridal world of sarees, lehengas and blouses created for your most meaningful celebration.",
@@ -42,7 +42,7 @@ const collections = [
         category: "Lehengas",
 
         image:
-            "/images/collections/lehengas.png?v=2",
+            "/images/collections/lehengas.webp?v=2",
 
         description:
             "Graceful lehengas designed for weddings, festivities and unforgettable celebrations.",
@@ -59,7 +59,7 @@ const collections = [
         category: "Blouses",
 
         image:
-            "/images/collections/handworked-blouses.png?v=2",
+            "/images/collections/handworked-blouses.webp?v=2",
 
         description:
             "Detailed handwork and individually crafted blouse designs.",
@@ -76,7 +76,7 @@ const collections = [
         category: "Sarees",
 
         image:
-            "/images/collections/handworked-sarees.png",
+            "/images/collections/handworked-sarees.webp",
 
         description:
             "Sarees enriched with handcrafted detailing and thoughtful design.",
@@ -96,7 +96,7 @@ const collections = [
             "Coordinated looks thoughtfully designed for two, with each ensemble created to complement one another.",
 
         image:
-            "/images/collections/couple-edit.png",
+            "/images/collections/couple-edit.webp",
 
         link:
             "/couple-edit",
@@ -111,7 +111,7 @@ const collections = [
         category: "Sarees",
 
         image:
-            "/images/collections/gharchola-sarees.png?v=2",
+            "/images/collections/gharchola-sarees.webp?v=2",
 
         description:
             "Traditional Gharchola sarees interpreted through Jivara craft and detailing.",
@@ -129,7 +129,7 @@ const collections = [
         category: "Indo-Western",
 
         image:
-            "/images/collections/indo-western.png?v=2",
+            "/images/collections/indo-western.webp?v=2",
 
         description:
             "Contemporary silhouettes shaped by Indian craft, colour and celebration.",
@@ -146,7 +146,7 @@ const collections = [
         category: "Bride & Groom",
 
         image:
-            "/images/collections/bride-groom.png",
+            "/images/collections/bride-groom.webp",
 
         description:
             "Coordinated looks created beautifully for two individuals sharing one celebration.",
@@ -163,7 +163,7 @@ const collections = [
         category: "Kids",
 
         image:
-            "/images/collections/kidswear.png",
+            "/images/collections/kidswear.webp",
 
         description:
             "Celebration-ready designs created with colour, comfort and personality.",
@@ -180,7 +180,7 @@ const collections = [
         category: "Men",
 
         image:
-            "/images/collections/menswear.png",
+            "/images/collections/menswear.webp",
 
         description:
             "Refined traditional and contemporary occasion wear for men.",
@@ -197,7 +197,7 @@ const collections = [
         category: "Gowns",
 
         image:
-            "/images/collections/western-gowns.png",
+            "/images/collections/western-gowns.webp",
 
         description:
             "Expressive silhouettes for evenings, celebrations and special occasions.",
@@ -216,7 +216,7 @@ const collections = [
             "Refined groomwear created for weddings, engagements and celebrations, blending timeless tradition with contemporary Jivara detailing.",
 
         image:
-            "/images/collections/groom.png",
+            "/images/collections/groom.webp",
 
         link:
             "/collections/groom",

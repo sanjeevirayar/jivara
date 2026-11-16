@@ -7,37 +7,37 @@ const collections = [
 
   {
     name: "Lehengas",
-    image: "/images/collections/lehengas.png?v=3",
+    image: "/images/collections/lehengas.webp?v=3",
     link: "/collections/lehengas",
   },
 
   {
     name: "Handworked Blouses",
-    image: "/images/collections/handworked-blouses.png?v=3",
+    image: "/images/collections/handworked-blouses.webp?v=3",
     link: "/collections/handwork-blouses",
   },
 
   {
     name: "Western Gowns",
-    image: "/images/collections/western-gowns.png",
+    image: "/images/collections/western-gowns.webp",
     link: "/collections/western-gowns",
   },
 
   {
     name: "Gharchola Sarees",
-    image: "/images/collections/gharchola-sarees.png?v=3",
+    image: "/images/collections/gharchola-sarees.webp?v=3",
     link: "/collections/gharchola-sarees",
   },
 
   {
     name: "Indo-Western",
-    image: "/images/collections/indo-western.png?v=3",
+    image: "/images/collections/indo-western.webp?v=3",
     link: "/collections/indo-western",
   },
 
   {
     name: "Men's Wear",
-    image: "/images/collections/mens-wear.png",
+    image: "/images/collections/mens-wear.webp",
     link: "/collections/menswear",
   },
 

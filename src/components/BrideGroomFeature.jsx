@@ -50,7 +50,7 @@ function BrideGroomFeature() {
         >
 
           <img
-            src="/images/bride-groom/bride-groom-1.png"
+            src="/images/bride-groom/bride-groom-2.webp"
             alt=""
             aria-hidden="true"
             className="couple-feature__image-bg"
@@ -58,7 +58,7 @@ function BrideGroomFeature() {
 
 
           <img
-            src="/images/bride-groom/bride-groom-1.png"
+            src="/images/bride-groom/bride-groom-2.webp"
             alt="Jivara bride and groom collection"
             className="couple-feature__image-main"
           />
@@ -77,7 +77,7 @@ function BrideGroomFeature() {
         >
 
           <img
-            src="/images/bride-groom/bride-groom-2.png"
+            src="/images/bride-groom/bride-groom-2.webp"
             alt=""
             aria-hidden="true"
             className="couple-feature__image-bg"
@@ -85,7 +85,7 @@ function BrideGroomFeature() {
 
 
           <img
-            src="/images/bride-groom/bride-groom-2.png"
+            src="/images/bride-groom/bride-groom-2.webp"
             alt="Jivara The Couple Edit coordinated outfits"
             className="couple-feature__image-main"
           />

@@ -1080,7 +1080,7 @@ function OrderDesign() {
 
 
                   <a
-                    href="/images/measurements/womens-measurement-guide.png"
+                    href="/images/measurements/womens-measurement-guide.webp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="measurement-guide__link"

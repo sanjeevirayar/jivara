@@ -145,7 +145,7 @@ function OurStory() {
             <div className="our-story-founder__image">
 
               <img
-                src="/images/about/jivara-story.png"
+                src="/images/about/jivara-story.webp"
                 alt="Jigna Thakkar Radhey, founder of Jivara"
               />
 

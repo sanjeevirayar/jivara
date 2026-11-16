@@ -214,7 +214,7 @@ function EternalLoveFeature() {
         ================================================= */}
 
         <img
-          src="/images/eternal-love/eternal-love-lehenga.png"
+          src="/images/eternal-love/eternal-love-lehenga.webp"
           alt="Jivara Eternal Love of Radha-Krishna lehenga"
           onClick={toggleMedia}
           className={

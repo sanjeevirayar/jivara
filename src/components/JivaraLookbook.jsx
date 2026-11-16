@@ -4,37 +4,37 @@ import { Link } from "react-router-dom";
 
 const looks = [
   {
-    image: "/images/lookbook/look-1.png",
+    image: "/images/lookbook/look-1.webp",
     alt: "Jivara custom occasion wear",
     position: "center center",
   },
 
   {
-    image: "/images/lookbook/look-2.png",
+    image: "/images/lookbook/look-2.webp",
     alt: "Jivara handcrafted outfit",
     position: "center 15%",
   },
 
   {
-    image: "/images/lookbook/look-3.png",
+    image: "/images/lookbook/look-3.webp",
     alt: "Jivara celebration wear",
     position: "center 15%",
   },
 
   {
-    image: "/images/lookbook/look-4.png",
+    image: "/images/lookbook/look-4.webp",
     alt: "Jivara custom designer look",
     position: "center 20%",
   },
 
   {
-    image: "/images/lookbook/look-5.png",
+    image: "/images/lookbook/look-5.webp",
     alt: "Jivara original design worn by client",
     position: "center 15%",
   },
 
   {
-    image: "/images/lookbook/look-6.png",
+    image: "/images/lookbook/look-6.webp",
     alt: "Jivara client wearing an original design",
     position: "center 20%",
   },

@@ -11,7 +11,7 @@ function AboutJivara() {
       <div className="about-jivara__visual">
 
         <img
-          src="/images/about/jivara-story.png"
+          src="/images/about/jivara-story.webp"
           alt="The story behind Jivara"
         />
 
